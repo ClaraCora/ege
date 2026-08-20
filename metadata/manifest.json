@@ -411,14 +411,6 @@
     },
     {
       "list": "mihomo.lsr",
-      "url": "https://cnsub.lkany.com/meta/geo/geosite/onedrive.mrs",
-      "path": "mihomo/onedrive.mrs",
-      "sha256": "0ecdba8f4bfa5161df4d0923ddba160ce6e85fc0c8cfa0ac5b9bac27384ac8bc",
-      "size": 288,
-      "etag": "\"69bf2ff4-120\""
-    },
-    {
-      "list": "mihomo.lsr",
       "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/private.mrs",
       "path": "mihomo/private-1fa87d08.mrs",
       "sha256": "0f9ba48d4d0b0d192a4e7c3548486dde05e5a92e6e58e8ea8c9cc302712a1420",
