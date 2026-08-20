@@ -443,6 +443,14 @@
     },
     {
       "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AI.png",
+      "path": "png/AI.png",
+      "sha256": "dea91e9e528c7f32e7bb7c4d390be6a0b8b65a89ff9d6d5e764e2c318201f98f",
+      "size": 9818,
+      "etag": "\"70211649147742652f29a3910b2b082b950528c98287d5b6da84637dad944d72\""
+    },
+    {
+      "list": "png.lsr",
       "url": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Adblock.png",
       "path": "png/Adblock.png",
       "sha256": "3f7a6e83acba3d13fb6a21c1ca9c006f5f6b92edc2c502f4e9158c3e4f6c63dd",
@@ -475,11 +483,35 @@
     },
     {
       "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png",
+      "path": "png/China.png",
+      "sha256": "105954406317babeefb5f3a7b5857ac4c797c1c4423a365eb6d2e8caa52d50c1",
+      "size": 11563,
+      "etag": "\"6d00ea1229e83fe154ac01beb6cb61498d22e8fc65a3ec1f9e1f457399d45f02\""
+    },
+    {
+      "list": "png.lsr",
       "url": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Emby.png",
-      "path": "png/Emby.png",
+      "path": "png/Emby-0decdc6c.png",
       "sha256": "3567d916fd85e221553b2201c2ec4408d6178d3efc9706a45ac3f81f4ad93c58",
       "size": 5897,
       "etag": "\"3852297714d5c81bf12c5ba30ce11ba55973ac80c836cea421131cce05207d5f\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png",
+      "path": "png/Emby-dc841cc2.png",
+      "sha256": "0af16310858118bc5e44467019a5c131e5703621866d0417d3f3440c8cfa1efa",
+      "size": 9689,
+      "etag": "\"cae06672538cede672cfdbb34ca01027bf1050a9809e8e2a95222b08270645cd\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png",
+      "path": "png/Final.png",
+      "sha256": "2f5e1d63526c34b4a26194bf07c554d35b98b25bbfaa988611d6ecb77e3f511f",
+      "size": 11353,
+      "etag": "\"26a8edfc98746083c83baa228c626bd7ec9d07209a3a359800ddef3d2f7035fd\""
     },
     {
       "list": "png.lsr",
@@ -507,6 +539,14 @@
     },
     {
       "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png",
+      "path": "png/Google_Search.png",
+      "sha256": "0202f62f8faab076d7e2ff823e1bd07973bd5cdafff787cfe245c2c5f0b5484e",
+      "size": 5837,
+      "etag": "\"14fa202637b7900702b96d1dce05e40229eca7298bcce087c4827c87f8d82b4b\""
+    },
+    {
+      "list": "png.lsr",
       "url": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png",
       "path": "png/HK.png",
       "sha256": "7b6d08af03264b34d63a355d802285dc33189ee3705db407e77f8a62223decad",
@@ -515,8 +555,24 @@
     },
     {
       "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png",
+      "path": "png/Hong_Kong.png",
+      "sha256": "eacee82c61b21e7a926b4f393403bf8f783b3109352b7dbd20b6ffd9c0d742c2",
+      "size": 11854,
+      "etag": "\"5f30f6c1f5158f3c733d3266fa44ba4d3c4fd24eafa6edfadb566cd3ff416d3e\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Instagram.png",
+      "path": "png/Instagram-4f81a6f8.png",
+      "sha256": "7bd303f5ae4b771f97764cd15a7388268096795329192996277d60cfa830338f",
+      "size": 16709,
+      "etag": "\"881fe254036d80d290c4f471e67a2ef8265904c4170ee05048832ef9c13484b8\""
+    },
+    {
+      "list": "png.lsr",
       "url": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Instagram.png",
-      "path": "png/Instagram.png",
+      "path": "png/Instagram-533227d7.png",
       "sha256": "6c38baf722d9fdde83a73c1f9aaf4f30fde2437d75e65a8e8b244a47eceed125",
       "size": 14021,
       "etag": "\"50085d63867ad9d5a4552ab53fe975ae42a4291826b224e650ab35c522dbc077\""
@@ -531,6 +587,14 @@
     },
     {
       "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png",
+      "path": "png/Japan.png",
+      "sha256": "59e351aab014850cd4b2a26fd17ce6a993649fffb44d8956c6635838432e0d82",
+      "size": 8754,
+      "etag": "\"051113e1b94f875399f15b3b6aa8513e45f732ae42698b8f4089b1ee98031632\""
+    },
+    {
+      "list": "png.lsr",
       "url": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png",
       "path": "png/KR.png",
       "sha256": "f33cc7a6722f4d9efc6cdee3535283ec5fc590e139cbdd2bd145c84d2f89b168",
@@ -539,11 +603,27 @@
     },
     {
       "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png",
+      "path": "png/Korea.png",
+      "sha256": "2612736989c0932b9d9057111f00b704aa1f146efcaa2ca853bade05d3f967ab",
+      "size": 10961,
+      "etag": "\"d0fab13fa1543b76a8ab4b90a04acc8e10682ed79bee8385c023fcc20cb5dbb1\""
+    },
+    {
+      "list": "png.lsr",
       "url": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/MO.png",
       "path": "png/MO.png",
       "sha256": "96f12cb99b0fdbbc458872999848517e5d086b7fb166da9bfa0f5277544d29c0",
       "size": 11137,
       "etag": "\"01bd6f2c23043ca6b03e331b02aa6e2b1bfe9e5a822640a5a094d80f275e3b65\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Macao.png",
+      "path": "png/Macao.png",
+      "sha256": "5457e5e243aa61a159f58450345d475f31b94762488a8e63b9e8814f70656977",
+      "size": 14424,
+      "etag": "\"2b1275a7289273917b5795a122c0c98e1de10972c337ffc89ff936a3a8fad1e1\""
     },
     {
       "list": "png.lsr",
@@ -556,10 +636,18 @@
     {
       "list": "png.lsr",
       "url": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png",
-      "path": "png/Microsoft.png",
+      "path": "png/Microsoft-5de51988.png",
       "sha256": "73ca9796a36f8408c2191df47bb31d7b4997727fe657acdf96ff06166d01e58c",
       "size": 9111,
       "etag": "\"897c5a1bb2663aa53dde7c3272c2d6bb865481300f16464557a10c26ad8ed05e\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png",
+      "path": "png/Microsoft-d11688b0.png",
+      "sha256": "31eb37edea6b63e72e0e7af7893b32a53f2df8c78d2edfb3fdfc02376b2b0bcf",
+      "size": 1243,
+      "etag": "\"8aa4f4499b01ad828290d45dd9f467221df547c81ef8b15eb39dc15821c2fc1f\""
     },
     {
       "list": "png.lsr",
@@ -568,6 +656,30 @@
       "sha256": "f67248781e661e341976af594061305c0578dd96e8d9bb7396b542bc4e1656fe",
       "size": 10973,
       "etag": "\"d676a827ad434d75594adf696e0781bf2f20565c084f0f97cc7f3e9c73d834a5\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png",
+      "path": "png/Netflix.png",
+      "sha256": "a190c314b964c6e2efb6a00028ee4c2b28159f16d2280189d8a97a3cdc9e62a0",
+      "size": 3875,
+      "etag": "\"0b592a9131b4e8c868b366164ffb83f9ea3f51b8891d981531f5445e355d6128\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PayPal.png",
+      "path": "png/PayPal.png",
+      "sha256": "3523f042f51164e2936c85d152f9ff98ff4f9aa992ab8969ce111573c0202e43",
+      "size": 4243,
+      "etag": "\"9c5278455151db2e9a808dd859259d26ea37e04d7b35f2d65c1296c93d5dc223\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png",
+      "path": "png/Proxy.png",
+      "sha256": "56f5e40b72a4279c12e3577f996a2fa003c9adafc86a66ed9a38c1ec60aa6bc4",
+      "size": 12999,
+      "etag": "\"d6b44415cf1d9ac6325aa3dafe361acad574965ef084cde2a63a740f5020f1bc\""
     },
     {
       "list": "png.lsr",
@@ -587,11 +699,27 @@
     },
     {
       "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png",
+      "path": "png/Singapore.png",
+      "sha256": "192249f40299813067a960ad964093a6dbfa965e2509d0b4ddf920eb4a1441cd",
+      "size": 9416,
+      "etag": "\"b329da4270841f6cd36910886659a45e514abcc451dc4c6f5fe3d01edbdbfebd\""
+    },
+    {
+      "list": "png.lsr",
       "url": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Speedtest.png",
       "path": "png/Speedtest.png",
       "sha256": "4ef2b98b38ef6377bcf90a0622d964bc2117098722d6c5de3ec86c306b920f03",
       "size": 6009,
       "etag": "\"b5d2c3dd7b22e650a76f0cfeb0fb51c2c6522c33d92dcf1330349b5ac45d88e0\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Steam.png",
+      "path": "png/Steam.png",
+      "sha256": "dcc4adb21cc434c02df2dd15512c10a8838e46fe033c520e7eb51d0769876e17",
+      "size": 15992,
+      "etag": "\"97356d0a92079753b13057724f96064bab9ebb8beb521466edc182e3b0b41a0b\""
     },
     {
       "list": "png.lsr",
@@ -619,8 +747,16 @@
     },
     {
       "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png",
+      "path": "png/TikTok-27034e11.png",
+      "sha256": "a60f7e5520fc58e894b7dbc596972787c1d1403ee1251cee1cad700c0847c587",
+      "size": 8365,
+      "etag": "\"5b1ca9c98a1185af00b4d9bc81b67aa975246c806930b25a83f65a211336f76a\""
+    },
+    {
+      "list": "png.lsr",
       "url": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/TikTok.png",
-      "path": "png/TikTok.png",
+      "path": "png/TikTok-5f5d2f2c.png",
       "sha256": "8097fcc577f174c6c52f4e5f05b40e53f56532ca8b99928423ea3ddf57c4fbe5",
       "size": 11688,
       "etag": "\"61e2d34a02eb537f2444102c13242c853e61f49347d912285a08547f56c0334d\""
@@ -648,6 +784,14 @@
       "sha256": "961bfb437ab98c46f1771031473165003dc200ea61ff9e30a4f4a18c2db56554",
       "size": 11359,
       "etag": "\"bfa36d48f0bace59608603571a481764d481b77c33d27c48aa75e8eeb1ebcc06\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png",
+      "path": "png/United_States.png",
+      "sha256": "63d7c028ea38626029cc968ff93ee63eee6672fab1750ccbda1ad1eabebc5f5a",
+      "size": 12522,
+      "etag": "\"6dafa4523d44508e77bcc12a1a1a7e1f3536c80e360e287f4a4ca0d0b895bd92\""
     },
     {
       "list": "png.lsr",
