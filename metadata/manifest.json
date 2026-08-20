@@ -1,0 +1,581 @@
+{
+  "user_agent": "Loon/975 CFNetwork/3860.700.1 Darwin/25.6.0",
+  "resources": [
+    {
+      "list": "ad.lsr",
+      "url": "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Egern/Rules/Ads_AWAvenue.yaml",
+      "path": "ad/Ads_AWAvenue.yaml",
+      "sha256": "89704acd0db14f516798eb876260ccd289d2bc63d2795b51c310ccf5f4d25210",
+      "size": 22146,
+      "etag": "\"9d7b33b359d4862903d38da2273479a9266ad4877a7f214cdac9362f63c81400\""
+    },
+    {
+      "list": "ad.lsr",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Advertising/Advertising.list",
+      "path": "ad/Advertising.list",
+      "sha256": "3ea71ec969df33bc1d0f147992ba58e154a3ecfa64a4d62cd69f4e1cdb66dea9",
+      "size": 26870,
+      "etag": "\"bb0ebfc195205da91de162f429f8a76d156a704753150c2fdfd1ccfd6517e989\""
+    },
+    {
+      "list": "ad.lsr",
+      "url": "https://adrules.top/adrules.list",
+      "path": "ad/adrules.list",
+      "sha256": "3bff860ee88d1238c324b1ac3c78fd778117e815d57b553a6527bcfb59cdb989",
+      "size": 6825517,
+      "etag": "\"20f7ebc58015d0a41594a320438ff8cc\""
+    },
+    {
+      "list": "kelee.lsr",
+      "url": "https://kelee.one/Tool/Loon/Lsr/AI.lsr",
+      "path": "kelee/AI.lsr",
+      "sha256": "ca8b005a6b750b891951c47e16aa145caabf7c43db31db8d47c2f9c717c8e06a",
+      "size": 3627,
+      "etag": "\"69b4324f2d0d2d767df465011be0e2d3\""
+    },
+    {
+      "list": "kelee.lsr",
+      "url": "https://rule.kelee.one/Loon/Alibaba.lsr",
+      "path": "kelee/Alibaba.lsr",
+      "sha256": "89fbf58aa482316adc6500a70eb726236e8a7d7a1c85fee80b3bf22f4d855362",
+      "size": 38814,
+      "etag": "\"d8a030ae8b3672225551aa8d270ad45b\""
+    },
+    {
+      "list": "kelee.lsr",
+      "url": "https://rule.kelee.one/Loon/Apple.lsr",
+      "path": "kelee/Apple.lsr",
+      "sha256": "18a6d908d164e172be18f69a4cd507580b52c8f31d0f129d4fb4db89a097251d",
+      "size": 61055,
+      "etag": "\"353a58f6e8ed3fa44552e9e3275c36f1\""
+    },
+    {
+      "list": "kelee.lsr",
+      "url": "https://rule.kelee.one/Loon/Baidu.lsr",
+      "path": "kelee/Baidu.lsr",
+      "sha256": "3cce3276cf3971f95639c91cf7cf086e2f9169b954558c8567f84b5d1f1fdb53",
+      "size": 7126,
+      "etag": "\"51c012b3f2014dfb532b7976fc6a6d61\""
+    },
+    {
+      "list": "kelee.lsr",
+      "url": "https://rule.kelee.one/Loon/BiliBili.lsr",
+      "path": "kelee/BiliBili.lsr",
+      "sha256": "0756c4e4947f15039efed0b7bee4957fa4f60ede9c35d6d2a4c83e8b431939a3",
+      "size": 4508,
+      "etag": "\"e9766b17076caff8a8b77ac6e3e0ab87\""
+    },
+    {
+      "list": "kelee.lsr",
+      "url": "https://rule.kelee.one/Loon/ChinaASN.lsr",
+      "path": "kelee/ChinaASN.lsr",
+      "sha256": "89f77b983eed6a24a25d265245b7af4d743b496785f9a52c2c66fb90c7ee5fdb",
+      "size": 26895,
+      "etag": "\"ea648c8841ee69bfd0d823a0bb01de88\""
+    },
+    {
+      "list": "kelee.lsr",
+      "url": "https://rule.kelee.one/Loon/ChinaMax.lsr",
+      "path": "kelee/ChinaMax.lsr",
+      "sha256": "210029ef8b12df0705474ebb312e918fb977ce7a434f3ccb1a9ce9d90c620303",
+      "size": 3554850,
+      "etag": "\"4a9d16eb39d934ea725eae5d3ce12496\""
+    },
+    {
+      "list": "kelee.lsr",
+      "url": "https://rule.kelee.one/Loon/ChinaMobile.lsr",
+      "path": "kelee/ChinaMobile.lsr",
+      "sha256": "d6a78de336944ba82dbb05235a1cccb3b160ac20704222b1e04afbd6697c65ff",
+      "size": 1051,
+      "etag": "\"83ff404ce14edab3ae150d225bc90235\""
+    },
+    {
+      "list": "kelee.lsr",
+      "url": "https://rule.kelee.one/Loon/ChinaTelecom.lsr",
+      "path": "kelee/ChinaTelecom.lsr",
+      "sha256": "76a3545f9a5e2da9767970903ba0350318b3bbf68f5b526b5a8a5773dc1f7e2c",
+      "size": 2306,
+      "etag": "\"1a41cd3aaa18e2ca23c561c482449fbe\""
+    },
+    {
+      "list": "kelee.lsr",
+      "url": "https://rule.kelee.one/Loon/DouYin.lsr",
+      "path": "kelee/DouYin.lsr",
+      "sha256": "223de1a2256434b6b3e96d4c4aee52469990478dfeca37d20611647f46c080ac",
+      "size": 428,
+      "etag": "\"5897645785cc0114e0039da4acabc370\""
+    },
+    {
+      "list": "kelee.lsr",
+      "url": "https://rule.kelee.one/Loon/GaoDe.lsr",
+      "path": "kelee/GaoDe.lsr",
+      "sha256": "d3f8af987981f181cea3a78dee6b7a29596e1f210839ca9a9e59dfd659e4836b",
+      "size": 278,
+      "etag": "\"40345f156e6daeed1bf49542005f7f4a\""
+    },
+    {
+      "list": "kelee.lsr",
+      "url": "https://rule.kelee.one/Loon/GitHub.lsr",
+      "path": "kelee/GitHub.lsr",
+      "sha256": "57abc342b55c789941803958b881920ba8c1d07ea102a41fceca10bda7b8f679",
+      "size": 1022,
+      "etag": "\"a4ee7039372b192ef53769566fdcbff0\""
+    },
+    {
+      "list": "kelee.lsr",
+      "url": "https://rule.kelee.one/Loon/Global.lsr",
+      "path": "kelee/Global.lsr",
+      "sha256": "6743f1f17bad95b68887313bd4d828b93ab68b1665862c545c41fd74f425c15d",
+      "size": 1066610,
+      "etag": "\"22ddad87a9e2257a7ecbbed888035b9a\""
+    },
+    {
+      "list": "kelee.lsr",
+      "url": "https://rule.kelee.one/Loon/Google.lsr",
+      "path": "kelee/Google.lsr",
+      "sha256": "63b3767d7b27437c73b1b3e007f73794f5b6da211fe3606b3a20c5027172edaf",
+      "size": 20707,
+      "etag": "\"bb5ac60f863419eaa92aa4380e2ff192\""
+    },
+    {
+      "list": "kelee.lsr",
+      "url": "https://rule.kelee.one/Loon/Instagram.lsr",
+      "path": "kelee/Instagram.lsr",
+      "sha256": "09a14587a3246fc7163b498d43a556a5fc2adab3648deca2c18357231e71d024",
+      "size": 163,
+      "etag": "\"1916eff38d4be1217b2e37fc12714505\""
+    },
+    {
+      "list": "kelee.lsr",
+      "url": "https://rule.kelee.one/Loon/JingDong.lsr",
+      "path": "kelee/JingDong.lsr",
+      "sha256": "43f3c98b8f2c93d20a9e313f530dfb3e27847d6dc52a3d3c40412ed0c27b35fe",
+      "size": 7384,
+      "etag": "\"1b846235b0715f48b20ce5cc78f6b506\""
+    },
+    {
+      "list": "kelee.lsr",
+      "url": "https://rule.kelee.one/Loon/KugouKuwo.lsr",
+      "path": "kelee/KugouKuwo.lsr",
+      "sha256": "3310f84437a3e95a897594f86bfefe106a21609aaab4cbb06520b243415b6685",
+      "size": 3857,
+      "etag": "\"c2609776f5ea36345617e263e710f754\""
+    },
+    {
+      "list": "kelee.lsr",
+      "url": "https://rule.kelee.one/Loon/Microsoft.lsr",
+      "path": "kelee/Microsoft.lsr",
+      "sha256": "3b5899e0411bc9a6fd0ef393855bb488a9c82e68235117ad46243fad88920282",
+      "size": 22491,
+      "etag": "\"46745e44671973b44f883753ebc39d5f\""
+    },
+    {
+      "list": "kelee.lsr",
+      "url": "https://rule.kelee.one/Loon/NetEase.lsr",
+      "path": "kelee/NetEase.lsr",
+      "sha256": "310816d8427f1167e4af8fa75a6fc8f222f920811fc940e28990b14b667050b0",
+      "size": 4326,
+      "etag": "\"d2c0859b1b3e83eae096e38a95deb1e5\""
+    },
+    {
+      "list": "kelee.lsr",
+      "url": "https://rule.kelee.one/Loon/NetEaseMusic.lsr",
+      "path": "kelee/NetEaseMusic.lsr",
+      "sha256": "a1fd9fdd50518ea59532cffcd6aa0e31c1eac920becb6fc187a22f9b4e693d45",
+      "size": 1133,
+      "etag": "\"acb2f97b1fe81dfffa964cc73c475cdb\""
+    },
+    {
+      "list": "kelee.lsr",
+      "url": "https://rule.kelee.one/Loon/Pinduoduo.lsr",
+      "path": "kelee/Pinduoduo.lsr",
+      "sha256": "353e31f98d18d06d29553b5ce8174fdf92eced81c6f65c5ef370b02cae08baa5",
+      "size": 134,
+      "etag": "\"92578aba7d73b3bd351c62b201ec3b7c\""
+    },
+    {
+      "list": "kelee.lsr",
+      "url": "https://kelee.one/Tool/Loon/Lsr/SpeedtestInternational.lsr",
+      "path": "kelee/SpeedtestInternational.lsr",
+      "sha256": "24229e29b95b56bf0c1504c33d7724344e5f00b6bf92c96f1f4e194f8b2ad6c2",
+      "size": 586389,
+      "etag": "\"cc9535cffb136a81d4e35664f2c16e6a\""
+    },
+    {
+      "list": "kelee.lsr",
+      "url": "https://rule.kelee.one/Loon/Telegram.lsr",
+      "path": "kelee/Telegram.lsr",
+      "sha256": "aabd524b294b845ebcb5a8093da4b0a20b39eabbbb357072643a18a1c9320ff5",
+      "size": 1231,
+      "etag": "\"1a8624a5164d8dc9a70402eb899ae6c1\""
+    },
+    {
+      "list": "kelee.lsr",
+      "url": "https://rule.kelee.one/Loon/Tencent.lsr",
+      "path": "kelee/Tencent.lsr",
+      "sha256": "6cb20df73f64e09014ed9ff789522752daf3a0fabc1284e366c4497571d13b37",
+      "size": 75795,
+      "etag": "\"eb2c420dab43a54250883ea709547bff\""
+    },
+    {
+      "list": "kelee.lsr",
+      "url": "https://rule.kelee.one/Loon/TestFlight.lsr",
+      "path": "kelee/TestFlight.lsr",
+      "sha256": "d45db22e9166ac080897872f341357688b728385c18d98e3f97e3c2cebf19721",
+      "size": 129,
+      "etag": "\"f297a326cb23b4ded141d7b0ce9dae33\""
+    },
+    {
+      "list": "kelee.lsr",
+      "url": "https://rule.kelee.one/Loon/TikTok.lsr",
+      "path": "kelee/TikTok.lsr",
+      "sha256": "40b83c3830d5bd959bdaf9fc2b7f70993f197173bd318fa6b3019fb22541c4a6",
+      "size": 978,
+      "etag": "\"83617185efaea41f98018d28f8fa9db3\""
+    },
+    {
+      "list": "kelee.lsr",
+      "url": "https://rule.kelee.one/Loon/Twitter.lsr",
+      "path": "kelee/Twitter.lsr",
+      "sha256": "2bae03f44477e138435b748131e450bb22df1a50c04662cc67ad28c40a516957",
+      "size": 1015,
+      "etag": "\"44afabebc67af540d800db875f4b6cf2\""
+    },
+    {
+      "list": "kelee.lsr",
+      "url": "https://rule.kelee.one/Loon/WeChat.lsr",
+      "path": "kelee/WeChat.lsr",
+      "sha256": "617a278e322cdca0f1b99b1e8d81929573ad9671b1bb6f91f15e50865d69f3d4",
+      "size": 1247,
+      "etag": "\"5237d0ddd2834e8d7db531d6a303918e\""
+    },
+    {
+      "list": "kelee.lsr",
+      "url": "https://rule.kelee.one/Loon/XiaoMi.lsr",
+      "path": "kelee/XiaoMi.lsr",
+      "sha256": "58d346cd19b670628508c371496ff5dc408ed2a24e56090257528e142b64d03b",
+      "size": 4726,
+      "etag": "\"36bf44ab74c2f2cd2945bfcc84f51fec\""
+    },
+    {
+      "list": "kelee.lsr",
+      "url": "https://rule.kelee.one/Loon/YouTube.lsr",
+      "path": "kelee/YouTube.lsr",
+      "sha256": "7f7870e8ec60403c97157dd093df297c60dfef08c2f3307ea18365671c2d436f",
+      "size": 5553,
+      "etag": "\"f93996b511c855e73302d1a2c4c19d3a\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Adblock.png",
+      "path": "png/Adblock.png",
+      "sha256": "3f7a6e83acba3d13fb6a21c1ca9c006f5f6b92edc2c502f4e9158c3e4f6c63dd",
+      "size": 12100,
+      "etag": "\"77b9bd54cbfdfc10464b40a19b32955f05d2f7543934d68c17459f3e4458d8f0\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png",
+      "path": "png/Apple.png",
+      "sha256": "89bfe107f21dd109d93f8d58671be06e0ad34a9f672ba96d228c2b3c3b89dfba",
+      "size": 4838,
+      "etag": "\"a3f75bfd5e57aec36230b5f87653519df5e8a5d7729bea881550f40a4312b2b8\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/CN.png",
+      "path": "png/CN.png",
+      "sha256": "b2c211b9305dcea4b39b364db73e478f588fff0515cd580ba8a2842c82cd2d51",
+      "size": 10124,
+      "etag": "\"51103d1dd7c71452e7f3ec463406619b688c29d0dc64863352582192d49e1488\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png",
+      "path": "png/ChatGPT.png",
+      "sha256": "2779f53f26cda315cc5624de87c51e51e6598210674875dce5271ef2a2d91691",
+      "size": 20153,
+      "etag": "\"3413faae9a658257f6f79ee5b94ecc9a91e9f3e24c41003fc070341882d2683e\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Emby.png",
+      "path": "png/Emby.png",
+      "sha256": "3567d916fd85e221553b2201c2ec4408d6178d3efc9706a45ac3f81f4ad93c58",
+      "size": 5897,
+      "etag": "\"3852297714d5c81bf12c5ba30ce11ba55973ac80c836cea421131cce05207d5f\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png",
+      "path": "png/GitHub.png",
+      "sha256": "9fb913b9abee0f0152a9acc6772e89762a071f5a9bd706420f5768e96cb24481",
+      "size": 14031,
+      "etag": "\"7dfe30dfa42cc219b2270517f90eb58bdac7c2782cbd0064a589a88e6207d4db\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png",
+      "path": "png/Global.png",
+      "sha256": "a57cdb22c5ae4e5cc27c42c4578eed61359786c37a11173d1436666e850aaf61",
+      "size": 6422,
+      "etag": "\"632e9eccc8dadd9c401768bcb032cbd863c31a86afb5e1e273ce4a211718b318\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Google.png",
+      "path": "png/Google.png",
+      "sha256": "72d52fa7b1bd7b097004b09855d8f2c7d3b2813694d65be787618d457fd9bac1",
+      "size": 9580,
+      "etag": "\"eb1fa9858b07c32c8c44b0f859672a66ac4562f62621d24df4a41e679570ed67\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png",
+      "path": "png/HK.png",
+      "sha256": "7b6d08af03264b34d63a355d802285dc33189ee3705db407e77f8a62223decad",
+      "size": 11336,
+      "etag": "\"31996eec09932f167528c872e7493a984df543defd43cd7b90b4b27e61d5ef63\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Instagram.png",
+      "path": "png/Instagram.png",
+      "sha256": "6c38baf722d9fdde83a73c1f9aaf4f30fde2437d75e65a8e8b244a47eceed125",
+      "size": 14021,
+      "etag": "\"50085d63867ad9d5a4552ab53fe975ae42a4291826b224e650ab35c522dbc077\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png",
+      "path": "png/JP.png",
+      "sha256": "9e6366a6764f2be7b0dbc8ebbf47b1c1312a653d7540364a33331d52a3b13220",
+      "size": 8477,
+      "etag": "\"857b98315c1ef0ea0279777de5e4adc22f165b59b3455d9e2bd9b2addc71b02b\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png",
+      "path": "png/KR.png",
+      "sha256": "f33cc7a6722f4d9efc6cdee3535283ec5fc590e139cbdd2bd145c84d2f89b168",
+      "size": 15018,
+      "etag": "\"15ff43936442448224c3e01e587ff6317708b986270b5d989b35830b19d2bcf9\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/MO.png",
+      "path": "png/MO.png",
+      "sha256": "96f12cb99b0fdbbc458872999848517e5d086b7fb166da9bfa0f5277544d29c0",
+      "size": 11137,
+      "etag": "\"01bd6f2c23043ca6b03e331b02aa6e2b1bfe9e5a822640a5a094d80f275e3b65\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Malaysia.png",
+      "path": "png/Malaysia.png",
+      "sha256": "070ca981478398e27db32e2b991f66ce18756f66661fe56294a616abdfd24a30",
+      "size": 11331,
+      "etag": "\"7c1b06c3686d4a178de35474e07c8ed9045c327a4b2ef82b58c0126d6690e6f0\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png",
+      "path": "png/Microsoft.png",
+      "sha256": "73ca9796a36f8408c2191df47bb31d7b4997727fe657acdf96ff06166d01e58c",
+      "size": 9111,
+      "etag": "\"897c5a1bb2663aa53dde7c3272c2d6bb865481300f16464557a10c26ad8ed05e\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Netease.png",
+      "path": "png/Netease.png",
+      "sha256": "f67248781e661e341976af594061305c0578dd96e8d9bb7396b542bc4e1656fe",
+      "size": 10973,
+      "etag": "\"d676a827ad434d75594adf696e0781bf2f20565c084f0f97cc7f3e9c73d834a5\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/QQ.png",
+      "path": "png/QQ.png",
+      "sha256": "fc0d811ecf9c1516baa0901ed5ce8a7e6bd6b64f7248a8cd3936b97563c48fe7",
+      "size": 15944,
+      "etag": "\"9abecb4a732e65be0e81601bc75223a87cd855e8665b8dfd4fc0fe56c8be603a\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png",
+      "path": "png/SG.png",
+      "sha256": "2fad74de2339578914335c3936d40a708a60b13de9cce5f76205125a5302e615",
+      "size": 7382,
+      "etag": "\"f9613153fe69c48f89d169c1cc616f2bda2a037ba5b78d2bf6be842b6d457125\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Speedtest.png",
+      "path": "png/Speedtest.png",
+      "sha256": "4ef2b98b38ef6377bcf90a0622d964bc2117098722d6c5de3ec86c306b920f03",
+      "size": 6009,
+      "etag": "\"b5d2c3dd7b22e650a76f0cfeb0fb51c2c6522c33d92dcf1330349b5ac45d88e0\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png",
+      "path": "png/TW.png",
+      "sha256": "49df3f34c471af48b81f96ebc5b4d3cb28942df3ddcedbedeb63792783588b78",
+      "size": 10244,
+      "etag": "\"61ad389ec97269a559c673bd4ce5bd5138cea6c5a13d39cda2f10f7e9ba5c120\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taobao.png",
+      "path": "png/Taobao.png",
+      "sha256": "2de8dc67f0ab3754fae2121032dc992129816300a0a65bbb9cc66b53a327c778",
+      "size": 11136,
+      "etag": "\"cb3f6b5ecf75b5052ecd05fd1528892e1a30fb254ae7f1fc9666a0f05c9b32c1\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png",
+      "path": "png/Telegram.png",
+      "sha256": "1af4c3abe4f3be8f1fa1677302aa40e7fb509b89707fbd79f07d209c36ba970e",
+      "size": 13559,
+      "etag": "\"2f4d621056ad11b4b2c120285c6f76af5126e28f436f87778f8ca90fee18cdd1\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/TikTok.png",
+      "path": "png/TikTok.png",
+      "sha256": "8097fcc577f174c6c52f4e5f05b40e53f56532ca8b99928423ea3ddf57c4fbe5",
+      "size": 11688,
+      "etag": "\"61e2d34a02eb537f2444102c13242c853e61f49347d912285a08547f56c0334d\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok_1.png",
+      "path": "png/TikTok_1.png",
+      "sha256": "8f4631726fa3ceef141424a2ed1186d39774ce17a91ddb650c0339ddf6848a04",
+      "size": 8440,
+      "etag": "\"7dd61d8b236b21ecdd42a07238209320abb66d967fcfd745e5531a759ec27f38\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png",
+      "path": "png/Twitter.png",
+      "sha256": "e36247f6e948f6bcf4f60d4e8f5fa82e6684444ecc4ede973b2067f8bdd5cd3f",
+      "size": 10369,
+      "etag": "\"9d9fd60d0630142faee71475161bf9d70bd880384f35ee233dc85731b1a03b26\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png",
+      "path": "png/US.png",
+      "sha256": "961bfb437ab98c46f1771031473165003dc200ea61ff9e30a4f4a18c2db56554",
+      "size": 11359,
+      "etag": "\"bfa36d48f0bace59608603571a481764d481b77c33d27c48aa75e8eeb1ebcc06\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Unlock.png",
+      "path": "png/Unlock.png",
+      "sha256": "b451099d582346c97f8a3f5a7f6f5461f9ccc9df99d609b274e17614d2e17750",
+      "size": 10629,
+      "etag": "\"15da0425dd265bc70e219c255335aee466fdc09812bc59f69416080f3f8edaad\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png",
+      "path": "png/YouTube.png",
+      "sha256": "1ff428e8f81e5b959cd7a1181f9f7279315e5d04de3b052886fc60834c28529d",
+      "size": 9092,
+      "etag": "\"6e556572691a3bfa72aab0023e8520de2560679d581c66fedcc094d2cb2cb6b7\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/baidunetdisk(1).png",
+      "path": "png/baidunetdisk(1).png",
+      "sha256": "41097eb1e686d1be2d7832408da30a7c06095d0f4ddb25fc242c6ad59963cd17",
+      "size": 17703,
+      "etag": "\"28471667402b29dbace2a1b4f1b2177e60ad85afd2e3c3d75ad7b4d1e2abb3fd\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili_3.png",
+      "path": "png/bilibili_3.png",
+      "sha256": "15c4a4f2cecdd38e2be03854e9c76c5d64b6a681f63c622713bb23576e44fb47",
+      "size": 9826,
+      "etag": "\"b151b261ee2b47e9cf113c21b8949ea6e2b623cd2307c55ebe7a944d9cea042e\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/dianxin.png",
+      "path": "png/dianxin.png",
+      "sha256": "8432713fdaadf394832d062be28ffce30b68cae905fe497dd8b2ebf2dd29854e",
+      "size": 3975,
+      "etag": "\"b1c5ee56a2b8ddbf5116e08375a096c4daea73ad1ce9e7c1572bc4926034180f\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/jingdong.png",
+      "path": "png/jingdong.png",
+      "sha256": "dafb109d95fbd0a74391cebb89b122aecc20b41c57e4c425289361674e988d3f",
+      "size": 5873,
+      "etag": "\"a49ebb970faa7bc022c68c7f2f33a6dfd37ffdc6d5d81e77ed88b773c12c0bdb\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/kugou.png",
+      "path": "png/kugou.png",
+      "sha256": "aa48d054c1fb9553c0d44cae3469e4845070295db4cebad03e05fbb0b165ef53",
+      "size": 14821,
+      "etag": "\"88b049bb93ed41fc118fa7d321e8f1ae9e2d6181956ccc41487ad0425b925110\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/mega.png",
+      "path": "png/mega.png",
+      "sha256": "b6324bca0851989b38e91f6e700867b434074840646a67fda671d6f10312663b",
+      "size": 5901,
+      "etag": "\"c32fdffce401222de95c235097f47ac843e35c5657f0519ba7b38ac0c7260294\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/pinduoduo.png",
+      "path": "png/pinduoduo.png",
+      "sha256": "1992ab9585c6b563ed7e745cad65d2cee527f5b7362a1bdda908de1db9260801",
+      "size": 22399,
+      "etag": "\"9ac403a1bff46600695e259ecd5608fb3e35c1847ab64c8ad62250f76d68a8f2\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/tengxunditu.png",
+      "path": "png/tengxunditu.png",
+      "sha256": "48c120598d3bbb8019c2f5b7b9dba1d36ea65d427aafa8d9993c9bd99141e389",
+      "size": 18788,
+      "etag": "\"709dcf3d2feb6de4ed7e67e5a00a76d0144d817d59a2021397f6160ea62b4d8a\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/testflight(2).png",
+      "path": "png/testflight(2).png",
+      "sha256": "a91645125099927a14e3b08eceb6e34b439b71de9290250f14351e1f8f2243fd",
+      "size": 28735,
+      "etag": "\"de9419c41c81aa6dbc3b3ef2a8dbdc0e514f16f25b3bca7755d428bae4ec16df\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/wechat(1).png",
+      "path": "png/wechat(1).png",
+      "sha256": "863141136444bbb4fcb17341979c654380e2f79dfec71182e24ff44871d209e2",
+      "size": 3638,
+      "etag": "\"d009f5fde407fb3e2ebc6d3ec4c31e476470bdf3c0d83f294c6fb7fa212b69a6\""
+    },
+    {
+      "list": "png.lsr",
+      "url": "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/yidong(1).png",
+      "path": "png/yidong(1).png",
+      "sha256": "bd40d73fdc87b325994adc084c07afa4a1d227633053eddc75dd29cd2f092152",
+      "size": 7228,
+      "etag": "\"8b970ca1b56f0b564963f847dbe13826fc729086d4eef95ec883a7a8c33d32af\""
+    }
+  ]
+}

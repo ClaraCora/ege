@@ -1,0 +1,38 @@
+name: Backup listed resources
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 00:17 and 12:17 UTC, avoiding the top of the hour.
+    - cron: "17 0,12 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: resource-backup
+  cancel-in-progress: false
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Download and validate resources
+        run: python3 scripts/backup.py
+
+      - name: Commit changes
+        shell: bash
+        run: |
+          git add -A -- kelee.lsr png.lsr ad.lsr kelee png ad metadata/manifest.json
+          if git diff --cached --quiet; then
+            echo "No resource changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(backup): update resources"
+          git push
