@@ -24,10 +24,21 @@ jobs:
       - name: Download and validate resources
         run: python3 scripts/backup.py
 
+      - name: Install Mihomo converter
+        shell: bash
+        run: |
+          curl -fsSL -o /tmp/mihomo.gz \
+            https://github.com/MetaCubeX/mihomo/releases/download/v1.19.30/mihomo-linux-amd64-v1-v1.19.30.gz
+          gzip -dc /tmp/mihomo.gz > /tmp/mihomo
+          chmod +x /tmp/mihomo
+
+      - name: Convert Kelee rules
+        run: python3 scripts/convert_kelee.py --mihomo /tmp/mihomo
+
       - name: Commit changes
         shell: bash
         run: |
-          git add -A -- kelee.lsr png.lsr ad.lsr kelee png ad metadata/manifest.json
+          git add -A -- kelee.lsr png.lsr ad.lsr mihomo.lsr geo.lsr kelee png ad mihomo metadata/manifest.json metadata/kelee-mihomo-manifest.json
           if git diff --cached --quiet; then
             echo "No resource changes"
             exit 0

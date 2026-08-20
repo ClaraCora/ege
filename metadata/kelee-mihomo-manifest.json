@@ -1,0 +1,797 @@
+{
+  "mihomo_version": "v1.19.30",
+  "sources": [
+    {
+      "source": "kelee/AI.lsr",
+      "source_sha256": "ca8b005a6b750b891951c47e16aa145caabf7c43db31db8d47c2f9c717c8e06a",
+      "counts": {
+        "domain": 90,
+        "ipcidr": 2,
+        "classical": 3,
+        "unsupported": 0
+      },
+      "outputs": [
+        {
+          "behavior": "domain",
+          "path": "domain/AI.mrs",
+          "sha256": "96bdd1d16a00d1e3b6cdae7081760524e08b291fba33983e4c4bd0fc57df88fb",
+          "size": 1065
+        },
+        {
+          "behavior": "ipcidr",
+          "path": "ipcidr/AI.mrs",
+          "sha256": "23097434fc9b409301244d48ac0b4143dec4a2743d698ac4915d6e11d9a9a365",
+          "size": 67
+        },
+        {
+          "behavior": "classical",
+          "path": "classical/AI.list",
+          "sha256": "c276dfcee3560443e1c4ac837fbd8bccddfc0923bcd3d485b95f1b5c5ef5a12c",
+          "size": 236
+        }
+      ]
+    },
+    {
+      "source": "kelee/Alibaba.lsr",
+      "source_sha256": "89fbf58aa482316adc6500a70eb726236e8a7d7a1c85fee80b3bf22f4d855362",
+      "counts": {
+        "domain": 1266,
+        "ipcidr": 54,
+        "classical": 0,
+        "unsupported": 0
+      },
+      "outputs": [
+        {
+          "behavior": "domain",
+          "path": "domain/Alibaba.mrs",
+          "sha256": "56622a33e66cc0178812b7514ac75b04c4d87f32f7f8ed4516b7c40400cebdfa",
+          "size": 7649
+        },
+        {
+          "behavior": "ipcidr",
+          "path": "ipcidr/Alibaba.mrs",
+          "sha256": "cffb4a135e01aa093dffcf770b02157c8a9bd495665ecafeed42b70ea7d45f6f",
+          "size": 333
+        }
+      ]
+    },
+    {
+      "source": "kelee/Apple.lsr",
+      "source_sha256": "18a6d908d164e172be18f69a4cd507580b52c8f31d0f129d4fb4db89a097251d",
+      "counts": {
+        "domain": 1823,
+        "ipcidr": 13,
+        "classical": 7,
+        "unsupported": 23
+      },
+      "outputs": [
+        {
+          "behavior": "domain",
+          "path": "domain/Apple.mrs",
+          "sha256": "be0256bd4ba6a46f27055f1cdb19d203291a5d37a41dc5f537c0ac6f797011b0",
+          "size": 18030
+        },
+        {
+          "behavior": "ipcidr",
+          "path": "ipcidr/Apple.mrs",
+          "sha256": "333c99021f21736882b611d8d1b9ecfb00bae7eebe10a65fb3b0e93f2cc9dd09",
+          "size": 171
+        },
+        {
+          "behavior": "classical",
+          "path": "classical/Apple.list",
+          "sha256": "73a6b62a0f5d6c84c5d75aa579a0b50fad4d52695b2574b654764949df978db3",
+          "size": 245
+        },
+        {
+          "behavior": "unsupported",
+          "path": "unsupported/Apple.list",
+          "sha256": "299eb49702fa3e2484e86d5f52deeb12e0476da16bbe7ad93aab142314bb2a48",
+          "size": 570
+        }
+      ]
+    },
+    {
+      "source": "kelee/Baidu.lsr",
+      "source_sha256": "3cce3276cf3971f95639c91cf7cf086e2f9169b954558c8567f84b5d1f1fdb53",
+      "counts": {
+        "domain": 251,
+        "ipcidr": 0,
+        "classical": 0,
+        "unsupported": 0
+      },
+      "outputs": [
+        {
+          "behavior": "domain",
+          "path": "domain/Baidu.mrs",
+          "sha256": "78b4d3053736eabe119b6c75d565ec04da7285111754812280ca4d3e9e44af7a",
+          "size": 2090
+        }
+      ]
+    },
+    {
+      "source": "kelee/BiliBili.lsr",
+      "source_sha256": "0756c4e4947f15039efed0b7bee4957fa4f60ede9c35d6d2a4c83e8b431939a3",
+      "counts": {
+        "domain": 115,
+        "ipcidr": 8,
+        "classical": 0,
+        "unsupported": 4
+      },
+      "outputs": [
+        {
+          "behavior": "domain",
+          "path": "domain/BiliBili.mrs",
+          "sha256": "46212e2fb7b18f24644f0f7a90a83efb0645738270769f527cf13f8a9b598497",
+          "size": 1477
+        },
+        {
+          "behavior": "ipcidr",
+          "path": "ipcidr/BiliBili.mrs",
+          "sha256": "064521dd03347b12a7bf2bb023880b632d421e6e3676fb97e5a31a70c529cbdf",
+          "size": 96
+        },
+        {
+          "behavior": "unsupported",
+          "path": "unsupported/BiliBili.list",
+          "sha256": "6d1a2bcb4d919deb3991387715e4f9be80f1ce1805bf99f14cc526ffab21d935",
+          "size": 83
+        }
+      ]
+    },
+    {
+      "source": "kelee/ChinaASN.lsr",
+      "source_sha256": "89f77b983eed6a24a25d265245b7af4d743b496785f9a52c2c66fb90c7ee5fdb",
+      "counts": {
+        "domain": 0,
+        "ipcidr": 0,
+        "classical": 1009,
+        "unsupported": 0
+      },
+      "outputs": [
+        {
+          "behavior": "classical",
+          "path": "classical/ChinaASN.list",
+          "sha256": "7e7599db0fb58d924b505f1ac45663dbcd564d9e13964ba1f747cee321c358f1",
+          "size": 26842
+        }
+      ]
+    },
+    {
+      "source": "kelee/ChinaMax.lsr",
+      "source_sha256": "210029ef8b12df0705474ebb312e918fb977ce7a434f3ccb1a9ce9d90c620303",
+      "counts": {
+        "domain": 111632,
+        "ipcidr": 12164,
+        "classical": 14,
+        "unsupported": 61
+      },
+      "outputs": [
+        {
+          "behavior": "domain",
+          "path": "domain/ChinaMax.mrs",
+          "sha256": "8103e4917f681b68689a9b3090678f47674f1ec38b8ea5611c9f6cedd2c73f06",
+          "size": 543146
+        },
+        {
+          "behavior": "ipcidr",
+          "path": "ipcidr/ChinaMax.mrs",
+          "sha256": "d9c3648e393ab80553a3b13d67f2636a3d720eb5aee939a9ee75d7286a9bf901",
+          "size": 50732
+        },
+        {
+          "behavior": "classical",
+          "path": "classical/ChinaMax.list",
+          "sha256": "18f704cc9fce8e3515f0d6a00f204112108f069c3535b3d139dc51d2be23e6cf",
+          "size": 333
+        },
+        {
+          "behavior": "unsupported",
+          "path": "unsupported/ChinaMax.list",
+          "sha256": "f54a0b886c6017f8dd44341f468aa2f0160cfb95c736a08988db4979d3e22634",
+          "size": 1649
+        }
+      ]
+    },
+    {
+      "source": "kelee/ChinaMobile.lsr",
+      "source_sha256": "d6a78de336944ba82dbb05235a1cccb3b160ac20704222b1e04afbd6697c65ff",
+      "counts": {
+        "domain": 35,
+        "ipcidr": 1,
+        "classical": 0,
+        "unsupported": 0
+      },
+      "outputs": [
+        {
+          "behavior": "domain",
+          "path": "domain/ChinaMobile.mrs",
+          "sha256": "a328c5093d69656c12c614ab7d8939bab45ba31fad794d83f1464e608f7b4ffa",
+          "size": 410
+        },
+        {
+          "behavior": "ipcidr",
+          "path": "ipcidr/ChinaMobile.mrs",
+          "sha256": "2393f1ac32e66cf7bb04101e571129d383bc943a3ab98baf06b653ee79967f78",
+          "size": 51
+        }
+      ]
+    },
+    {
+      "source": "kelee/ChinaTelecom.lsr",
+      "source_sha256": "76a3545f9a5e2da9767970903ba0350318b3bbf68f5b526b5a8a5773dc1f7e2c",
+      "counts": {
+        "domain": 83,
+        "ipcidr": 0,
+        "classical": 0,
+        "unsupported": 0
+      },
+      "outputs": [
+        {
+          "behavior": "domain",
+          "path": "domain/ChinaTelecom.mrs",
+          "sha256": "cfdc51fc9827bcf04bc636fc5c69439a04bbb7d627ee31c91ded3e4de7e0aad0",
+          "size": 703
+        }
+      ]
+    },
+    {
+      "source": "kelee/DouYin.lsr",
+      "source_sha256": "223de1a2256434b6b3e96d4c4aee52469990478dfeca37d20611647f46c080ac",
+      "counts": {
+        "domain": 13,
+        "ipcidr": 0,
+        "classical": 0,
+        "unsupported": 0
+      },
+      "outputs": [
+        {
+          "behavior": "domain",
+          "path": "domain/DouYin.mrs",
+          "sha256": "bd47e644565e0cd08a42e4f1b11dc59e25917458c147c109a33fa03b8e0ed62a",
+          "size": 202
+        }
+      ]
+    },
+    {
+      "source": "kelee/GaoDe.lsr",
+      "source_sha256": "d3f8af987981f181cea3a78dee6b7a29596e1f210839ca9a9e59dfd659e4836b",
+      "counts": {
+        "domain": 9,
+        "ipcidr": 0,
+        "classical": 0,
+        "unsupported": 0
+      },
+      "outputs": [
+        {
+          "behavior": "domain",
+          "path": "domain/GaoDe.mrs",
+          "sha256": "e94c3172b188f14e1927d4c85d20a4c1fc1acc890d8ab2ca4a835e05075d2d03",
+          "size": 138
+        }
+      ]
+    },
+    {
+      "source": "kelee/GitHub.lsr",
+      "source_sha256": "57abc342b55c789941803958b881920ba8c1d07ea102a41fceca10bda7b8f679",
+      "counts": {
+        "domain": 30,
+        "ipcidr": 0,
+        "classical": 1,
+        "unsupported": 0
+      },
+      "outputs": [
+        {
+          "behavior": "domain",
+          "path": "domain/GitHub.mrs",
+          "sha256": "96cfed234352274a3a47be0dec5423d80319ddebda1c4e81eaac341418ca05d1",
+          "size": 466
+        },
+        {
+          "behavior": "classical",
+          "path": "classical/GitHub.list",
+          "sha256": "f4261ff07a42b2c30b03e3343fae368f1116993c4e4684e226cf63fd7c816464",
+          "size": 23
+        }
+      ]
+    },
+    {
+      "source": "kelee/Global.lsr",
+      "source_sha256": "6743f1f17bad95b68887313bd4d828b93ab68b1665862c545c41fd74f425c15d",
+      "counts": {
+        "domain": 35543,
+        "ipcidr": 116,
+        "classical": 36,
+        "unsupported": 46
+      },
+      "outputs": [
+        {
+          "behavior": "domain",
+          "path": "domain/Global.mrs",
+          "sha256": "6c4ddd8bf121c670d9e131ca40d168dee48aa1a657088b127929967388ef5d7f",
+          "size": 245261
+        },
+        {
+          "behavior": "ipcidr",
+          "path": "ipcidr/Global.mrs",
+          "sha256": "9bb5c8eb1a87cab2f5fd95459a7593007e0ebd29213fec950c324c9303813abf",
+          "size": 818
+        },
+        {
+          "behavior": "classical",
+          "path": "classical/Global.list",
+          "sha256": "badf770aa4ab38bce03eb8314a928d2f8065efb1f5b2261667a2a3691dbe1460",
+          "size": 856
+        },
+        {
+          "behavior": "unsupported",
+          "path": "unsupported/Global.list",
+          "sha256": "503045979aa7b81cf02f10a195b60ddc379c99512b56038be75fba61ff284114",
+          "size": 1047
+        }
+      ]
+    },
+    {
+      "source": "kelee/Google.lsr",
+      "source_sha256": "63b3767d7b27437c73b1b3e007f73794f5b6da211fe3606b3a20c5027172edaf",
+      "counts": {
+        "domain": 698,
+        "ipcidr": 5,
+        "classical": 5,
+        "unsupported": 3
+      },
+      "outputs": [
+        {
+          "behavior": "domain",
+          "path": "domain/Google.mrs",
+          "sha256": "5f6efc689ef405bb3af1b0e8987ed82dad5bb2b14e6eebc8f1852db245336cfb",
+          "size": 6196
+        },
+        {
+          "behavior": "ipcidr",
+          "path": "ipcidr/Google.mrs",
+          "sha256": "385efe1b53becd83c39dc9ffa1b2ec529224eb17a761fb7c9d2790defdadf695",
+          "size": 97
+        },
+        {
+          "behavior": "classical",
+          "path": "classical/Google.list",
+          "sha256": "abf20070c3e5b2f2f18a4be23825e5a6b959a0992257845a936b8d18b98dd9f7",
+          "size": 120
+        },
+        {
+          "behavior": "unsupported",
+          "path": "unsupported/Google.list",
+          "sha256": "dfc216737c8c0863663a7a582b94ca13f2baf2a804c62c9655ff5177d98827cd",
+          "size": 107
+        }
+      ]
+    },
+    {
+      "source": "kelee/Instagram.lsr",
+      "source_sha256": "09a14587a3246fc7163b498d43a556a5fc2adab3648deca2c18357231e71d024",
+      "counts": {
+        "domain": 3,
+        "ipcidr": 0,
+        "classical": 1,
+        "unsupported": 0
+      },
+      "outputs": [
+        {
+          "behavior": "domain",
+          "path": "domain/Instagram.mrs",
+          "sha256": "3832eae03d3fe5fe117c5acfc0a8a1a3add1b00bc0a4f6455ff32e2ae0dd01ea",
+          "size": 81
+        },
+        {
+          "behavior": "classical",
+          "path": "classical/Instagram.list",
+          "sha256": "f8903111996f7da772f8922d09f725624c1d23c25005f3af5c4c04036aaab579",
+          "size": 26
+        }
+      ]
+    },
+    {
+      "source": "kelee/JingDong.lsr",
+      "source_sha256": "43f3c98b8f2c93d20a9e313f530dfb3e27847d6dc52a3d3c40412ed0c27b35fe",
+      "counts": {
+        "domain": 249,
+        "ipcidr": 0,
+        "classical": 0,
+        "unsupported": 0
+      },
+      "outputs": [
+        {
+          "behavior": "domain",
+          "path": "domain/JingDong.mrs",
+          "sha256": "5f44135dddb0b8141ab7f6cfffdb1a8a85500ef50a6acc3486bce88e02dfdcb0",
+          "size": 2144
+        }
+      ]
+    },
+    {
+      "source": "kelee/KugouKuwo.lsr",
+      "source_sha256": "3310f84437a3e95a897594f86bfefe106a21609aaab4cbb06520b243415b6685",
+      "counts": {
+        "domain": 19,
+        "ipcidr": 90,
+        "classical": 0,
+        "unsupported": 0
+      },
+      "outputs": [
+        {
+          "behavior": "domain",
+          "path": "domain/KugouKuwo.mrs",
+          "sha256": "1515007dbd6c02b1321a55e2edeb4f1dc9f838611c7f2016df037fcf72943f1f",
+          "size": 214
+        },
+        {
+          "behavior": "ipcidr",
+          "path": "ipcidr/KugouKuwo.mrs",
+          "sha256": "0d0e43aa96b8ef048d68058039ac513232f5ccb5f0d82b129f0046a5681c6bdc",
+          "size": 617
+        }
+      ]
+    },
+    {
+      "source": "kelee/Microsoft.lsr",
+      "source_sha256": "3b5899e0411bc9a6fd0ef393855bb488a9c82e68235117ad46243fad88920282",
+      "counts": {
+        "domain": 704,
+        "ipcidr": 0,
+        "classical": 4,
+        "unsupported": 3
+      },
+      "outputs": [
+        {
+          "behavior": "domain",
+          "path": "domain/Microsoft.mrs",
+          "sha256": "dfca6472fb0fd72c569c3609d38bd6eb0cb4febc98140d1934e637528605d785",
+          "size": 7184
+        },
+        {
+          "behavior": "classical",
+          "path": "classical/Microsoft.list",
+          "sha256": "597a6d32495f4390ea6ce01fc66743432b12978c11a9719f3fc8b7b4f783a6a5",
+          "size": 97
+        },
+        {
+          "behavior": "unsupported",
+          "path": "unsupported/Microsoft.list",
+          "sha256": "8e911c9ac98d71fab087928ef90f47aedec62fe2b4d93a85958e48c9e31593a3",
+          "size": 73
+        }
+      ]
+    },
+    {
+      "source": "kelee/NetEase.lsr",
+      "source_sha256": "310816d8427f1167e4af8fa75a6fc8f222f920811fc940e28990b14b667050b0",
+      "counts": {
+        "domain": 118,
+        "ipcidr": 28,
+        "classical": 0,
+        "unsupported": 0
+      },
+      "outputs": [
+        {
+          "behavior": "domain",
+          "path": "domain/NetEase.mrs",
+          "sha256": "46a7b8a02acae6d3a8ed0259ea65c19903eb552555da26c7034b37ed6bdf8fbb",
+          "size": 1031
+        },
+        {
+          "behavior": "ipcidr",
+          "path": "ipcidr/NetEase.mrs",
+          "sha256": "b27efd845c8599fc886dda817b155e8963aaafff16f897328590aad3c75aa1e8",
+          "size": 157
+        }
+      ]
+    },
+    {
+      "source": "kelee/NetEaseMusic.lsr",
+      "source_sha256": "a1fd9fdd50518ea59532cffcd6aa0e31c1eac920becb6fc187a22f9b4e693d45",
+      "counts": {
+        "domain": 10,
+        "ipcidr": 18,
+        "classical": 0,
+        "unsupported": 2
+      },
+      "outputs": [
+        {
+          "behavior": "domain",
+          "path": "domain/NetEaseMusic.mrs",
+          "sha256": "58d1e1ec3915a0f69f50e25cb203ded4d4f48448304f3530ca0065ec4e21eb74",
+          "size": 199
+        },
+        {
+          "behavior": "ipcidr",
+          "path": "ipcidr/NetEaseMusic.mrs",
+          "sha256": "7607b30c27fddfe85542e60eb76de5c0e95106760db62a8700409f6e0675781a",
+          "size": 146
+        },
+        {
+          "behavior": "unsupported",
+          "path": "unsupported/NetEaseMusic.list",
+          "sha256": "adf3fbb645776a562918e8385b4453e078fff460fd916378fd08551bc77f3bb1",
+          "size": 85
+        }
+      ]
+    },
+    {
+      "source": "kelee/Pinduoduo.lsr",
+      "source_sha256": "353e31f98d18d06d29553b5ce8174fdf92eced81c6f65c5ef370b02cae08baa5",
+      "counts": {
+        "domain": 3,
+        "ipcidr": 0,
+        "classical": 0,
+        "unsupported": 0
+      },
+      "outputs": [
+        {
+          "behavior": "domain",
+          "path": "domain/Pinduoduo.mrs",
+          "sha256": "dd3e43be833198b3a253f242cfa674ac916410ba6f0078f71caf1b457dc77269",
+          "size": 81
+        }
+      ]
+    },
+    {
+      "source": "kelee/SpeedtestInternational.lsr",
+      "source_sha256": "24229e29b95b56bf0c1504c33d7724344e5f00b6bf92c96f1f4e194f8b2ad6c2",
+      "counts": {
+        "domain": 17158,
+        "ipcidr": 9,
+        "classical": 0,
+        "unsupported": 0
+      },
+      "outputs": [
+        {
+          "behavior": "domain",
+          "path": "domain/SpeedtestInternational.mrs",
+          "sha256": "b4422584786d244d5b27cf5de112e462fa6b77a2c03438bd5bd709e1fc38f5f5",
+          "size": 165561
+        },
+        {
+          "behavior": "ipcidr",
+          "path": "ipcidr/SpeedtestInternational.mrs",
+          "sha256": "5276f4145946e05ab7b20c11f9aa73b833e77860a40aa04600aef2e264b55758",
+          "size": 82
+        }
+      ]
+    },
+    {
+      "source": "kelee/Telegram.lsr",
+      "source_sha256": "aabd524b294b845ebcb5a8093da4b0a20b39eabbbb357072643a18a1c9320ff5",
+      "counts": {
+        "domain": 24,
+        "ipcidr": 10,
+        "classical": 6,
+        "unsupported": 0
+      },
+      "outputs": [
+        {
+          "behavior": "domain",
+          "path": "domain/Telegram.mrs",
+          "sha256": "a41a84d6d5c12152428541a363e240f54791f1b518aa1c9b93b289cb50da9cd1",
+          "size": 310
+        },
+        {
+          "behavior": "ipcidr",
+          "path": "ipcidr/Telegram.mrs",
+          "sha256": "4bf7ab72e61586ba31270c5bf9dfd0e7a8e4e3b23444e3e6ff0eca5677bb3c83",
+          "size": 143
+        },
+        {
+          "behavior": "classical",
+          "path": "classical/Telegram.list",
+          "sha256": "2209991af53ba5250692cc05b7c050ae5cf33e5828c9942aee319d18faf7ec01",
+          "size": 156
+        }
+      ]
+    },
+    {
+      "source": "kelee/Tencent.lsr",
+      "source_sha256": "6cb20df73f64e09014ed9ff789522752daf3a0fabc1284e366c4497571d13b37",
+      "counts": {
+        "domain": 2498,
+        "ipcidr": 20,
+        "classical": 0,
+        "unsupported": 5
+      },
+      "outputs": [
+        {
+          "behavior": "domain",
+          "path": "domain/Tencent.mrs",
+          "sha256": "d32db4e6afd91991a1599becefebc724e2ac8f560e95c3249e47f916a76e1c4a",
+          "size": 17924
+        },
+        {
+          "behavior": "ipcidr",
+          "path": "ipcidr/Tencent.mrs",
+          "sha256": "28c925cc69862c1b53d49834ea1889107fc315d9704ffe77b29654a3bd56c2b9",
+          "size": 137
+        },
+        {
+          "behavior": "unsupported",
+          "path": "unsupported/Tencent.list",
+          "sha256": "426d6ff90427d888d493b9c63620d86571c1bcb1188ea655cc94a635f6c0b5e4",
+          "size": 153
+        }
+      ]
+    },
+    {
+      "source": "kelee/TestFlight.lsr",
+      "source_sha256": "d45db22e9166ac080897872f341357688b728385c18d98e3f97e3c2cebf19721",
+      "counts": {
+        "domain": 2,
+        "ipcidr": 0,
+        "classical": 1,
+        "unsupported": 0
+      },
+      "outputs": [
+        {
+          "behavior": "domain",
+          "path": "domain/TestFlight.mrs",
+          "sha256": "6247257a66a68e496972460fc41e9bdfd15cfea23eb02c1171b36524d5ae8ba5",
+          "size": 73
+        },
+        {
+          "behavior": "classical",
+          "path": "classical/TestFlight.list",
+          "sha256": "0637c9289245a6173e7f88917791a71090d4fd6af7eb48860e9e6f17492b6908",
+          "size": 27
+        }
+      ]
+    },
+    {
+      "source": "kelee/TikTok.lsr",
+      "source_sha256": "40b83c3830d5bd959bdaf9fc2b7f70993f197173bd318fa6b3019fb22541c4a6",
+      "counts": {
+        "domain": 29,
+        "ipcidr": 0,
+        "classical": 2,
+        "unsupported": 1
+      },
+      "outputs": [
+        {
+          "behavior": "domain",
+          "path": "domain/TikTok.mrs",
+          "sha256": "ffae9b9fe5ab74e90b8ff3340b4cda3a800caf898a52a991f20e7a8300bde376",
+          "size": 403
+        },
+        {
+          "behavior": "classical",
+          "path": "classical/TikTok.list",
+          "sha256": "d3beff44ccf545ea655681cb3e238a4ba51676adb8b0e08e74ee43af36a125c2",
+          "size": 50
+        },
+        {
+          "behavior": "unsupported",
+          "path": "unsupported/TikTok.list",
+          "sha256": "5281baf220b4935403f27d9f7716fa4348ee58627c7a3cd2111a02c63a6f853f",
+          "size": 20
+        }
+      ]
+    },
+    {
+      "source": "kelee/Twitter.lsr",
+      "source_sha256": "2bae03f44477e138435b748131e450bb22df1a50c04662cc67ad28c40a516957",
+      "counts": {
+        "domain": 26,
+        "ipcidr": 6,
+        "classical": 1,
+        "unsupported": 0
+      },
+      "outputs": [
+        {
+          "behavior": "domain",
+          "path": "domain/Twitter.mrs",
+          "sha256": "5a46d2c9274451a7e79156dc3b31226152c8da14603e6168561b98dea4ea2baa",
+          "size": 324
+        },
+        {
+          "behavior": "ipcidr",
+          "path": "ipcidr/Twitter.mrs",
+          "sha256": "37225a5d4545dce6311703418edc3414afdee77283ffb639ae9d57018148f320",
+          "size": 96
+        },
+        {
+          "behavior": "classical",
+          "path": "classical/Twitter.list",
+          "sha256": "3303a5cd5e9efd87e5051bb84196ba5a156297464ffa00b7ae6e808aae779143",
+          "size": 24
+        }
+      ]
+    },
+    {
+      "source": "kelee/WeChat.lsr",
+      "source_sha256": "617a278e322cdca0f1b99b1e8d81929573ad9671b1bb6f91f15e50865d69f3d4",
+      "counts": {
+        "domain": 40,
+        "ipcidr": 0,
+        "classical": 1,
+        "unsupported": 2
+      },
+      "outputs": [
+        {
+          "behavior": "domain",
+          "path": "domain/WeChat.mrs",
+          "sha256": "4c222de5bcb267775a4facaaeef185de37e2f87800b26673bc64f8cf2cee34b2",
+          "size": 418
+        },
+        {
+          "behavior": "classical",
+          "path": "classical/WeChat.list",
+          "sha256": "7351c01d05b75d4bcbeeba8a4b9e6af05cf41790dee38d123322e01329cb2ea4",
+          "size": 27
+        },
+        {
+          "behavior": "unsupported",
+          "path": "unsupported/WeChat.list",
+          "sha256": "d58c060bd41aeb45f04cfceb065294e0ea6bea0636a5fa8bca7be60ecfed5d59",
+          "size": 48
+        }
+      ]
+    },
+    {
+      "source": "kelee/XiaoMi.lsr",
+      "source_sha256": "58d346cd19b670628508c371496ff5dc408ed2a24e56090257528e142b64d03b",
+      "counts": {
+        "domain": 148,
+        "ipcidr": 9,
+        "classical": 0,
+        "unsupported": 0
+      },
+      "outputs": [
+        {
+          "behavior": "domain",
+          "path": "domain/XiaoMi.mrs",
+          "sha256": "d6b0d9f87891dfc27749c0fd80f7b3f39888b721f3d91bacc2fda2ec5e80b36d",
+          "size": 1384
+        },
+        {
+          "behavior": "ipcidr",
+          "path": "ipcidr/XiaoMi.mrs",
+          "sha256": "d70f49485d12f9c562c81a19e609a8dcb994dd9f752776f3b190eb69a7723070",
+          "size": 92
+        }
+      ]
+    },
+    {
+      "source": "kelee/YouTube.lsr",
+      "source_sha256": "7f7870e8ec60403c97157dd093df297c60dfef08c2f3307ea18365671c2d436f",
+      "counts": {
+        "domain": 182,
+        "ipcidr": 3,
+        "classical": 1,
+        "unsupported": 7
+      },
+      "outputs": [
+        {
+          "behavior": "domain",
+          "path": "domain/YouTube.mrs",
+          "sha256": "2420faa97a137efab36451552d1688aba9401f2a0dc10e6e0651e202f74f5aae",
+          "size": 1364
+        },
+        {
+          "behavior": "ipcidr",
+          "path": "ipcidr/YouTube.mrs",
+          "sha256": "cae1e3dce31a1e3ed69c5533b091d4b37b064d17bfdaf71439c21e42b6bc7749",
+          "size": 77
+        },
+        {
+          "behavior": "classical",
+          "path": "classical/YouTube.list",
+          "sha256": "eb587e1228875830162e35e425aa06e67daae8d3439f454ebb3a314e1a103f0c",
+          "size": 24
+        },
+        {
+          "behavior": "unsupported",
+          "path": "unsupported/YouTube.list",
+          "sha256": "0434350bb4c38b72bdca43363c0c3ee46dfa62b957a27e86753e2e8e1c785708",
+          "size": 215
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Download the resources listed in the repository's three URL indexes."""
+"""Download the resources listed in the repository's URL indexes."""
 
 from __future__ import annotations
 
@@ -17,7 +17,7 @@ from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
 USER_AGENT = "Loon/975 CFNetwork/3860.700.1 Darwin/25.6.0"
-LIST_NAMES = ("kelee", "png", "ad")
+LIST_NAMES = ("kelee", "png", "ad", "mihomo", "geo")
 STATE_PATH = ROOT / "metadata" / "manifest.json"
 MAX_DOWNLOAD_BYTES = 50 * 1024 * 1024
 RETRY_DELAYS = (1, 3, 8)
@@ -68,10 +68,11 @@ def filename_from_url(url: str) -> str:
 def destination_paths(name: str, urls: list[str]) -> list[tuple[str, str]]:
     """Return (URL, repository path), adding a stable suffix on collisions."""
     names = [filename_from_url(url) for url in urls]
-    counts = Counter(names)
+    # Treat filenames case-insensitively so the same indexes work on Windows.
+    counts = Counter(filename.casefold() for filename in names)
     destinations: list[tuple[str, str]] = []
     for url, filename in zip(urls, names):
-        if counts[filename] > 1:
+        if counts[filename.casefold()] > 1:
             stem, extension = os.path.splitext(filename)
             suffix = hashlib.sha256(url.encode("utf-8")).hexdigest()[:8]
             filename = f"{stem}-{suffix}{extension}"
@@ -201,7 +202,8 @@ def main() -> int:
 
         current_paths = {item["path"] for item in new_resources}
         for old_path in previous_paths - current_paths:
-            if old_path.startswith(("kelee/", "png/", "ad/")):
+            old_parts = PurePosixPath(old_path).parts
+            if len(old_parts) == 2 and old_parts[0] in LIST_NAMES:
                 old_file = ROOT / old_path
                 if old_file.is_file():
                     old_file.unlink()
