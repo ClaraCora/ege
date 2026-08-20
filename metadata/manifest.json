@@ -387,22 +387,6 @@
     },
     {
       "list": "mihomo.lsr",
-      "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/cn.mrs",
-      "path": "mihomo/cn-36811f9e.mrs",
-      "sha256": "a6893fadea38f410eb328ec1a6c1c1937ce3a7d27176257e0aee75cf570e77c4",
-      "size": 537036,
-      "etag": "\"ed56bc632f6d78332545cfe892aff7256fb42ff4aef0c4d7e35acd0268c75dec\""
-    },
-    {
-      "list": "mihomo.lsr",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/cn.mrs",
-      "path": "mihomo/cn-4fc25e45.mrs",
-      "sha256": "d49c14fbe6ad334fdd5a9d84437c7ff84952b3ba49065bdff5862ba4f08e51ff",
-      "size": 24764,
-      "etag": "\"43e59265bcf0bc77a73f218d05c8a55378ba6bd842c467ebf22f3ab6d9bfca45\""
-    },
-    {
-      "list": "mihomo.lsr",
       "url": "https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/mihomo-ruleset/fakeip-filter.mrs",
       "path": "mihomo/fakeip-filter.mrs",
       "sha256": "1499646829c716a7fd5fb2714f16ba12045d30e7258f0f6a169bb97c32fecc80",
