@@ -1,2 +1,7 @@
 __pycache__/
 *.py[cod]
+
+# Staging directories the scripts create under the repository root; normally
+# removed on exit, but left behind if a run is interrupted.
+resource-backup-*/
+kelee-convert-*/

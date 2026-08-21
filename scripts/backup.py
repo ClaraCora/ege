@@ -169,13 +169,21 @@ def main() -> int:
     }
 
     new_resources: list[dict] = []
+    failures: list[tuple[str, str]] = []
     total_bytes = 0
     with tempfile.TemporaryDirectory(prefix="resource-backup-", dir=ROOT) as temporary_dir:
         staging = Path(temporary_dir)
         for index, (list_name, url, repository_path) in enumerate(all_entries, start=1):
             print(f"[{index}/{len(all_entries)}] {url}")
-            data, etag = download(url)
-            validate_content(repository_path, data)
+            # Keep going after a bad source so one run reports every broken URL
+            # instead of only the first one.
+            try:
+                data, etag = download(url)
+                validate_content(repository_path, data)
+            except RuntimeError as exc:
+                print(f"  FAILED: {exc}")
+                failures.append((url, str(exc)))
+                continue
             staged_path = staging / repository_path
             staged_path.parent.mkdir(parents=True, exist_ok=True)
             staged_path.write_bytes(data)
@@ -191,6 +199,17 @@ def main() -> int:
                 }
             )
             total_bytes += len(data)
+
+        # Nothing has left the staging directory yet, so aborting here leaves the
+        # committed files untouched rather than half-updated.
+        if failures:
+            print(f"\n{len(failures)} of {len(all_entries)} resources failed:")
+            for url, reason in failures:
+                print(f"  {url}\n    {reason}")
+            raise RuntimeError(
+                f"{len(failures)} resource(s) failed to download; "
+                "no files were modified"
+            )
 
         new_resources.sort(key=lambda item: item["path"])
         new_manifest = {"user_agent": USER_AGENT, "resources": new_resources}

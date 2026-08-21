@@ -35,10 +35,13 @@ jobs:
       - name: Convert Kelee rules
         run: python3 scripts/convert_kelee.py --mihomo /tmp/mihomo
 
+      - name: Render README
+        run: python3 scripts/render_readme.py
+
       - name: Commit changes
         shell: bash
         run: |
-          git add -A -- kelee.lsr png.lsr ad.lsr mihomo.lsr geo.lsr kelee png ad mihomo metadata/manifest.json metadata/kelee-mihomo-manifest.json
+          git add -A -- kelee.lsr png.lsr ad.lsr mihomo.lsr geo.lsr kelee png ad mihomo geo README.md metadata/manifest.json metadata/kelee-mihomo-manifest.json
           if git diff --cached --quiet; then
             echo "No resource changes"
             exit 0

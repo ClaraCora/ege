@@ -1,592 +1,153 @@
 # ege 资源备份仓库
 
-本仓库用于备份 Loon、Egern 和 Mihomo 使用的远程资源。GitHub Actions 每 12 小时读取根目录的 URL 清单，使用 Loon 的请求 User-Agent 下载资源、校验内容，并在资源发生变化时自动提交到 `main` 分支。
+[![Backup](https://github.com/ClaraCora/ege/actions/workflows/backup.yml/badge.svg)](https://github.com/ClaraCora/ege/actions/workflows/backup.yml)
 
-请求 User-Agent：
+备份 Loon、Egern 和 Mihomo 使用的远程资源。GitHub Actions 每天两次读取根目录的 URL 清单，以 Loon 的请求 User-Agent 下载、校验内容，并在资源发生变化时提交回 `main` 分支。
 
-```text
-Loon/975 CFNetwork/3860.700.1 Darwin/25.6.0
-```
+当前收录 **111** 个下载资源，另由 30 个 Kelee 规则转换出 **72** 个 Mihomo Provider（Mihomo `v1.19.30`）。
 
-仓库地址：<https://github.com/ClaraCora/ege>
-
-## 一、根目录清单和地址复制
-
-根目录的 `.lsr` 文件是 GitHub Actions 使用的下载输入清单。客户端通常应该引用后面的具体备份文件，而不是引用清单本身。
-
-| 文件名 | Raw 地址 |
+| 项目 | 值 |
 | --- | --- |
-| `kelee.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee.lsr` |
-| `png.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png.lsr` |
-| `ad.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/ad.lsr` |
-| `mihomo.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo.lsr` |
-| `geo.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/geo.lsr` |
+| 请求 User-Agent | `Loon/975 CFNetwork/3860.700.1 Darwin/25.6.0` |
+| 运行时间 | UTC `00:17` / `12:17`（北京时间约 `08:17` / `20:17`） |
+| 仓库地址 | <https://github.com/ClaraCora/ege> |
 
-根目录清单一键复制：
+下表所有条目都是可点击的名称链接，右键复制链接地址即可填入客户端。
 
-```text
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/png.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/ad.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/geo.lsr
-```
+> 本文件由 `scripts/render_readme.py` 依据磁盘上的实际文件生成，请不要手工编辑。
 
-## 二、可直接使用的资源地址
+## 快速开始
 
-每张表只有“文件名”和“Raw 地址”两列。链接使用代码格式显示，便于复制；分类下方的代码框可以一键复制整组地址。
+|⭐ Loon / Egern 规则|  |  |  |  |
+| ---- | ---- | ---- | ---- | ---- |
+|[AI](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/AI.lsr) |[Apple](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Apple.lsr) |[ChinaMax](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/ChinaMax.lsr) |[Global](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Global.lsr) |[Microsoft](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Microsoft.lsr) |
+|[Telegram](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Telegram.lsr) |[YouTube](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/YouTube.lsr) |  |  |  |
 
-### Kelee Loon 规则
+|⭐ Loon / Egern 图标|  |  |  |  |
+| ---- | ---- | ---- | ---- | ---- |
+|[Global](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Global.png) |[Proxy](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Proxy.png) |[Apple](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Apple.png) |[Microsoft](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Microsoft-5de51988.png) |[Telegram](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Telegram.png) |
+|[YouTube](https://raw.githubusercontent.com/ClaraCora/ege/main/png/YouTube.png) |  |  |  |  |
 
-| 文件名 | Raw 地址 |
-| --- | --- |
-| `kelee/AI.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/AI.lsr` |
-| `kelee/Alibaba.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Alibaba.lsr` |
-| `kelee/Apple.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Apple.lsr` |
-| `kelee/Baidu.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Baidu.lsr` |
-| `kelee/BiliBili.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/BiliBili.lsr` |
-| `kelee/ChinaASN.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/ChinaASN.lsr` |
-| `kelee/ChinaMax.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/ChinaMax.lsr` |
-| `kelee/ChinaMobile.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/ChinaMobile.lsr` |
-| `kelee/ChinaTelecom.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/ChinaTelecom.lsr` |
-| `kelee/DouYin.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/DouYin.lsr` |
-| `kelee/GaoDe.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/GaoDe.lsr` |
-| `kelee/GitHub.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/GitHub.lsr` |
-| `kelee/Global.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Global.lsr` |
-| `kelee/Google.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Google.lsr` |
-| `kelee/Instagram.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Instagram.lsr` |
-| `kelee/JingDong.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/JingDong.lsr` |
-| `kelee/KugouKuwo.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/KugouKuwo.lsr` |
-| `kelee/Microsoft.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Microsoft.lsr` |
-| `kelee/NetEase.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/NetEase.lsr` |
-| `kelee/NetEaseMusic.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/NetEaseMusic.lsr` |
-| `kelee/Pinduoduo.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Pinduoduo.lsr` |
-| `kelee/SpeedtestInternational.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/SpeedtestInternational.lsr` |
-| `kelee/Telegram.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Telegram.lsr` |
-| `kelee/Tencent.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Tencent.lsr` |
-| `kelee/TestFlight.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/TestFlight.lsr` |
-| `kelee/TikTok.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/TikTok.lsr` |
-| `kelee/Twitter.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Twitter.lsr` |
-| `kelee/WeChat.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/WeChat.lsr` |
-| `kelee/XiaoMi.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/XiaoMi.lsr` |
-| `kelee/YouTube.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/YouTube.lsr` |
+|⭐ Mihomo Provider|  |  |  |  |
+| ---- | ---- | ---- | ---- | ---- |
+|[Global (domain)](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Global.mrs) |[Global (ipcidr)](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Global.mrs) |[Global (classical)](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Global.list) |[Microsoft (domain)](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Microsoft.mrs) |[Apple (domain)](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Apple.mrs) |
+|[YouTube (domain)](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/YouTube.mrs) |[ads](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ads.mrs) |[fakeip-filter](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/fakeip-filter.mrs) |  |  |
 
-一键复制本组地址：
+## 根目录清单
 
-```text
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/AI.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Alibaba.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Apple.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Baidu.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/BiliBili.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/ChinaASN.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/ChinaMax.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/ChinaMobile.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/ChinaTelecom.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/DouYin.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/GaoDe.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/GitHub.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Global.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Google.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Instagram.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/JingDong.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/KugouKuwo.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Microsoft.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/NetEase.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/NetEaseMusic.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Pinduoduo.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/SpeedtestInternational.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Telegram.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Tencent.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/TestFlight.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/TikTok.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Twitter.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/WeChat.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/XiaoMi.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/YouTube.lsr
-```
+GitHub Actions 的下载输入清单。客户端应引用下方的具体备份文件，而不是清单本身。
 
-### PNG 图标
+|📋 清单文件|  |  |  |  |
+| ---- | ---- | ---- | ---- | ---- |
+|[kelee](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee.lsr) |[png](https://raw.githubusercontent.com/ClaraCora/ege/main/png.lsr) |[ad](https://raw.githubusercontent.com/ClaraCora/ege/main/ad.lsr) |[mihomo](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo.lsr) |[geo](https://raw.githubusercontent.com/ClaraCora/ege/main/geo.lsr) |
 
-| 文件名 | Raw 地址 |
-| --- | --- |
-| `png/Adblock.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Adblock.png` |
-| `png/AI.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/AI.png` |
-| `png/Apple.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Apple.png` |
-| `png/baidunetdisk(1).png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/baidunetdisk(1).png` |
-| `png/bilibili_3.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/bilibili_3.png` |
-| `png/ChatGPT.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/ChatGPT.png` |
-| `png/China.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/China.png` |
-| `png/CN.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/CN.png` |
-| `png/dianxin.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/dianxin.png` |
-| `png/Emby-0decdc6c.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Emby-0decdc6c.png` |
-| `png/Emby-dc841cc2.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Emby-dc841cc2.png` |
-| `png/Final.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Final.png` |
-| `png/GitHub.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/GitHub.png` |
-| `png/Global.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Global.png` |
-| `png/Google.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Google.png` |
-| `png/Google_Search.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Google_Search.png` |
-| `png/HK.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/HK.png` |
-| `png/Hong_Kong.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Hong_Kong.png` |
-| `png/Instagram-4f81a6f8.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Instagram-4f81a6f8.png` |
-| `png/Instagram-533227d7.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Instagram-533227d7.png` |
-| `png/Japan.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Japan.png` |
-| `png/jingdong.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/jingdong.png` |
-| `png/JP.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/JP.png` |
-| `png/Korea.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Korea.png` |
-| `png/KR.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/KR.png` |
-| `png/kugou.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/kugou.png` |
-| `png/Macao.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Macao.png` |
-| `png/Malaysia.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Malaysia.png` |
-| `png/mega.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/mega.png` |
-| `png/Microsoft-5de51988.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Microsoft-5de51988.png` |
-| `png/Microsoft-d11688b0.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Microsoft-d11688b0.png` |
-| `png/MO.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/MO.png` |
-| `png/Netease.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Netease.png` |
-| `png/Netflix.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Netflix.png` |
-| `png/PayPal.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/PayPal.png` |
-| `png/pinduoduo.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/pinduoduo.png` |
-| `png/Proxy.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Proxy.png` |
-| `png/QQ.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/QQ.png` |
-| `png/SG.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/SG.png` |
-| `png/Singapore.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Singapore.png` |
-| `png/Speedtest.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Speedtest.png` |
-| `png/Steam.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Steam.png` |
-| `png/Taobao.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Taobao.png` |
-| `png/Telegram.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Telegram.png` |
-| `png/tengxunditu.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/tengxunditu.png` |
-| `png/testflight(2).png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/testflight(2).png` |
-| `png/TikTok_1.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/TikTok_1.png` |
-| `png/TikTok-27034e11.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/TikTok-27034e11.png` |
-| `png/TikTok-5f5d2f2c.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/TikTok-5f5d2f2c.png` |
-| `png/TW.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/TW.png` |
-| `png/Twitter.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Twitter.png` |
-| `png/United_States.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/United_States.png` |
-| `png/Unlock.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Unlock.png` |
-| `png/US.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/US.png` |
-| `png/wechat(1).png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/wechat(1).png` |
-| `png/yidong(1).png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/yidong(1).png` |
-| `png/YouTube.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/YouTube.png` |
+## 下载备份
 
-一键复制本组地址：
+由 `scripts/backup.py` 按根目录清单下载并校验。
 
-```text
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Adblock.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/AI.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Apple.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/baidunetdisk(1).png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/bilibili_3.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/ChatGPT.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/China.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/CN.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/dianxin.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Emby-0decdc6c.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Emby-dc841cc2.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Final.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/GitHub.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Global.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Google.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Google_Search.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/HK.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Hong_Kong.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Instagram-4f81a6f8.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Instagram-533227d7.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Japan.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/jingdong.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/JP.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Korea.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/KR.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/kugou.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Macao.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Malaysia.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/mega.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Microsoft-5de51988.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Microsoft-d11688b0.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/MO.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Netease.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Netflix.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/PayPal.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/pinduoduo.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Proxy.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/QQ.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/SG.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Singapore.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Speedtest.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Steam.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Taobao.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Telegram.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/tengxunditu.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/testflight(2).png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/TikTok_1.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/TikTok-27034e11.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/TikTok-5f5d2f2c.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/TW.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Twitter.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/United_States.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Unlock.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/US.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/wechat(1).png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/yidong(1).png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/YouTube.png
-```
+|🧩 Kelee Loon 规则（30）|  |  |  |  |
+| ---- | ---- | ---- | ---- | ---- |
+|[AI](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/AI.lsr) |[Alibaba](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Alibaba.lsr) |[Apple](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Apple.lsr) |[Baidu](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Baidu.lsr) |[BiliBili](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/BiliBili.lsr) |
+|[ChinaASN](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/ChinaASN.lsr) |[ChinaMax](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/ChinaMax.lsr) |[ChinaMobile](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/ChinaMobile.lsr) |[ChinaTelecom](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/ChinaTelecom.lsr) |[DouYin](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/DouYin.lsr) |
+|[GaoDe](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/GaoDe.lsr) |[GitHub](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/GitHub.lsr) |[Global](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Global.lsr) |[Google](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Google.lsr) |[Instagram](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Instagram.lsr) |
+|[JingDong](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/JingDong.lsr) |[KugouKuwo](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/KugouKuwo.lsr) |[Microsoft](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Microsoft.lsr) |[NetEase](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/NetEase.lsr) |[NetEaseMusic](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/NetEaseMusic.lsr) |
+|[Pinduoduo](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Pinduoduo.lsr) |[SpeedtestInternational](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/SpeedtestInternational.lsr) |[Telegram](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Telegram.lsr) |[Tencent](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Tencent.lsr) |[TestFlight](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/TestFlight.lsr) |
+|[TikTok](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/TikTok.lsr) |[Twitter](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Twitter.lsr) |[WeChat](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/WeChat.lsr) |[XiaoMi](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/XiaoMi.lsr) |[YouTube](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/YouTube.lsr) |
 
-### 广告规则
+|🖼️ PNG 图标（57）|  |  |  |  |
+| ---- | ---- | ---- | ---- | ---- |
+|[AI](https://raw.githubusercontent.com/ClaraCora/ege/main/png/AI.png) |[Adblock](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Adblock.png) |[Apple](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Apple.png) |[CN](https://raw.githubusercontent.com/ClaraCora/ege/main/png/CN.png) |[ChatGPT](https://raw.githubusercontent.com/ClaraCora/ege/main/png/ChatGPT.png) |
+|[China](https://raw.githubusercontent.com/ClaraCora/ege/main/png/China.png) |[Emby-0decdc6c](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Emby-0decdc6c.png) |[Emby-dc841cc2](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Emby-dc841cc2.png) |[Final](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Final.png) |[GitHub](https://raw.githubusercontent.com/ClaraCora/ege/main/png/GitHub.png) |
+|[Global](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Global.png) |[Google](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Google.png) |[Google_Search](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Google_Search.png) |[HK](https://raw.githubusercontent.com/ClaraCora/ege/main/png/HK.png) |[Hong_Kong](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Hong_Kong.png) |
+|[Instagram-4f81a6f8](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Instagram-4f81a6f8.png) |[Instagram-533227d7](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Instagram-533227d7.png) |[JP](https://raw.githubusercontent.com/ClaraCora/ege/main/png/JP.png) |[Japan](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Japan.png) |[KR](https://raw.githubusercontent.com/ClaraCora/ege/main/png/KR.png) |
+|[Korea](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Korea.png) |[MO](https://raw.githubusercontent.com/ClaraCora/ege/main/png/MO.png) |[Macao](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Macao.png) |[Malaysia](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Malaysia.png) |[Microsoft-5de51988](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Microsoft-5de51988.png) |
+|[Microsoft-d11688b0](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Microsoft-d11688b0.png) |[Netease](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Netease.png) |[Netflix](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Netflix.png) |[PayPal](https://raw.githubusercontent.com/ClaraCora/ege/main/png/PayPal.png) |[Proxy](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Proxy.png) |
+|[QQ](https://raw.githubusercontent.com/ClaraCora/ege/main/png/QQ.png) |[SG](https://raw.githubusercontent.com/ClaraCora/ege/main/png/SG.png) |[Singapore](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Singapore.png) |[Speedtest](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Speedtest.png) |[Steam](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Steam.png) |
+|[TW](https://raw.githubusercontent.com/ClaraCora/ege/main/png/TW.png) |[Taobao](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Taobao.png) |[Telegram](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Telegram.png) |[TikTok-27034e11](https://raw.githubusercontent.com/ClaraCora/ege/main/png/TikTok-27034e11.png) |[TikTok-5f5d2f2c](https://raw.githubusercontent.com/ClaraCora/ege/main/png/TikTok-5f5d2f2c.png) |
+|[TikTok_1](https://raw.githubusercontent.com/ClaraCora/ege/main/png/TikTok_1.png) |[Twitter](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Twitter.png) |[US](https://raw.githubusercontent.com/ClaraCora/ege/main/png/US.png) |[United_States](https://raw.githubusercontent.com/ClaraCora/ege/main/png/United_States.png) |[Unlock](https://raw.githubusercontent.com/ClaraCora/ege/main/png/Unlock.png) |
+|[YouTube](https://raw.githubusercontent.com/ClaraCora/ege/main/png/YouTube.png) |[baidunetdisk（1）](https://raw.githubusercontent.com/ClaraCora/ege/main/png/baidunetdisk%281%29.png) |[bilibili_3](https://raw.githubusercontent.com/ClaraCora/ege/main/png/bilibili_3.png) |[dianxin](https://raw.githubusercontent.com/ClaraCora/ege/main/png/dianxin.png) |[jingdong](https://raw.githubusercontent.com/ClaraCora/ege/main/png/jingdong.png) |
+|[kugou](https://raw.githubusercontent.com/ClaraCora/ege/main/png/kugou.png) |[mega](https://raw.githubusercontent.com/ClaraCora/ege/main/png/mega.png) |[pinduoduo](https://raw.githubusercontent.com/ClaraCora/ege/main/png/pinduoduo.png) |[tengxunditu](https://raw.githubusercontent.com/ClaraCora/ege/main/png/tengxunditu.png) |[testflight（2）](https://raw.githubusercontent.com/ClaraCora/ege/main/png/testflight%282%29.png) |
+|[wechat（1）](https://raw.githubusercontent.com/ClaraCora/ege/main/png/wechat%281%29.png) |[yidong（1）](https://raw.githubusercontent.com/ClaraCora/ege/main/png/yidong%281%29.png) |  |  |  |
 
-| 文件名 | Raw 地址 |
-| --- | --- |
-| `ad/adrules.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/ad/adrules.list` |
-| `ad/Ads_AWAvenue.yaml` | `https://raw.githubusercontent.com/ClaraCora/ege/main/ad/Ads_AWAvenue.yaml` |
-| `ad/Advertising.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/ad/Advertising.list` |
+|📵 广告规则（3）|  |  |  |  |
+| ---- | ---- | ---- | ---- | ---- |
+|[Ads_AWAvenue](https://raw.githubusercontent.com/ClaraCora/ege/main/ad/Ads_AWAvenue.yaml) |[Advertising](https://raw.githubusercontent.com/ClaraCora/ege/main/ad/Advertising.list) |[adrules](https://raw.githubusercontent.com/ClaraCora/ege/main/ad/adrules.list) |  |  |
 
-一键复制本组地址：
+|🌐 Geo 数据库（4）|  |  |  |  |
+| ---- | ---- | ---- | ---- | ---- |
+|[GeoLite2-ASN](https://raw.githubusercontent.com/ClaraCora/ege/main/geo/GeoLite2-ASN.mmdb) |[country](https://raw.githubusercontent.com/ClaraCora/ege/main/geo/country.mmdb) |[geoip](https://raw.githubusercontent.com/ClaraCora/ege/main/geo/geoip.dat) |[geosite](https://raw.githubusercontent.com/ClaraCora/ege/main/geo/geosite.dat) |  |
 
-```text
-https://raw.githubusercontent.com/ClaraCora/ege/main/ad/adrules.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/ad/Ads_AWAvenue.yaml
-https://raw.githubusercontent.com/ClaraCora/ege/main/ad/Advertising.list
-```
+|⚙️ Mihomo 原生资源（17）|  |  |  |  |
+| ---- | ---- | ---- | ---- | ---- |
+|[Binance](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/Binance.list) |[Crypto](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/Crypto.list) |[Discord](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/Discord.list) |[Facebook](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/Facebook.list) |[LinkedIn](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/LinkedIn.list) |
+|[OKX](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/OKX.list) |[PayPal](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/PayPal.list) |[Reddit](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/Reddit.list) |[Steam](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/Steam.yaml) |[WebRTC](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/WebRTC.list) |
+|[ads](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ads.mrs) |[fakeip-filter](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/fakeip-filter.mrs) |[netflix-2b0a4ed1](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/netflix-2b0a4ed1.mrs) |[netflix-512b2f11](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/netflix-512b2f11.mrs) |[private-1fa87d08](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/private-1fa87d08.mrs) |
+|[private-275bfa0d](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/private-275bfa0d.mrs) |[proxy](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/proxy.mrs) |  |  |  |
 
-### Geo 数据库
+## Kelee 转换产物
 
-| 文件名 | Raw 地址 |
-| --- | --- |
-| `geo/country.mmdb` | `https://raw.githubusercontent.com/ClaraCora/ege/main/geo/country.mmdb` |
-| `geo/geoip.dat` | `https://raw.githubusercontent.com/ClaraCora/ege/main/geo/geoip.dat` |
-| `geo/GeoLite2-ASN.mmdb` | `https://raw.githubusercontent.com/ClaraCora/ege/main/geo/GeoLite2-ASN.mmdb` |
-| `geo/geosite.dat` | `https://raw.githubusercontent.com/ClaraCora/ege/main/geo/geosite.dat` |
+由 `scripts/convert_kelee.py` 调用 Mihomo `v1.19.30` 从 `kelee/` 生成。
 
-一键复制本组地址：
+|🔤 Mihomo domain Provider（29）|  |  |  |  |
+| ---- | ---- | ---- | ---- | ---- |
+|[AI](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/AI.mrs) |[Alibaba](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Alibaba.mrs) |[Apple](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Apple.mrs) |[Baidu](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Baidu.mrs) |[BiliBili](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/BiliBili.mrs) |
+|[ChinaMax](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/ChinaMax.mrs) |[ChinaMobile](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/ChinaMobile.mrs) |[ChinaTelecom](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/ChinaTelecom.mrs) |[DouYin](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/DouYin.mrs) |[GaoDe](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/GaoDe.mrs) |
+|[GitHub](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/GitHub.mrs) |[Global](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Global.mrs) |[Google](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Google.mrs) |[Instagram](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Instagram.mrs) |[JingDong](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/JingDong.mrs) |
+|[KugouKuwo](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/KugouKuwo.mrs) |[Microsoft](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Microsoft.mrs) |[NetEase](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/NetEase.mrs) |[NetEaseMusic](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/NetEaseMusic.mrs) |[Pinduoduo](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Pinduoduo.mrs) |
+|[SpeedtestInternational](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/SpeedtestInternational.mrs) |[Telegram](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Telegram.mrs) |[Tencent](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Tencent.mrs) |[TestFlight](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/TestFlight.mrs) |[TikTok](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/TikTok.mrs) |
+|[Twitter](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Twitter.mrs) |[WeChat](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/WeChat.mrs) |[XiaoMi](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/XiaoMi.mrs) |[YouTube](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/YouTube.mrs) |  |
 
-```text
-https://raw.githubusercontent.com/ClaraCora/ege/main/geo/country.mmdb
-https://raw.githubusercontent.com/ClaraCora/ege/main/geo/geoip.dat
-https://raw.githubusercontent.com/ClaraCora/ege/main/geo/GeoLite2-ASN.mmdb
-https://raw.githubusercontent.com/ClaraCora/ege/main/geo/geosite.dat
-```
+behavior: domain，来自 `DOMAIN` 和 `DOMAIN-SUFFIX`。
 
-### Mihomo 原生资源
+|🔢 Mihomo ipcidr Provider（17）|  |  |  |  |
+| ---- | ---- | ---- | ---- | ---- |
+|[AI](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/AI.mrs) |[Alibaba](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Alibaba.mrs) |[Apple](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Apple.mrs) |[BiliBili](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/BiliBili.mrs) |[ChinaMax](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/ChinaMax.mrs) |
+|[ChinaMobile](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/ChinaMobile.mrs) |[Global](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Global.mrs) |[Google](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Google.mrs) |[KugouKuwo](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/KugouKuwo.mrs) |[NetEase](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/NetEase.mrs) |
+|[NetEaseMusic](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/NetEaseMusic.mrs) |[SpeedtestInternational](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/SpeedtestInternational.mrs) |[Telegram](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Telegram.mrs) |[Tencent](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Tencent.mrs) |[Twitter](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Twitter.mrs) |
+|[XiaoMi](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/XiaoMi.mrs) |[YouTube](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/YouTube.mrs) |  |  |  |
 
-| 文件名 | Raw 地址 |
-| --- | --- |
-| `mihomo/ads.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ads.mrs` |
-| `mihomo/Binance.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/Binance.list` |
-| `mihomo/Crypto.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/Crypto.list` |
-| `mihomo/Discord.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/Discord.list` |
-| `mihomo/Facebook.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/Facebook.list` |
-| `mihomo/fakeip-filter.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/fakeip-filter.mrs` |
-| `mihomo/LinkedIn.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/LinkedIn.list` |
-| `mihomo/netflix-2b0a4ed1.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/netflix-2b0a4ed1.mrs` |
-| `mihomo/netflix-512b2f11.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/netflix-512b2f11.mrs` |
-| `mihomo/OKX.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/OKX.list` |
-| `mihomo/PayPal.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/PayPal.list` |
-| `mihomo/private-1fa87d08.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/private-1fa87d08.mrs` |
-| `mihomo/private-275bfa0d.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/private-275bfa0d.mrs` |
-| `mihomo/proxy.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/proxy.mrs` |
-| `mihomo/Reddit.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/Reddit.list` |
-| `mihomo/Steam.yaml` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/Steam.yaml` |
-| `mihomo/WebRTC.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/WebRTC.list` |
+behavior: ipcidr，来自 `IP-CIDR` 和 `IP-CIDR6`。
 
-一键复制本组地址：
+|📄 Mihomo classical Provider（15）|  |  |  |  |
+| ---- | ---- | ---- | ---- | ---- |
+|[AI](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/AI.list) |[Apple](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Apple.list) |[ChinaASN](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/ChinaASN.list) |[ChinaMax](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/ChinaMax.list) |[GitHub](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/GitHub.list) |
+|[Global](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Global.list) |[Google](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Google.list) |[Instagram](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Instagram.list) |[Microsoft](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Microsoft.list) |[Telegram](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Telegram.list) |
+|[TestFlight](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/TestFlight.list) |[TikTok](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/TikTok.list) |[Twitter](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Twitter.list) |[WeChat](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/WeChat.list) |[YouTube](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/YouTube.list) |
 
-```text
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ads.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/Binance.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/Crypto.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/Discord.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/Facebook.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/fakeip-filter.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/LinkedIn.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/netflix-2b0a4ed1.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/netflix-512b2f11.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/OKX.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/PayPal.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/private-1fa87d08.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/private-275bfa0d.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/proxy.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/Reddit.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/Steam.yaml
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/WebRTC.list
-```
+behavior: classical，来自 `DOMAIN-KEYWORD`、`IP-ASN`、`AND`、`OR`、`NOT`。
 
-### Mihomo domain Provider
+|🔍 Mihomo unsupported 审计（11）|  |  |  |  |
+| ---- | ---- | ---- | ---- | ---- |
+|[Apple](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/Apple.list) |[BiliBili](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/BiliBili.list) |[ChinaMax](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/ChinaMax.list) |[Global](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/Global.list) |[Google](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/Google.list) |
+|[Microsoft](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/Microsoft.list) |[NetEaseMusic](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/NetEaseMusic.list) |[Tencent](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/Tencent.list) |[TikTok](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/TikTok.list) |[WeChat](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/WeChat.list) |
+|[YouTube](https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/YouTube.list) |  |  |  |  |
 
-| 文件名 | Raw 地址 |
-| --- | --- |
-| `mihomo/domain/AI.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/AI.mrs` |
-| `mihomo/domain/Alibaba.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Alibaba.mrs` |
-| `mihomo/domain/Apple.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Apple.mrs` |
-| `mihomo/domain/Baidu.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Baidu.mrs` |
-| `mihomo/domain/BiliBili.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/BiliBili.mrs` |
-| `mihomo/domain/ChinaMax.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/ChinaMax.mrs` |
-| `mihomo/domain/ChinaMobile.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/ChinaMobile.mrs` |
-| `mihomo/domain/ChinaTelecom.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/ChinaTelecom.mrs` |
-| `mihomo/domain/DouYin.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/DouYin.mrs` |
-| `mihomo/domain/GaoDe.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/GaoDe.mrs` |
-| `mihomo/domain/GitHub.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/GitHub.mrs` |
-| `mihomo/domain/Global.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Global.mrs` |
-| `mihomo/domain/Google.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Google.mrs` |
-| `mihomo/domain/Instagram.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Instagram.mrs` |
-| `mihomo/domain/JingDong.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/JingDong.mrs` |
-| `mihomo/domain/KugouKuwo.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/KugouKuwo.mrs` |
-| `mihomo/domain/Microsoft.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Microsoft.mrs` |
-| `mihomo/domain/NetEase.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/NetEase.mrs` |
-| `mihomo/domain/NetEaseMusic.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/NetEaseMusic.mrs` |
-| `mihomo/domain/Pinduoduo.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Pinduoduo.mrs` |
-| `mihomo/domain/SpeedtestInternational.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/SpeedtestInternational.mrs` |
-| `mihomo/domain/Telegram.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Telegram.mrs` |
-| `mihomo/domain/Tencent.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Tencent.mrs` |
-| `mihomo/domain/TestFlight.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/TestFlight.mrs` |
-| `mihomo/domain/TikTok.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/TikTok.mrs` |
-| `mihomo/domain/Twitter.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Twitter.mrs` |
-| `mihomo/domain/WeChat.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/WeChat.mrs` |
-| `mihomo/domain/XiaoMi.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/XiaoMi.mrs` |
-| `mihomo/domain/YouTube.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/YouTube.mrs` |
+无法转换的规则，仅供人工核对，不要作为 Provider 引用。
 
-一键复制本组地址：
+## 目录结构
 
-```text
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/AI.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Alibaba.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Apple.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Baidu.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/BiliBili.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/ChinaMax.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/ChinaMobile.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/ChinaTelecom.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/DouYin.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/GaoDe.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/GitHub.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Global.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Google.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Instagram.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/JingDong.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/KugouKuwo.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Microsoft.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/NetEase.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/NetEaseMusic.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Pinduoduo.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/SpeedtestInternational.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Telegram.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Tencent.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/TestFlight.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/TikTok.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Twitter.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/WeChat.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/XiaoMi.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/YouTube.mrs
-```
-
-### Mihomo ipcidr Provider
-
-| 文件名 | Raw 地址 |
-| --- | --- |
-| `mihomo/ipcidr/AI.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/AI.mrs` |
-| `mihomo/ipcidr/Alibaba.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Alibaba.mrs` |
-| `mihomo/ipcidr/Apple.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Apple.mrs` |
-| `mihomo/ipcidr/BiliBili.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/BiliBili.mrs` |
-| `mihomo/ipcidr/ChinaMax.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/ChinaMax.mrs` |
-| `mihomo/ipcidr/ChinaMobile.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/ChinaMobile.mrs` |
-| `mihomo/ipcidr/Global.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Global.mrs` |
-| `mihomo/ipcidr/Google.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Google.mrs` |
-| `mihomo/ipcidr/KugouKuwo.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/KugouKuwo.mrs` |
-| `mihomo/ipcidr/NetEase.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/NetEase.mrs` |
-| `mihomo/ipcidr/NetEaseMusic.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/NetEaseMusic.mrs` |
-| `mihomo/ipcidr/SpeedtestInternational.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/SpeedtestInternational.mrs` |
-| `mihomo/ipcidr/Telegram.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Telegram.mrs` |
-| `mihomo/ipcidr/Tencent.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Tencent.mrs` |
-| `mihomo/ipcidr/Twitter.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Twitter.mrs` |
-| `mihomo/ipcidr/XiaoMi.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/XiaoMi.mrs` |
-| `mihomo/ipcidr/YouTube.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/YouTube.mrs` |
-
-一键复制本组地址：
-
-```text
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/AI.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Alibaba.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Apple.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/BiliBili.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/ChinaMax.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/ChinaMobile.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Global.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Google.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/KugouKuwo.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/NetEase.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/NetEaseMusic.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/SpeedtestInternational.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Telegram.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Tencent.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Twitter.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/XiaoMi.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/YouTube.mrs
-```
-
-### Mihomo classical Provider
-
-| 文件名 | Raw 地址 |
-| --- | --- |
-| `mihomo/classical/AI.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/AI.list` |
-| `mihomo/classical/Apple.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Apple.list` |
-| `mihomo/classical/ChinaASN.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/ChinaASN.list` |
-| `mihomo/classical/ChinaMax.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/ChinaMax.list` |
-| `mihomo/classical/GitHub.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/GitHub.list` |
-| `mihomo/classical/Global.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Global.list` |
-| `mihomo/classical/Google.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Google.list` |
-| `mihomo/classical/Instagram.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Instagram.list` |
-| `mihomo/classical/Microsoft.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Microsoft.list` |
-| `mihomo/classical/Telegram.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Telegram.list` |
-| `mihomo/classical/TestFlight.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/TestFlight.list` |
-| `mihomo/classical/TikTok.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/TikTok.list` |
-| `mihomo/classical/Twitter.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Twitter.list` |
-| `mihomo/classical/WeChat.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/WeChat.list` |
-| `mihomo/classical/YouTube.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/YouTube.list` |
-
-一键复制本组地址：
-
-```text
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/AI.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Apple.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/ChinaASN.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/ChinaMax.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/GitHub.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Global.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Google.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Instagram.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Microsoft.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Telegram.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/TestFlight.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/TikTok.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Twitter.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/WeChat.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/YouTube.list
-```
-
-### Mihomo unsupported 审计
-
-| 文件名 | Raw 地址 |
-| --- | --- |
-| `mihomo/unsupported/Apple.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/Apple.list` |
-| `mihomo/unsupported/BiliBili.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/BiliBili.list` |
-| `mihomo/unsupported/ChinaMax.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/ChinaMax.list` |
-| `mihomo/unsupported/Global.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/Global.list` |
-| `mihomo/unsupported/Google.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/Google.list` |
-| `mihomo/unsupported/Microsoft.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/Microsoft.list` |
-| `mihomo/unsupported/NetEaseMusic.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/NetEaseMusic.list` |
-| `mihomo/unsupported/Tencent.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/Tencent.list` |
-| `mihomo/unsupported/TikTok.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/TikTok.list` |
-| `mihomo/unsupported/WeChat.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/WeChat.list` |
-| `mihomo/unsupported/YouTube.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/YouTube.list` |
-
-一键复制本组地址：
-
-```text
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/Apple.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/BiliBili.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/ChinaMax.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/Global.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/Google.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/Microsoft.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/NetEaseMusic.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/Tencent.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/TikTok.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/WeChat.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/YouTube.list
-```
-
-## 三、常用配置地址
-
-### Loon / Egern 规则
-
-| 文件名 | Raw 地址 |
-| --- | --- |
-| `kelee/AI.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/AI.lsr` |
-| `kelee/Apple.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Apple.lsr` |
-| `kelee/ChinaMax.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/ChinaMax.lsr` |
-| `kelee/Global.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Global.lsr` |
-| `kelee/Microsoft.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Microsoft.lsr` |
-| `kelee/Telegram.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Telegram.lsr` |
-| `kelee/YouTube.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/YouTube.lsr` |
-
-一键复制：
-
-```text
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/AI.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Apple.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/ChinaMax.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Global.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Microsoft.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Telegram.lsr
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/YouTube.lsr
-```
-
-### Loon / Egern 图标
-
-| 文件名 | Raw 地址 |
-| --- | --- |
-| `png/Global.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Global.png` |
-| `png/Proxy.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Proxy.png` |
-| `png/Apple.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Apple.png` |
-| `png/Microsoft-5de51988.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Microsoft-5de51988.png` |
-| `png/Telegram.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/Telegram.png` |
-| `png/YouTube.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/YouTube.png` |
-
-一键复制：
-
-```text
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Global.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Proxy.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Apple.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Microsoft-5de51988.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Telegram.png
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/YouTube.png
-```
-
-### Mihomo Provider
-
-| 文件名 | Raw 地址 |
-| --- | --- |
-| `mihomo/domain/Global.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Global.mrs` |
-| `mihomo/ipcidr/Global.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Global.mrs` |
-| `mihomo/classical/Global.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Global.list` |
-| `mihomo/domain/Microsoft.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Microsoft.mrs` |
-| `mihomo/domain/Apple.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Apple.mrs` |
-| `mihomo/domain/YouTube.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/YouTube.mrs` |
-| `mihomo/ads.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ads.mrs` |
-| `mihomo/fakeip-filter.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/fakeip-filter.mrs` |
-
-一键复制：
-
-```text
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Global.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Global.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Global.list
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Microsoft.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Apple.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/YouTube.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ads.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/fakeip-filter.mrs
-```
-
-## 四、文件和自动化说明
-
-| 路径 | 作用 | 是否自动生成 |
+| 路径 | 作用 | 自动生成 |
 | --- | --- | --- |
-| `kelee/` | 保存 `kelee.lsr` 下载的 Loon 规则 | 是 |
-| `png/` | 保存 `png.lsr` 下载的 PNG 图标 | 是 |
-| `ad/` | 保存 `ad.lsr` 下载的广告资源 | 是 |
-| `mihomo/` | 保存 Mihomo 原生资源和 Kelee 转换结果 | 部分 |
-| `geo/` | 保存 `geo.lsr` 下载的地理数据库 | 是 |
-| `metadata/manifest.json` | 记录来源 URL、目标路径、SHA-256、文件大小和 ETag | 是 |
-| `metadata/kelee-mihomo-manifest.json` | 记录 Kelee 规则的分类数量、输出路径和校验值 | 是 |
-| `scripts/backup.py` | 下载、校验、保存资源并清理已删除来源的旧文件 | 否 |
-| `scripts/convert_kelee.py` | 调用 Mihomo 转换器生成 MRS 和 classical 文件 | 否 |
-| `.github/workflows/backup.yml` | 每 12 小时执行备份和转换，有变化才提交 | 否 |
+| `kelee/` | `kelee.lsr` 下载的 Loon 规则 | 是 |
+| `png/` | `png.lsr` 下载的 PNG 图标 | 是 |
+| `ad/` | `ad.lsr` 下载的广告资源 | 是 |
+| `geo/` | `geo.lsr` 下载的地理数据库 | 是 |
+| `mihomo/` | Mihomo 原生资源，以及 Kelee 转换结果子目录 | 是 |
+| `metadata/manifest.json` | 来源 URL、目标路径、SHA-256、大小和 ETag | 是 |
+| `metadata/kelee-mihomo-manifest.json` | Kelee 规则的分类数量、输出路径和校验值 | 是 |
+| `scripts/backup.py` | 下载、校验、保存资源，清理已移除来源的旧文件 | 否 |
+| `scripts/convert_kelee.py` | 调用 Mihomo 生成 MRS 和文本 Provider | 否 |
+| `scripts/render_readme.py` | 依据磁盘实际文件生成本文件 | 否 |
+| `.github/workflows/backup.yml` | 定时执行备份、转换与提交 | 否 |
 
-## 五、更新和转换规则
+## 运行规则
 
-1. 工作流在 UTC `00:17` 和 `12:17` 运行，即北京时间约 `08:17` 和 `20:17`；也可以在 Actions 页面手动运行。
-2. 下载失败、空文件、HTML 拦截页、超大响应和错误 PNG 会使本次任务失败，不会覆盖旧文件。
-3. Kelee 的 `DOMAIN` 和 `DOMAIN-SUFFIX` 会生成 `mihomo/domain/` 下的 MRS；`IP-CIDR` 和 `IP-CIDR6` 会生成 `mihomo/ipcidr/` 下的 MRS。
-4. `DOMAIN-KEYWORD`、`IP-ASN`、`AND`、`OR`、`NOT` 会生成 `mihomo/classical/` 下的文本 Provider。
-5. `USER-AGENT` 等无法直接表达的规则只写入 `mihomo/unsupported/` 审计文件，不会自动加入 Mihomo 配置。
-6. 资源内容未变化时不会产生新的 Git 提交，但 Actions 运行记录仍会保留。
-7. 修改资源来源时只编辑根目录对应的 `.lsr` 文件，不要手动修改自动生成目录。
+1. 工作流在 UTC `00:17` 和 `12:17` 运行（北京时间约 `08:17` 和 `20:17`），也可在 Actions 页面用 **Run workflow** 手动触发。
+2. GitHub 的定时调度可能延迟数十分钟，且**不会补跑**错过的时段；需要立刻更新时请手动触发。
+3. 下载失败、空文件、HTML 拦截页、超大响应或损坏的 PNG 都会让本次运行失败，此时不会覆盖任何已有文件——备份要么整体更新，要么保持原样。
+4. 单次运行会汇总报告所有失败的资源，而不是遇到第一个错误就停下，便于一次定位全部问题源。
+5. Kelee 的 `DOMAIN` 和 `DOMAIN-SUFFIX` 生成 `mihomo/domain/` 下的 MRS；`IP-CIDR` 和 `IP-CIDR6` 生成 `mihomo/ipcidr/` 下的 MRS。
+6. `DOMAIN-KEYWORD`、`IP-ASN`、`AND`、`OR`、`NOT` 生成 `mihomo/classical/` 下的文本 Provider。
+7. `USER-AGENT` 等无法表达的规则只写入 `mihomo/unsupported/` 供审计，不要作为 Provider 引用。
+8. 资源内容没有变化时不会产生新提交，但 Actions 运行记录仍会保留。
+9. 调整资源来源时只编辑根目录对应的 `.lsr` 文件，不要手工修改自动生成的目录。
