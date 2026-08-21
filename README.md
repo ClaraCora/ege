@@ -1,6 +1,6 @@
 # ege 资源备份仓库
 
-本仓库用于集中备份 Loon、Egern 和 Mihomo 使用的远程资源。GitHub Actions 每 12 小时读取根目录下的 URL 清单，使用 Loon 的请求 User-Agent 下载资源、校验内容，并在资源发生变化时自动提交到 `main` 分支。
+本仓库用于备份 Loon、Egern 和 Mihomo 使用的远程资源。GitHub Actions 每 12 小时读取根目录的 URL 清单，使用 Loon 的请求 User-Agent 下载资源、校验内容，并在资源发生变化时自动提交到 `main` 分支。
 
 请求 User-Agent：
 
@@ -10,96 +10,309 @@ Loon/975 CFNetwork/3860.700.1 Darwin/25.6.0
 
 仓库地址：<https://github.com/ClaraCora/ege>
 
-## 一、直接引用地址
+## 一、根目录清单的现成引用地址
 
-以下地址使用 GitHub Raw 服务，适合直接填入客户端配置。表中的 `main` 是当前稳定分支；如果需要固定到某个版本，可以把 `main` 替换为具体提交 ID。
+下表中的地址是真实存在、可以直接打开或复制的 Raw 地址。根目录的 `.lsr` 文件是“下载输入清单”，用于 GitHub Actions 读取来源；客户端通常应该引用后面的具体备份文件，而不是引用清单本身。
 
-| 资源用途 | 仓库文件 | Raw 引用地址 | 适用场景 |
+| 文件 | 直接引用地址 | 用途 | 是否自动生成 |
 | --- | --- | --- | --- |
-| Kelee 源 URL 清单 | [`kelee.lsr`](kelee.lsr) | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee.lsr> | 查看或维护 Kelee 规则的来源列表，不建议客户端直接把它当作单个规则集使用 |
-| Kelee Loon 规则 | `kelee/<名称>.lsr` | `https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/<名称>.lsr` | Loon、Egern 直接引用；例如 [`kelee/Global.lsr`](kelee/Global.lsr) |
-| PNG 图标清单 | [`png.lsr`](png.lsr) | <https://raw.githubusercontent.com/ClaraCora/ege/main/png.lsr> | 查看或维护图标来源列表 |
-| PNG 图标文件 | `png/<名称>.png` | `https://raw.githubusercontent.com/ClaraCora/ege/main/png/<名称>.png` | Loon、Egern 分组图标；例如 [`png/Global.png`](png/Global.png) |
-| 广告资源清单 | [`ad.lsr`](ad.lsr) | <https://raw.githubusercontent.com/ClaraCora/ege/main/ad.lsr> | 查看或维护广告规则来源列表 |
-| 广告规则文件 | `ad/<文件名>` | `https://raw.githubusercontent.com/ClaraCora/ege/main/ad/<文件名>` | Loon、Egern 或其他支持对应格式的客户端；例如 [`ad/Advertising.list`](ad/Advertising.list) |
-| Mihomo 外部资源清单 | [`mihomo.lsr`](mihomo.lsr) | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo.lsr> | 查看或维护 Mihomo 外部资源来源列表 |
-| Mihomo 直接镜像资源 | `mihomo/<文件名>` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/<文件名>` | 直接引用原本就是 Mihomo 格式的资源，例如 [`mihomo/proxy.mrs`](mihomo/proxy.mrs) |
-| Kelee 转换后的域名规则 | `mihomo/domain/<名称>.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/<名称>.mrs` | Mihomo `behavior: domain` Provider；例如 [`mihomo/domain/Global.mrs`](mihomo/domain/Global.mrs) |
-| Kelee 转换后的 IP 规则 | `mihomo/ipcidr/<名称>.mrs` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/<名称>.mrs` | Mihomo `behavior: ipcidr` Provider；例如 [`mihomo/ipcidr/Global.mrs`](mihomo/ipcidr/Global.mrs) |
-| Kelee 转换后的经典规则 | `mihomo/classical/<名称>.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/<名称>.list` | Mihomo `behavior: classical` Provider；例如 [`mihomo/classical/Global.list`](mihomo/classical/Global.list) |
-| 暂不支持的规则审计 | `mihomo/unsupported/<名称>.list` | `https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/<名称>.list` | 仅用于查看转换遗漏，不会被自动启用；常见类型包括 `USER-AGENT` |
-| 地理数据库清单 | [`geo.lsr`](geo.lsr) | <https://raw.githubusercontent.com/ClaraCora/ege/main/geo.lsr> | 查看或维护 GeoIP、GeoSite、MMDB 来源列表 |
-| 地理数据库文件 | `geo/<文件名>` | `https://raw.githubusercontent.com/ClaraCora/ege/main/geo/<文件名>` | Mihomo、Loon 或其他支持对应数据库格式的客户端；例如 [`geo/geosite.dat`](geo/geosite.dat) |
+| `kelee.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee.lsr> | 下载 Kelee Loon 规则的输入清单 | 否 |
+| `png.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png.lsr> | 下载 PNG 图标的输入清单 | 否 |
+| `ad.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/ad.lsr> | 下载广告规则的输入清单 | 否 |
+| `mihomo.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo.lsr> | 下载 Mihomo 原生资源的输入清单 | 否 |
+| `geo.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/geo.lsr> | 下载 GeoIP、GeoSite 和 MMDB 的输入清单 | 否 |
 
-### 常用引用示例
+## 二、可直接使用的资源地址
 
-```text
-# Loon / Egern 规则
-https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Global.lsr
+以下各表按当前仓库中实际存在的文件列出完整地址，不使用 `<名称>`、`<文件名>` 等占位符。复制第三列地址即可使用。
 
-# Loon / Egern 图标
-https://raw.githubusercontent.com/ClaraCora/ege/main/png/Global.png
+### Kelee Loon 规则
 
-# Mihomo MRS Provider
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Global.mrs
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Global.mrs
-
-# Mihomo Classical Provider
-https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Global.list
-```
-
-## 二、仓库文件索引
-
-| 路径 | 类型 | 是否自动生成 | 作用 |
-| --- | --- | --- | --- |
-| `kelee.lsr` | URL 清单 | 否 | 列出需要备份的 Kelee Loon 规则地址；每行一个 HTTPS URL |
-| `png.lsr` | URL 清单 | 否 | 列出需要备份的 PNG 图标地址 |
-| `ad.lsr` | URL 清单 | 否 | 列出需要备份的广告规则地址 |
-| `mihomo.lsr` | URL 清单 | 否 | 列出需要备份的 Mihomo 原生资源地址；不再包含不稳定的 `cnsub.lkany.com` OneDrive 资源 |
-| `geo.lsr` | URL 清单 | 否 | 列出需要备份的 GeoIP、GeoSite 和 MMDB 地址 |
-| `kelee/` | Loon 规则目录 | 是 | 保存 `kelee.lsr` 下载的 `.lsr` 文件，文件名取自 URL 路径 |
-| `png/` | 图标目录 | 是 | 保存 `png.lsr` 下载的 `.png` 图标 |
-| `ad/` | 广告规则目录 | 是 | 保存 `ad.lsr` 下载的规则文件 |
-| `mihomo/` | Mihomo 资源目录 | 部分 | 保存 `mihomo.lsr` 的原生资源，以及 Kelee 转换生成的 Provider |
-| `mihomo/domain/` | MRS Provider | 是 | Kelee 中可转换为域名行为的规则 |
-| `mihomo/ipcidr/` | MRS Provider | 是 | Kelee 中可转换为 IP-CIDR 行为的规则 |
-| `mihomo/classical/` | Classical Provider | 是 | Mihomo 没有独立 MRS 行为、但可用经典格式表达的规则 |
-| `mihomo/unsupported/` | 审计报告 | 是 | 记录无法安全转换的规则，供人工评估，不会自动加入配置 |
-| `geo/` | 地理数据库目录 | 是 | 保存 `geo.lsr` 下载的 `.dat` 和 `.mmdb` 文件 |
-| `metadata/manifest.json` | 下载清单 | 是 | 记录每个下载文件的来源 URL、目标路径、SHA-256、大小和 ETag，用于校验和清理旧文件 |
-| `metadata/kelee-mihomo-manifest.json` | 转换清单 | 是 | 记录每个 Kelee 文件的规则数量、转换类型、输出路径和校验值 |
-| `scripts/backup.py` | Python 脚本 | 否 | 读取五个 `.lsr` 清单、下载资源、校验内容、写入备份目录和 `manifest.json` |
-| `scripts/convert_kelee.py` | Python 脚本 | 否 | 调用 Mihomo `convert-ruleset`，生成 `domain`、`ipcidr`、`classical` 和 `unsupported` 输出 |
-| `.github/workflows/backup.yml` | GitHub Actions 工作流 | 否 | 定时执行备份、安装 Mihomo 转换器，并在有变化时提交回仓库 |
-| `README.md` | 文档 | 否 | 说明目录结构、引用地址和自动化流程 |
-
-## 三、自动更新流程
-
-| 阶段 | 执行内容 | 结果 |
+| 文件 | 现成可用的 Raw 地址 | 作用 |
 | --- | --- | --- |
-| 1. 读取清单 | 读取 `kelee.lsr`、`png.lsr`、`ad.lsr`、`mihomo.lsr`、`geo.lsr` | 忽略空行和 `#` 注释，要求每行是 HTTPS 地址 |
-| 2. 下载与校验 | 使用 Loon UA 下载，最多重试三次 | 拒绝空文件、HTML 拦截页、超大响应和错误 PNG |
-| 3. 保存镜像 | 按清单名称写入 `kelee/`、`png/`、`ad/`、`mihomo/`、`geo/` | 同名文件会根据 URL 添加稳定哈希后缀，避免覆盖 |
-| 4. 转换 Kelee | 下载 Mihomo `v1.19.30` 转换器并运行 `convert_kelee.py` | 生成可供 Mihomo 使用的 `.mrs` 和 `.list` |
-| 5. 提交变化 | 比较工作区是否有变化 | 有变化才由 `github-actions[bot]` 提交并推送；无变化显示 `No resource changes` |
+| `kelee/AI.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/AI.lsr> | Loon / Egern 规则，可直接作为规则资源引用 |
+| `kelee/Alibaba.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Alibaba.lsr> | Loon / Egern 规则，可直接作为规则资源引用 |
+| `kelee/Apple.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Apple.lsr> | Loon / Egern 规则，可直接作为规则资源引用 |
+| `kelee/Baidu.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Baidu.lsr> | Loon / Egern 规则，可直接作为规则资源引用 |
+| `kelee/BiliBili.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/BiliBili.lsr> | Loon / Egern 规则，可直接作为规则资源引用 |
+| `kelee/ChinaASN.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/ChinaASN.lsr> | Loon / Egern 规则，可直接作为规则资源引用 |
+| `kelee/ChinaMax.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/ChinaMax.lsr> | Loon / Egern 规则，可直接作为规则资源引用 |
+| `kelee/ChinaMobile.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/ChinaMobile.lsr> | Loon / Egern 规则，可直接作为规则资源引用 |
+| `kelee/ChinaTelecom.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/ChinaTelecom.lsr> | Loon / Egern 规则，可直接作为规则资源引用 |
+| `kelee/DouYin.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/DouYin.lsr> | Loon / Egern 规则，可直接作为规则资源引用 |
+| `kelee/GaoDe.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/GaoDe.lsr> | Loon / Egern 规则，可直接作为规则资源引用 |
+| `kelee/GitHub.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/GitHub.lsr> | Loon / Egern 规则，可直接作为规则资源引用 |
+| `kelee/Global.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Global.lsr> | Loon / Egern 规则，可直接作为规则资源引用 |
+| `kelee/Google.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Google.lsr> | Loon / Egern 规则，可直接作为规则资源引用 |
+| `kelee/Instagram.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Instagram.lsr> | Loon / Egern 规则，可直接作为规则资源引用 |
+| `kelee/JingDong.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/JingDong.lsr> | Loon / Egern 规则，可直接作为规则资源引用 |
+| `kelee/KugouKuwo.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/KugouKuwo.lsr> | Loon / Egern 规则，可直接作为规则资源引用 |
+| `kelee/Microsoft.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Microsoft.lsr> | Loon / Egern 规则，可直接作为规则资源引用 |
+| `kelee/NetEase.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/NetEase.lsr> | Loon / Egern 规则，可直接作为规则资源引用 |
+| `kelee/NetEaseMusic.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/NetEaseMusic.lsr> | Loon / Egern 规则，可直接作为规则资源引用 |
+| `kelee/Pinduoduo.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Pinduoduo.lsr> | Loon / Egern 规则，可直接作为规则资源引用 |
+| `kelee/SpeedtestInternational.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/SpeedtestInternational.lsr> | Loon / Egern 规则，可直接作为规则资源引用 |
+| `kelee/Telegram.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Telegram.lsr> | Loon / Egern 规则，可直接作为规则资源引用 |
+| `kelee/Tencent.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Tencent.lsr> | Loon / Egern 规则，可直接作为规则资源引用 |
+| `kelee/TestFlight.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/TestFlight.lsr> | Loon / Egern 规则，可直接作为规则资源引用 |
+| `kelee/TikTok.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/TikTok.lsr> | Loon / Egern 规则，可直接作为规则资源引用 |
+| `kelee/Twitter.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Twitter.lsr> | Loon / Egern 规则，可直接作为规则资源引用 |
+| `kelee/WeChat.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/WeChat.lsr> | Loon / Egern 规则，可直接作为规则资源引用 |
+| `kelee/XiaoMi.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/XiaoMi.lsr> | Loon / Egern 规则，可直接作为规则资源引用 |
+| `kelee/YouTube.lsr` | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/YouTube.lsr> | Loon / Egern 规则，可直接作为规则资源引用 |
 
-工作流触发时间为 UTC `00:17` 和 `12:17`，即北京时间约 `08:17` 和 `20:17`。也可以在仓库的 **Actions → Backup listed resources → Run workflow** 手动执行。
+### PNG 图标
 
-## 四、转换规则说明
+| 文件 | 现成可用的 Raw 地址 | 作用 |
+| --- | --- | --- |
+| `png/Adblock.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Adblock.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/AI.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/AI.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/Apple.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Apple.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/baidunetdisk(1).png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/baidunetdisk(1).png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/bilibili_3.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/bilibili_3.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/ChatGPT.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/ChatGPT.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/China.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/China.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/CN.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/CN.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/dianxin.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/dianxin.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/Emby-0decdc6c.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Emby-0decdc6c.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/Emby-dc841cc2.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Emby-dc841cc2.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/Final.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Final.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/GitHub.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/GitHub.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/Global.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Global.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/Google.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Google.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/Google_Search.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Google_Search.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/HK.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/HK.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/Hong_Kong.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Hong_Kong.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/Instagram-4f81a6f8.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Instagram-4f81a6f8.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/Instagram-533227d7.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Instagram-533227d7.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/Japan.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Japan.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/jingdong.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/jingdong.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/JP.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/JP.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/Korea.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Korea.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/KR.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/KR.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/kugou.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/kugou.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/Macao.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Macao.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/Malaysia.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Malaysia.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/mega.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/mega.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/Microsoft-5de51988.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Microsoft-5de51988.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/Microsoft-d11688b0.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Microsoft-d11688b0.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/MO.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/MO.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/Netease.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Netease.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/Netflix.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Netflix.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/PayPal.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/PayPal.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/pinduoduo.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/pinduoduo.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/Proxy.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Proxy.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/QQ.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/QQ.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/SG.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/SG.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/Singapore.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Singapore.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/Speedtest.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Speedtest.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/Steam.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Steam.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/Taobao.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Taobao.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/Telegram.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Telegram.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/tengxunditu.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/tengxunditu.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/testflight(2).png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/testflight(2).png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/TikTok_1.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/TikTok_1.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/TikTok-27034e11.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/TikTok-27034e11.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/TikTok-5f5d2f2c.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/TikTok-5f5d2f2c.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/TW.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/TW.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/Twitter.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Twitter.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/United_States.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/United_States.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/Unlock.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Unlock.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/US.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/US.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/wechat(1).png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/wechat(1).png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/yidong(1).png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/yidong(1).png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
+| `png/YouTube.png` | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/YouTube.png> | Loon / Egern 分组图标，可直接作为图标 URL 引用 |
 
-Kelee 规则会按类型拆分：
+### 广告规则
 
-- `DOMAIN`、`DOMAIN-SUFFIX` → `mihomo/domain/<名称>.mrs`
-- `IP-CIDR`、`IP-CIDR6` → `mihomo/ipcidr/<名称>.mrs`
-- `DOMAIN-KEYWORD`、`IP-ASN`、`AND`、`OR`、`NOT` → `mihomo/classical/<名称>.list`
-- `USER-AGENT` 以及其他无法直接表达的类型 → `mihomo/unsupported/<名称>.list`
+| 文件 | 现成可用的 Raw 地址 | 作用 |
+| --- | --- | --- |
+| `ad/adrules.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/ad/adrules.list> | 广告过滤规则，按文件实际格式在客户端中引用 |
+| `ad/Ads_AWAvenue.yaml` | <https://raw.githubusercontent.com/ClaraCora/ege/main/ad/Ads_AWAvenue.yaml> | 广告过滤规则，按文件实际格式在客户端中引用 |
+| `ad/Advertising.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/ad/Advertising.list> | 广告过滤规则，按文件实际格式在客户端中引用 |
 
-`unsupported` 目录是审计用途，不应直接加入 Mihomo 配置。需要保留 `USER-AGENT` 语义时，应在 Mihomo 配置中使用等价的 `PROCESS-NAME`、域名规则或其他客户端支持的匹配方式单独补充。
+### Geo 数据库
 
-## 五、维护约定
+| 文件 | 现成可用的 Raw 地址 | 作用 |
+| --- | --- | --- |
+| `geo/country.mmdb` | <https://raw.githubusercontent.com/ClaraCora/ege/main/geo/country.mmdb> | Mihomo、Loon 或其他支持对应格式的 Geo 数据库 |
+| `geo/geoip.dat` | <https://raw.githubusercontent.com/ClaraCora/ege/main/geo/geoip.dat> | Mihomo、Loon 或其他支持对应格式的 Geo 数据库 |
+| `geo/GeoLite2-ASN.mmdb` | <https://raw.githubusercontent.com/ClaraCora/ege/main/geo/GeoLite2-ASN.mmdb> | Mihomo、Loon 或其他支持对应格式的 Geo 数据库 |
+| `geo/geosite.dat` | <https://raw.githubusercontent.com/ClaraCora/ege/main/geo/geosite.dat> | Mihomo、Loon 或其他支持对应格式的 Geo 数据库 |
 
-1. 修改源地址时只编辑根目录对应的 `.lsr` 文件，不要手动修改自动生成目录。
-2. 资源文件名来自 URL 的最后一段；如果多个 URL 文件名相同，脚本会自动追加八位 URL 哈希。
-3. 删除源地址后，下一次运行会根据 `manifest.json` 清理对应的旧备份文件。
-4. 资源内容未变化时不会产生新的 Git 提交，Actions 的运行记录仍会保留。
-5. 引用客户端资源时优先使用具体文件的 Raw 地址，不要引用 `.lsr` 清单本身，除非客户端明确支持该清单格式。
+### Mihomo 原生资源
+
+| 文件 | 现成可用的 Raw 地址 | 作用 |
+| --- | --- | --- |
+| `mihomo/ads.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ads.mrs> | 原本就是 Mihomo 格式的资源，可直接作为 Provider 或配置资源 |
+| `mihomo/Binance.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/Binance.list> | 原本就是 Mihomo 格式的资源，可直接作为 Provider 或配置资源 |
+| `mihomo/Crypto.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/Crypto.list> | 原本就是 Mihomo 格式的资源，可直接作为 Provider 或配置资源 |
+| `mihomo/Discord.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/Discord.list> | 原本就是 Mihomo 格式的资源，可直接作为 Provider 或配置资源 |
+| `mihomo/Facebook.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/Facebook.list> | 原本就是 Mihomo 格式的资源，可直接作为 Provider 或配置资源 |
+| `mihomo/fakeip-filter.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/fakeip-filter.mrs> | 原本就是 Mihomo 格式的资源，可直接作为 Provider 或配置资源 |
+| `mihomo/LinkedIn.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/LinkedIn.list> | 原本就是 Mihomo 格式的资源，可直接作为 Provider 或配置资源 |
+| `mihomo/netflix-2b0a4ed1.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/netflix-2b0a4ed1.mrs> | 原本就是 Mihomo 格式的资源，可直接作为 Provider 或配置资源 |
+| `mihomo/netflix-512b2f11.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/netflix-512b2f11.mrs> | 原本就是 Mihomo 格式的资源，可直接作为 Provider 或配置资源 |
+| `mihomo/OKX.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/OKX.list> | 原本就是 Mihomo 格式的资源，可直接作为 Provider 或配置资源 |
+| `mihomo/PayPal.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/PayPal.list> | 原本就是 Mihomo 格式的资源，可直接作为 Provider 或配置资源 |
+| `mihomo/private-1fa87d08.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/private-1fa87d08.mrs> | 原本就是 Mihomo 格式的资源，可直接作为 Provider 或配置资源 |
+| `mihomo/private-275bfa0d.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/private-275bfa0d.mrs> | 原本就是 Mihomo 格式的资源，可直接作为 Provider 或配置资源 |
+| `mihomo/proxy.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/proxy.mrs> | 原本就是 Mihomo 格式的资源，可直接作为 Provider 或配置资源 |
+| `mihomo/Reddit.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/Reddit.list> | 原本就是 Mihomo 格式的资源，可直接作为 Provider 或配置资源 |
+| `mihomo/Steam.yaml` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/Steam.yaml> | 原本就是 Mihomo 格式的资源，可直接作为 Provider 或配置资源 |
+| `mihomo/WebRTC.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/WebRTC.list> | 原本就是 Mihomo 格式的资源，可直接作为 Provider 或配置资源 |
+
+### Mihomo domain Provider
+
+| 文件 | 现成可用的 Raw 地址 | 作用 |
+| --- | --- | --- |
+| `mihomo/domain/AI.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/AI.mrs> | Mihomo `behavior: domain` 的 MRS Provider |
+| `mihomo/domain/Alibaba.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Alibaba.mrs> | Mihomo `behavior: domain` 的 MRS Provider |
+| `mihomo/domain/Apple.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Apple.mrs> | Mihomo `behavior: domain` 的 MRS Provider |
+| `mihomo/domain/Baidu.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Baidu.mrs> | Mihomo `behavior: domain` 的 MRS Provider |
+| `mihomo/domain/BiliBili.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/BiliBili.mrs> | Mihomo `behavior: domain` 的 MRS Provider |
+| `mihomo/domain/ChinaMax.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/ChinaMax.mrs> | Mihomo `behavior: domain` 的 MRS Provider |
+| `mihomo/domain/ChinaMobile.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/ChinaMobile.mrs> | Mihomo `behavior: domain` 的 MRS Provider |
+| `mihomo/domain/ChinaTelecom.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/ChinaTelecom.mrs> | Mihomo `behavior: domain` 的 MRS Provider |
+| `mihomo/domain/DouYin.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/DouYin.mrs> | Mihomo `behavior: domain` 的 MRS Provider |
+| `mihomo/domain/GaoDe.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/GaoDe.mrs> | Mihomo `behavior: domain` 的 MRS Provider |
+| `mihomo/domain/GitHub.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/GitHub.mrs> | Mihomo `behavior: domain` 的 MRS Provider |
+| `mihomo/domain/Global.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Global.mrs> | Mihomo `behavior: domain` 的 MRS Provider |
+| `mihomo/domain/Google.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Google.mrs> | Mihomo `behavior: domain` 的 MRS Provider |
+| `mihomo/domain/Instagram.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Instagram.mrs> | Mihomo `behavior: domain` 的 MRS Provider |
+| `mihomo/domain/JingDong.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/JingDong.mrs> | Mihomo `behavior: domain` 的 MRS Provider |
+| `mihomo/domain/KugouKuwo.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/KugouKuwo.mrs> | Mihomo `behavior: domain` 的 MRS Provider |
+| `mihomo/domain/Microsoft.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Microsoft.mrs> | Mihomo `behavior: domain` 的 MRS Provider |
+| `mihomo/domain/NetEase.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/NetEase.mrs> | Mihomo `behavior: domain` 的 MRS Provider |
+| `mihomo/domain/NetEaseMusic.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/NetEaseMusic.mrs> | Mihomo `behavior: domain` 的 MRS Provider |
+| `mihomo/domain/Pinduoduo.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Pinduoduo.mrs> | Mihomo `behavior: domain` 的 MRS Provider |
+| `mihomo/domain/SpeedtestInternational.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/SpeedtestInternational.mrs> | Mihomo `behavior: domain` 的 MRS Provider |
+| `mihomo/domain/Telegram.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Telegram.mrs> | Mihomo `behavior: domain` 的 MRS Provider |
+| `mihomo/domain/Tencent.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Tencent.mrs> | Mihomo `behavior: domain` 的 MRS Provider |
+| `mihomo/domain/TestFlight.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/TestFlight.mrs> | Mihomo `behavior: domain` 的 MRS Provider |
+| `mihomo/domain/TikTok.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/TikTok.mrs> | Mihomo `behavior: domain` 的 MRS Provider |
+| `mihomo/domain/Twitter.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Twitter.mrs> | Mihomo `behavior: domain` 的 MRS Provider |
+| `mihomo/domain/WeChat.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/WeChat.mrs> | Mihomo `behavior: domain` 的 MRS Provider |
+| `mihomo/domain/XiaoMi.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/XiaoMi.mrs> | Mihomo `behavior: domain` 的 MRS Provider |
+| `mihomo/domain/YouTube.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/YouTube.mrs> | Mihomo `behavior: domain` 的 MRS Provider |
+
+### Mihomo ipcidr Provider
+
+| 文件 | 现成可用的 Raw 地址 | 作用 |
+| --- | --- | --- |
+| `mihomo/ipcidr/AI.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/AI.mrs> | Mihomo `behavior: ipcidr` 的 MRS Provider |
+| `mihomo/ipcidr/Alibaba.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Alibaba.mrs> | Mihomo `behavior: ipcidr` 的 MRS Provider |
+| `mihomo/ipcidr/Apple.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Apple.mrs> | Mihomo `behavior: ipcidr` 的 MRS Provider |
+| `mihomo/ipcidr/BiliBili.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/BiliBili.mrs> | Mihomo `behavior: ipcidr` 的 MRS Provider |
+| `mihomo/ipcidr/ChinaMax.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/ChinaMax.mrs> | Mihomo `behavior: ipcidr` 的 MRS Provider |
+| `mihomo/ipcidr/ChinaMobile.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/ChinaMobile.mrs> | Mihomo `behavior: ipcidr` 的 MRS Provider |
+| `mihomo/ipcidr/Global.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Global.mrs> | Mihomo `behavior: ipcidr` 的 MRS Provider |
+| `mihomo/ipcidr/Google.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Google.mrs> | Mihomo `behavior: ipcidr` 的 MRS Provider |
+| `mihomo/ipcidr/KugouKuwo.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/KugouKuwo.mrs> | Mihomo `behavior: ipcidr` 的 MRS Provider |
+| `mihomo/ipcidr/NetEase.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/NetEase.mrs> | Mihomo `behavior: ipcidr` 的 MRS Provider |
+| `mihomo/ipcidr/NetEaseMusic.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/NetEaseMusic.mrs> | Mihomo `behavior: ipcidr` 的 MRS Provider |
+| `mihomo/ipcidr/SpeedtestInternational.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/SpeedtestInternational.mrs> | Mihomo `behavior: ipcidr` 的 MRS Provider |
+| `mihomo/ipcidr/Telegram.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Telegram.mrs> | Mihomo `behavior: ipcidr` 的 MRS Provider |
+| `mihomo/ipcidr/Tencent.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Tencent.mrs> | Mihomo `behavior: ipcidr` 的 MRS Provider |
+| `mihomo/ipcidr/Twitter.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Twitter.mrs> | Mihomo `behavior: ipcidr` 的 MRS Provider |
+| `mihomo/ipcidr/XiaoMi.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/XiaoMi.mrs> | Mihomo `behavior: ipcidr` 的 MRS Provider |
+| `mihomo/ipcidr/YouTube.mrs` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/YouTube.mrs> | Mihomo `behavior: ipcidr` 的 MRS Provider |
+
+### Mihomo classical Provider
+
+| 文件 | 现成可用的 Raw 地址 | 作用 |
+| --- | --- | --- |
+| `mihomo/classical/AI.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/AI.list> | Mihomo `behavior: classical` 的文本 Provider |
+| `mihomo/classical/Apple.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Apple.list> | Mihomo `behavior: classical` 的文本 Provider |
+| `mihomo/classical/ChinaASN.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/ChinaASN.list> | Mihomo `behavior: classical` 的文本 Provider |
+| `mihomo/classical/ChinaMax.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/ChinaMax.list> | Mihomo `behavior: classical` 的文本 Provider |
+| `mihomo/classical/GitHub.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/GitHub.list> | Mihomo `behavior: classical` 的文本 Provider |
+| `mihomo/classical/Global.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Global.list> | Mihomo `behavior: classical` 的文本 Provider |
+| `mihomo/classical/Google.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Google.list> | Mihomo `behavior: classical` 的文本 Provider |
+| `mihomo/classical/Instagram.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Instagram.list> | Mihomo `behavior: classical` 的文本 Provider |
+| `mihomo/classical/Microsoft.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Microsoft.list> | Mihomo `behavior: classical` 的文本 Provider |
+| `mihomo/classical/Telegram.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Telegram.list> | Mihomo `behavior: classical` 的文本 Provider |
+| `mihomo/classical/TestFlight.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/TestFlight.list> | Mihomo `behavior: classical` 的文本 Provider |
+| `mihomo/classical/TikTok.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/TikTok.list> | Mihomo `behavior: classical` 的文本 Provider |
+| `mihomo/classical/Twitter.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Twitter.list> | Mihomo `behavior: classical` 的文本 Provider |
+| `mihomo/classical/WeChat.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/WeChat.list> | Mihomo `behavior: classical` 的文本 Provider |
+| `mihomo/classical/YouTube.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/YouTube.list> | Mihomo `behavior: classical` 的文本 Provider |
+
+### Mihomo unsupported 审计
+
+| 文件 | 现成可用的 Raw 地址 | 作用 |
+| --- | --- | --- |
+| `mihomo/unsupported/Apple.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/Apple.list> | 仅用于查看无法自动转换的规则，不应直接启用 |
+| `mihomo/unsupported/BiliBili.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/BiliBili.list> | 仅用于查看无法自动转换的规则，不应直接启用 |
+| `mihomo/unsupported/ChinaMax.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/ChinaMax.list> | 仅用于查看无法自动转换的规则，不应直接启用 |
+| `mihomo/unsupported/Global.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/Global.list> | 仅用于查看无法自动转换的规则，不应直接启用 |
+| `mihomo/unsupported/Google.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/Google.list> | 仅用于查看无法自动转换的规则，不应直接启用 |
+| `mihomo/unsupported/Microsoft.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/Microsoft.list> | 仅用于查看无法自动转换的规则，不应直接启用 |
+| `mihomo/unsupported/NetEaseMusic.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/NetEaseMusic.list> | 仅用于查看无法自动转换的规则，不应直接启用 |
+| `mihomo/unsupported/Tencent.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/Tencent.list> | 仅用于查看无法自动转换的规则，不应直接启用 |
+| `mihomo/unsupported/TikTok.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/TikTok.list> | 仅用于查看无法自动转换的规则，不应直接启用 |
+| `mihomo/unsupported/WeChat.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/WeChat.list> | 仅用于查看无法自动转换的规则，不应直接启用 |
+| `mihomo/unsupported/YouTube.list` | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/unsupported/YouTube.list> | 仅用于查看无法自动转换的规则，不应直接启用 |
+
+## 三、常用配置地址
+
+### Loon / Egern 规则
+
+| 规则 | 直接地址 |
+| --- | --- |
+| AI | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/AI.lsr> |
+| Apple | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Apple.lsr> |
+| ChinaMax | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/ChinaMax.lsr> |
+| Global | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Global.lsr> |
+| Microsoft | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Microsoft.lsr> |
+| Telegram | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Telegram.lsr> |
+| YouTube | <https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/YouTube.lsr> |
+
+### Loon / Egern 图标
+
+| 图标 | 直接地址 |
+| --- | --- |
+| Global | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Global.png> |
+| Proxy | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Proxy.png> |
+| Apple | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Apple.png> |
+| Microsoft | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Microsoft-5de51988.png> |
+| Telegram | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/Telegram.png> |
+| YouTube | <https://raw.githubusercontent.com/ClaraCora/ege/main/png/YouTube.png> |
+
+### Mihomo Provider
+
+| Provider | 直接地址 | behavior |
+| --- | --- | --- |
+| Global 域名 | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Global.mrs> | domain |
+| Global IP | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ipcidr/Global.mrs> | ipcidr |
+| Global 经典规则 | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/classical/Global.list> | classical |
+| Microsoft 域名 | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Microsoft.mrs> | domain |
+| Apple 域名 | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/Apple.mrs> | domain |
+| YouTube 域名 | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/domain/YouTube.mrs> | domain |
+| 广告规则 | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/ads.mrs> | Mihomo 原生 MRS |
+| Fake-IP 过滤 | <https://raw.githubusercontent.com/ClaraCora/ege/main/mihomo/fakeip-filter.mrs> | Mihomo 原生 MRS |
+
+## 四、文件和自动化说明
+
+| 路径 | 作用 | 是否自动生成 |
+| --- | --- | --- |
+| `kelee/` | 保存 `kelee.lsr` 下载的 Loon 规则 | 是 |
+| `png/` | 保存 `png.lsr` 下载的 PNG 图标 | 是 |
+| `ad/` | 保存 `ad.lsr` 下载的广告资源 | 是 |
+| `mihomo/` | 保存 Mihomo 原生资源和 Kelee 转换结果 | 部分 |
+| `geo/` | 保存 `geo.lsr` 下载的地理数据库 | 是 |
+| `metadata/manifest.json` | 记录来源 URL、目标路径、SHA-256、文件大小和 ETag | 是 |
+| `metadata/kelee-mihomo-manifest.json` | 记录 Kelee 规则的分类数量、输出路径和校验值 | 是 |
+| `scripts/backup.py` | 下载、校验、保存资源并清理已删除来源的旧文件 | 否 |
+| `scripts/convert_kelee.py` | 调用 Mihomo 转换器生成 MRS 和 classical 文件 | 否 |
+| `.github/workflows/backup.yml` | 每 12 小时执行备份和转换，有变化才提交 | 否 |
+
+## 五、更新和转换规则
+
+1. 工作流在 UTC `00:17` 和 `12:17` 运行，即北京时间约 `08:17` 和 `20:17`；也可以在 Actions 页面手动运行。
+2. 下载失败、空文件、HTML 拦截页、超大响应和错误 PNG 会使本次任务失败，不会覆盖旧文件。
+3. Kelee 的 `DOMAIN` 和 `DOMAIN-SUFFIX` 会生成 `mihomo/domain/` 下的 MRS；`IP-CIDR` 和 `IP-CIDR6` 会生成 `mihomo/ipcidr/` 下的 MRS。
+4. `DOMAIN-KEYWORD`、`IP-ASN`、`AND`、`OR`、`NOT` 会生成 `mihomo/classical/` 下的文本 Provider。
+5. `USER-AGENT` 等无法直接表达的规则只写入 `mihomo/unsupported/` 审计文件，不会自动加入 Mihomo 配置。
+6. 资源内容未变化时不会产生新的 Git 提交，但 Actions 运行记录仍会保留。
+7. 修改资源来源时只编辑根目录对应的 `.lsr` 文件，不要手动修改自动生成目录。
