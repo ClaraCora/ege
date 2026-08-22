@@ -1,5 +1,5 @@
-# UpdateTime：2026-08-20 03:16:06
-# RuleCount：35741
+# UpdateTime：2026-08-22 03:18:28
+# RuleCount：35751
 DOMAIN, practivate.adobe
 DOMAIN, scholar.google.ae
 DOMAIN, yangzhi.app
@@ -3712,6 +3712,7 @@ DOMAIN-SUFFIX, amazonstudiosguilds.com
 DOMAIN-SUFFIX, amazontrust.com
 DOMAIN-SUFFIX, amazonvideo.com
 DOMAIN-SUFFIX, amazonvideodirect.com
+DOMAIN-SUFFIX, amazonwebservices.com
 DOMAIN-SUFFIX, amazonworkdocs.com
 DOMAIN-SUFFIX, amc.com
 DOMAIN-SUFFIX, amcn.com
@@ -6821,6 +6822,7 @@ DOMAIN-SUFFIX, drdremonsterdre.com
 DOMAIN-SUFFIX, drdreprobeatssale.com
 DOMAIN-SUFFIX, dreamamateurs.com
 DOMAIN-SUFFIX, dreamforce.com
+DOMAIN-SUFFIX, dreamgen.com
 DOMAIN-SUFFIX, dreammovies.com
 DOMAIN-SUFFIX, dreamorder.com
 DOMAIN-SUFFIX, dreamteamfc.com
@@ -7666,6 +7668,7 @@ DOMAIN-SUFFIX, fanqianglu.com
 DOMAIN-SUFFIX, fanqiangzhe.com
 DOMAIN-SUFFIX, fans-here.com
 DOMAIN-SUFFIX, fans17.com
+DOMAIN-SUFFIX, fansly.com
 DOMAIN-SUFFIX, fansnudes.com
 DOMAIN-SUFFIX, fansteek.com
 DOMAIN-SUFFIX, fanswong.com
@@ -19637,6 +19640,7 @@ DOMAIN-SUFFIX, sproxy.info
 DOMAIN-SUFFIX, squirly.info
 DOMAIN-SUFFIX, swiftbank.info
 DOMAIN-SUFFIX, swiftfinancial.info
+DOMAIN-SUFFIX, talkai.info
 DOMAIN-SUFFIX, taolun.info
 DOMAIN-SUFFIX, tbpic.info
 DOMAIN-SUFFIX, telega.info
@@ -19687,6 +19691,7 @@ DOMAIN-SUFFIX, 1inch.io
 DOMAIN-SUFFIX, 1password.io
 DOMAIN-SUFFIX, 4everland.io
 DOMAIN-SUFFIX, 54647.io
+DOMAIN-SUFFIX, 5ch.io
 DOMAIN-SUFFIX, 7tv.io
 DOMAIN-SUFFIX, 8muses.io
 DOMAIN-SUFFIX, abema.io
@@ -19853,6 +19858,7 @@ DOMAIN-SUFFIX, nlm.io
 DOMAIN-SUFFIX, nodereal.io
 DOMAIN-SUFFIX, nofile.io
 DOMAIN-SUFFIX, nomadproject.io
+DOMAIN-SUFFIX, notegpt.io
 DOMAIN-SUFFIX, oasis.io
 DOMAIN-SUFFIX, olevod.io
 DOMAIN-SUFFIX, oneapi.io
@@ -20591,6 +20597,7 @@ DOMAIN-SUFFIX, nhk.jp
 DOMAIN-SUFFIX, nhk-ondemand.jp
 DOMAIN-SUFFIX, nhkworld.jp
 DOMAIN-SUFFIX, nhncorp.jp
+DOMAIN-SUFFIX, nicochannel.jp
 DOMAIN-SUFFIX, nicodic.jp
 DOMAIN-SUFFIX, nicomanga.jp
 DOMAIN-SUFFIX, nicoseiga.jp
@@ -21624,6 +21631,7 @@ DOMAIN-SUFFIX, google.ms
 DOMAIN-SUFFIX, hummingbird.ms
 DOMAIN-SUFFIX, jwt.ms
 DOMAIN-SUFFIX, ntp.nat.ms
+DOMAIN-SUFFIX, nico.ms
 DOMAIN-SUFFIX, nyti.ms
 DOMAIN-SUFFIX, onestore.ms
 DOMAIN-SUFFIX, rsg.ms
@@ -23119,6 +23127,7 @@ DOMAIN-SUFFIX, nirsoft.net
 DOMAIN-SUFFIX, nitter.net
 DOMAIN-SUFFIX, wikia.nocookie.net
 DOMAIN-SUFFIX, test-ipv6.noroutetohost.net
+DOMAIN-SUFFIX, novelai.net
 DOMAIN-SUFFIX, nsimg.net
 DOMAIN-SUFFIX, nsstatic.net
 DOMAIN-SUFFIX, nubiles.net
@@ -25389,6 +25398,7 @@ DOMAIN-SUFFIX, ogaoga.org
 DOMAIN-SUFFIX, ogate.org
 DOMAIN-SUFFIX, ohchr.org
 DOMAIN-SUFFIX, ohentai.org
+DOMAIN-SUFFIX, oldmapsonline.org
 DOMAIN-SUFFIX, olympicwatch.org
 DOMAIN-SUFFIX, omct.org
 DOMAIN-SUFFIX, omnitalk.org

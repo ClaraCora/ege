@@ -1,5 +1,5 @@
-# UpdateTime：2026-08-20 03:14:54
-# RuleCount：123875
+# UpdateTime：2026-08-22 03:17:31
+# RuleCount：123848
 DOMAIN, livecdnh2.tvanywhere.ae
 DOMAIN, ip.istatmenus.app
 DOMAIN, rtvcdn.com.au
@@ -18,7 +18,6 @@ DOMAIN, live2.asbctv.com
 DOMAIN, cpro.baidustatic.com
 DOMAIN, hb2stream1.baoxinwen.com
 DOMAIN, stream.baoxinwen.com
-DOMAIN, emoi-cncdn.bing.com
 DOMAIN, live.btgdt.com
 DOMAIN, vss.cbnmtv.com
 DOMAIN, www.cbsnews.com
@@ -30,32 +29,6 @@ DOMAIN, chaoan.chaoantv.com
 DOMAIN, bbstv.clouducs.com
 DOMAIN, firebase-settings.crashlytics.com
 DOMAIN, update.crashlytics.com
-DOMAIN, afcs.dell.com
-DOMAIN, si.cdn.dell.com
-DOMAIN, snp.cdn.dell.com
-DOMAIN, clientperipherals.dell.com
-DOMAIN, customization-cdn.dell.com
-DOMAIN, dds.dell.com
-DOMAIN, dl.dell.com
-DOMAIN, ea2cn-dev-outlet.dell.com
-DOMAIN, ea2cn-prod-outlet.dell.com
-DOMAIN, ea2cn-staging-outlet.dell.com
-DOMAIN, fcs.dell.com
-DOMAIN, fta.dell.com
-DOMAIN, ftaapj.dell.com
-DOMAIN, ftaemea.dell.com
-DOMAIN, ftasitapj.dell.com
-DOMAIN, gbxgateway.dell.com
-DOMAIN, gbxgateway-dev.dell.com
-DOMAIN, i.dell.com
-DOMAIN, nexus.dell.com
-DOMAIN, p.cdn.persaas.dell.com
-DOMAIN, scene7-cdn.dell.com
-DOMAIN, sm.dell.com
-DOMAIN, snpi.dell.com
-DOMAIN, supportassist.dell.com
-DOMAIN, www.dell.com
-DOMAIN, www-csb.dell.com
 DOMAIN, www.destinationurl.com
 DOMAIN, stream01.dqtv123.com
 DOMAIN, sohucao.duapp.com
@@ -96,7 +69,6 @@ DOMAIN, ksn-tcert.geoksn.kaspersky.com
 DOMAIN, ksn-url.geoksn.kaspersky.com
 DOMAIN, ksn-verdict.geoksn.kaspersky.com
 DOMAIN, vip888.kuyun99.com
-DOMAIN, tp.louisvuitton.com
 DOMAIN, developer.microsoft.com
 DOMAIN, storeedgefd.dsx.mp.microsoft.com
 DOMAIN, ntservicepack.microsoft.com
@@ -151,7 +123,6 @@ DOMAIN, live.todaydunhuang.com
 DOMAIN, media.trrtv.com
 DOMAIN, e1.vdowowza.vip.hk1.tvb.com
 DOMAIN, live.tvbaoji.com
-DOMAIN, uplaypc-s-ubisoft.cdn.ubi.com
 DOMAIN, service.urchin.com
 DOMAIN, necgokr2-724.acs.wecandeo.com
 DOMAIN, cn.widevine.com
@@ -112606,6 +112577,7 @@ IP-CIDR, 45.81.34.0/24, no-resolve
 IP-CIDR, 45.82.241.0/24, no-resolve
 IP-CIDR, 45.87.53.0/24, no-resolve
 IP-CIDR, 45.87.54.0/24, no-resolve
+IP-CIDR, 45.91.139.0/24, no-resolve
 IP-CIDR, 45.112.132.0/22, no-resolve
 IP-CIDR, 45.112.188.0/22, no-resolve
 IP-CIDR, 45.112.208.0/20, no-resolve
@@ -116528,7 +116500,7 @@ IP-CIDR, 140.248.63.47/32, no-resolve
 IP-CIDR, 140.249.0.0/16, no-resolve
 IP-CIDR, 140.250.0.0/16, no-resolve
 IP-CIDR, 140.255.0.0/16, no-resolve
-IP-CIDR, 141.11.50.0/24, no-resolve
+IP-CIDR, 141.11.50.0/23, no-resolve
 IP-CIDR, 142.70.0.0/16, no-resolve
 IP-CIDR, 142.86.0.0/16, no-resolve
 IP-CIDR, 143.64.0.0/16, no-resolve
@@ -116687,7 +116659,6 @@ IP-CIDR, 154.19.86.0/23, no-resolve
 IP-CIDR, 154.19.88.0/21, no-resolve
 IP-CIDR, 154.19.96.0/19, no-resolve
 IP-CIDR, 154.36.92.0/23, no-resolve
-IP-CIDR, 154.72.42.0/24, no-resolve
 IP-CIDR, 154.72.44.0/24, no-resolve
 IP-CIDR, 154.72.47.0/24, no-resolve
 IP-CIDR, 154.84.180.0/24, no-resolve
@@ -116954,6 +116925,7 @@ IP-CIDR, 163.177.0.0/16, no-resolve
 IP-CIDR, 163.179.0.0/16, no-resolve
 IP-CIDR, 163.181.0.0/16, no-resolve
 IP-CIDR, 163.204.0.0/16, no-resolve
+IP-CIDR, 163.223.72.0/23, no-resolve
 IP-CIDR, 163.227.40.0/23, no-resolve
 IP-CIDR, 163.228.0.0/16, no-resolve
 IP-CIDR, 163.244.246.0/24, no-resolve
@@ -116971,6 +116943,7 @@ IP-CIDR, 166.0.97.0/24, no-resolve
 IP-CIDR, 166.0.100.0/23, no-resolve
 IP-CIDR, 166.1.139.0/24, no-resolve
 IP-CIDR, 166.1.218.0/24, no-resolve
+IP-CIDR, 166.1.246.0/23, no-resolve
 IP-CIDR, 166.111.0.0/16, no-resolve
 IP-CIDR, 166.118.227.88/32, no-resolve
 IP-CIDR, 167.139.0.0/16, no-resolve
