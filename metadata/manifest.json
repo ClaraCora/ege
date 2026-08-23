@@ -21,9 +21,9 @@
       "list": "ad.lsr",
       "url": "https://adrules.top/adrules.list",
       "path": "ad/adrules.list",
-      "sha256": "18469e12b8da9a7e12c07a21985425b0ed3c1135aefc9f4fe82f733affa28dfd",
-      "size": 6836729,
-      "etag": "\"1f88d68a60244d2d2db747a02fa49018\""
+      "sha256": "be48fa0d35bd35eba488b65babf95427e07087f4bf4983f006371bb6d97f58d1",
+      "size": 6841724,
+      "etag": "\"42216ba223819a9a632840bdcb4977af\""
     },
     {
       "list": "geo.lsr",
@@ -429,9 +429,9 @@
       "list": "mihomo.lsr",
       "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/proxy.mrs",
       "path": "mihomo/proxy.mrs",
-      "sha256": "7387fd69a77fe3363d4cc8846f4c61bb12be37a79b3e9dfc00e5b4a4494456b0",
-      "size": 192365,
-      "etag": "\"981ba7cefb1c5c6c1f33bb9dc75a26cf300a029235e581a8990ba8f5a78c2a1c\""
+      "sha256": "6464c3c631d5d9c6579367ddf7c8533c11066ccb71516757d5cfad562da6ca2b",
+      "size": 192389,
+      "etag": "\"8aac11658038183c45d89e171f98190c879ea9635b4f94f2c0f8e9d3a534e81c\""
     },
     {
       "list": "png.lsr",
