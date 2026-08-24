@@ -1,5 +1,5 @@
-# UpdateTime：2026-08-22 03:18:28
-# RuleCount：35751
+# UpdateTime：2026-08-24 03:15:43
+# RuleCount：35755
 DOMAIN, practivate.adobe
 DOMAIN, scholar.google.ae
 DOMAIN, yangzhi.app
@@ -11094,6 +11094,7 @@ DOMAIN-SUFFIX, mcdonalds.com
 DOMAIN-SUFFIX, mcdonalds-online.com
 DOMAIN-SUFFIX, mcdonaldsapps.com
 DOMAIN-SUFFIX, mcdonaldsarabia.com
+DOMAIN-SUFFIX, mceindex.com
 DOMAIN-SUFFIX, mcfog.com
 DOMAIN-SUFFIX, mcisco.com
 DOMAIN-SUFFIX, mcpeaceofmind.com
@@ -22684,6 +22685,7 @@ DOMAIN-SUFFIX, himemix.net
 DOMAIN-SUFFIX, hinet.net
 DOMAIN-SUFFIX, hiporn.net
 DOMAIN-SUFFIX, hipzoom.net
+DOMAIN-SUFFIX, historylines.net
 DOMAIN-SUFFIX, historyofdota.net
 DOMAIN-SUFFIX, hiveon.net
 DOMAIN-SUFFIX, hkacg.net
@@ -24434,6 +24436,7 @@ DOMAIN-SUFFIX, botorch.org
 DOMAIN-SUFFIX, braintreepayments.org
 DOMAIN-SUFFIX, braumeister.org
 DOMAIN-SUFFIX, brazz.org
+DOMAIN-SUFFIX, briarproject.org
 DOMAIN-SUFFIX, brilliant.org
 DOMAIN-SUFFIX, bromite.org
 DOMAIN-SUFFIX, brotli.org
@@ -25179,6 +25182,7 @@ DOMAIN-SUFFIX, khanacademy.org
 DOMAIN-SUFFIX, khatrimaza.org
 DOMAIN-SUFFIX, kindleoasis.org
 DOMAIN-SUFFIX, kingdomsalvation.org
+DOMAIN-SUFFIX, kiwix.org
 DOMAIN-SUFFIX, kmeleonbrowser.org
 DOMAIN-SUFFIX, konami.org
 DOMAIN-SUFFIX, kotlinlang.org
