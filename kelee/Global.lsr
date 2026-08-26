@@ -1,5 +1,5 @@
-# UpdateTime：2026-08-24 03:15:43
-# RuleCount：35755
+# UpdateTime：2026-08-26 03:16:00
+# RuleCount：35756
 DOMAIN, practivate.adobe
 DOMAIN, scholar.google.ae
 DOMAIN, yangzhi.app
@@ -9350,7 +9350,6 @@ DOMAIN-SUFFIX, hp-invent.com
 DOMAIN-SUFFIX, hp-mns.com
 DOMAIN-SUFFIX, hp-printing.com
 DOMAIN-SUFFIX, hp-webplatform.com
-DOMAIN-SUFFIX, hp-ww.com
 DOMAIN-SUFFIX, hp3d.com
 DOMAIN-SUFFIX, hp3dmetals.com
 DOMAIN-SUFFIX, hp3dprinter.com
@@ -14416,6 +14415,7 @@ DOMAIN-SUFFIX, showtimeanytime.com
 DOMAIN-SUFFIX, showybeauty.com
 DOMAIN-SUFFIX, shrkurl.com
 DOMAIN-SUFFIX, shsh201.com
+DOMAIN-SUFFIX, api.shuaiapi.com
 DOMAIN-SUFFIX, shufflesex.com
 DOMAIN-SUFFIX, shutterstock.com
 DOMAIN-SUFFIX, shvoong.com
@@ -18443,6 +18443,7 @@ DOMAIN-SUFFIX, volvogroup.fr
 DOMAIN-SUFFIX, volvopenta.fr
 DOMAIN-SUFFIX, volvotrucks.fr
 DOMAIN-SUFFIX, webex.fr
+DOMAIN-SUFFIX, x86.fr
 DOMAIN-SUFFIX, yahoo.fr
 DOMAIN-SUFFIX, yandex.fr
 DOMAIN-SUFFIX, youtube.fr
