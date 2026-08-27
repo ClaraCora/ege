@@ -21,17 +21,17 @@
       "list": "ad.lsr",
       "url": "https://adrules.top/adrules.list",
       "path": "ad/adrules.list",
-      "sha256": "031d45dd8ba63b79655b26994d122a09a6a6ac44f6a980b6900f9ee435ac3184",
-      "size": 6843150,
-      "etag": "\"a7cd9c613617ee0b4f9899434d26574e\""
+      "sha256": "ec7f572c02ce648e6b4420145ee892a47b9c0363e5d230efef061c1829e3a40a",
+      "size": 6850456,
+      "etag": "\"8a675a452573f6601b308de38481f698\""
     },
     {
       "list": "geo.lsr",
       "url": "https://gh-proxy.org/https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb",
       "path": "geo/GeoLite2-ASN.mmdb",
-      "sha256": "82abcabdf4d0ecb34da45e4f0f9bc30bf933cfbfec446b89a2215fae5b1fdbdc",
-      "size": 12061149,
-      "etag": "\"0x8DEFE5308E2D0DB\""
+      "sha256": "93456017eef970e7e60ab66312402b2130bb233af792a5aa30b2ff4de854c5cf",
+      "size": 12079074,
+      "etag": "\"0x8DF03FCC834FE0E\""
     },
     {
       "list": "geo.lsr",
@@ -381,9 +381,9 @@
       "list": "mihomo.lsr",
       "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/ads.mrs",
       "path": "mihomo/ads.mrs",
-      "sha256": "691b5849b7b97272749a8e2d64ccd396b50e642554626ab5b2133fdfad481cc9",
-      "size": 868278,
-      "etag": "\"e9f3b0f32b23199752c62edc6e7de022a86e019d753e44698dd6abb497d3501d\""
+      "sha256": "0a5430f4a6609077b4e7fa80a004667a709b33a41ccc88d00cd266c0feece59f",
+      "size": 865585,
+      "etag": "\"70f87362f00517a571e67acd30b16e65645e6020a60013077b37dda15173a07b\""
     },
     {
       "list": "mihomo.lsr",
@@ -429,9 +429,9 @@
       "list": "mihomo.lsr",
       "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/proxy.mrs",
       "path": "mihomo/proxy.mrs",
-      "sha256": "1476e4c9a36b75c45cc36f8bb0aa120a97bf71775898dfddf9940630ea4b4e9d",
-      "size": 192553,
-      "etag": "\"a32f0221b5273551cfa4b3f16cadb5e77e76b17033ff3e2bc8142918590a09f7\""
+      "sha256": "f144723597e08073aee1152fdcbcd4792697904a495358ca9cf3a9547d503c3c",
+      "size": 192517,
+      "etag": "\"41bdc245e6de78e8a116884fc22d6cb9c6e9d4d361c25f1cda3522eea565b800\""
     },
     {
       "list": "png.lsr",
