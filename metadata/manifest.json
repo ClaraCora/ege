@@ -21,9 +21,9 @@
       "list": "ad.lsr",
       "url": "https://adrules.top/adrules.list",
       "path": "ad/adrules.list",
-      "sha256": "a5403f67f45fb3582116d78249e3a04c2f2a0b7ec453c38629ea2d5070df062b",
-      "size": 6888910,
-      "etag": "\"dff1f06fde604c65f1e9eb28b4990232\""
+      "sha256": "bcb15583289072c2d969565e54424e5bbf570121d78257151e71d2aa5547a491",
+      "size": 6870356,
+      "etag": "\"33067220cf20ddcbef9081af4bd79bd2\""
     },
     {
       "list": "geo.lsr",
@@ -53,9 +53,9 @@
       "list": "geo.lsr",
       "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat",
       "path": "geo/geosite.dat",
-      "sha256": "818c7f5b434ce8d24aac8138fc4c304a3525f057a6893547ce2bccfb7cf2ae3e",
-      "size": 4243231,
-      "etag": "W/\"40bf1f-To2gjkuvD7lWyESLqAs8nzdLtKM\""
+      "sha256": "13b7cde1c317da9b65a145c1678587ab0dff88c3bd9738e5d1faa0af5ee17c12",
+      "size": 4246547,
+      "etag": "W/\"40cc13-GtWyAkc7rrZ8RFCRuI0NVqZ3UK0\""
     },
     {
       "list": "kelee.lsr",
