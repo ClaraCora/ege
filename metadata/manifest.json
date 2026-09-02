@@ -21,9 +21,9 @@
       "list": "ad.lsr",
       "url": "https://adrules.top/adrules.list",
       "path": "ad/adrules.list",
-      "sha256": "7d31bf2696ae4d1c84adb7db0329bf7999fa851f177b4affc7a60b0dc34f5280",
-      "size": 6889531,
-      "etag": "\"27cfba7514b000e37e123c5937521535\""
+      "sha256": "9a20b405edc17c0100ab19b3c102796dd0f939f7273ddac0e9733c3d600f7d50",
+      "size": 6895488,
+      "etag": "\"272edafdc2357f027df938a5da5d767f\""
     },
     {
       "list": "geo.lsr",
