@@ -1,5 +1,5 @@
-# UpdateTime：2026-08-31 03:15:56
-# RuleCount：35764
+# UpdateTime：2026-09-02 03:20:19
+# RuleCount：35765
 DOMAIN, practivate.adobe
 DOMAIN, scholar.google.ae
 DOMAIN, yangzhi.app
@@ -24908,6 +24908,7 @@ DOMAIN-SUFFIX, getfedora.org
 DOMAIN-SUFFIX, getfoxyoutside.org
 DOMAIN-SUFFIX, getfoxyproxy.org
 DOMAIN-SUFFIX, getlantern.org
+DOMAIN-SUFFIX, getmonero.org
 DOMAIN-SUFFIX, getoutline.org
 DOMAIN-SUFFIX, getsession.org
 DOMAIN-SUFFIX, getzola.org
