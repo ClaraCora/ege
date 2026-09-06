@@ -537,9 +537,9 @@
     },
     {
       "source": "kelee/SpeedtestInternational.lsr",
-      "source_sha256": "624081287e01fc6cd480e2733a700048aa005ece1d0ff6a8c42038c2c939089a",
+      "source_sha256": "869f4ca55ab0c510506a41c426bdd402901811e3792b9ecc308e8e2cb1d1fecb",
       "counts": {
-        "domain": 17683,
+        "domain": 17956,
         "ipcidr": 9,
         "classical": 0,
         "unsupported": 0
@@ -548,8 +548,8 @@
         {
           "behavior": "domain",
           "path": "domain/SpeedtestInternational.mrs",
-          "sha256": "32ef697838de6bc8775a296baa09ae0e51f0d959b34f3c435c711c229453b2bb",
-          "size": 170172
+          "sha256": "1af6d551e96f2e8fe39ac24cedb6cbc509a01c5508d3cb68b3736551f9a838ad",
+          "size": 172508
         },
         {
           "behavior": "ipcidr",
