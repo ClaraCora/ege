@@ -1,5 +1,5 @@
-# UpdateTime：2026-09-05 03:21:53
-# RuleCount：35772
+# UpdateTime：2026-09-07 03:22:01
+# RuleCount：35773
 DOMAIN, practivate.adobe
 DOMAIN, scholar.google.ae
 DOMAIN, yangzhi.app
@@ -27257,6 +27257,7 @@ DOMAIN-SUFFIX, doh.sb
 DOMAIN-SUFFIX, dot.sb
 DOMAIN-SUFFIX, ip.sb
 DOMAIN-SUFFIX, jav.sb
+DOMAIN-SUFFIX, linux.sb
 DOMAIN-SUFFIX, sb.sb
 DOMAIN-SUFFIX, www.sb
 DOMAIN-SUFFIX, ahlxsdh.sbs
