@@ -13,17 +13,17 @@
       "list": "ad.lsr",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Advertising/Advertising.list",
       "path": "ad/Advertising.list",
-      "sha256": "77175c47ce4f86ae8cf1e397b1307db7a0496773da4f1e337ec44b05c0b65b5c",
+      "sha256": "e5a1bd74ea92a14402b7c9fc6a629d318e548a6a24c3bd5f5e362cc2d0f948f9",
       "size": 26870,
-      "etag": "\"e1a5e369c81ffddb115e19bcb02a72baaa28a449bacf2b8798530077103b18eb\""
+      "etag": "\"fb61708465f982396b9d76af148b7aa8809fbca1db090083b940600584c91e5f\""
     },
     {
       "list": "ad.lsr",
       "url": "https://adrules.top/adrules.list",
       "path": "ad/adrules.list",
-      "sha256": "ce53c01027744bbe2260974cd3915734a6c1dcd1aa4a27538ef9646b8386c9fd",
-      "size": 6823867,
-      "etag": "\"1220cac2340acc155a63474c32c10270\""
+      "sha256": "3dc8ea0cb93cf5d39af2f7da2a38f086a61a6e4f29fd9c0c42da62ad5d3a5b50",
+      "size": 6829085,
+      "etag": "\"b5eaa38a91186976355cda83743fb59b\""
     },
     {
       "list": "geo.lsr",
@@ -53,9 +53,9 @@
       "list": "geo.lsr",
       "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat",
       "path": "geo/geosite.dat",
-      "sha256": "7f42e9e1f08894bc03d7c18f129b1c3967d4a0f477937a981071354ae9262aa3",
-      "size": 4243589,
-      "etag": "W/\"40c085-OIWTr/wgYuft+u2B58m4UAQhFEk\""
+      "sha256": "c5fe9448d979391192f5bd553b5e28c39efdc9bd857b7c879a7d995fded0c3fe",
+      "size": 4243905,
+      "etag": "W/\"40c1c1-gdYjQBAe6I32uiHpa+T+tKZ4GRo\""
     },
     {
       "list": "kelee.lsr",
