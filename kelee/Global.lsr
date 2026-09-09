@@ -1,5 +1,5 @@
-# UpdateTime：2026-09-07 03:22:01
-# RuleCount：35773
+# UpdateTime：2026-09-09 03:54:34
+# RuleCount：35780
 DOMAIN, practivate.adobe
 DOMAIN, scholar.google.ae
 DOMAIN, yangzhi.app
@@ -613,6 +613,7 @@ DOMAIN, sni1dcb6gl.wpc.edgecastcdn.net
 DOMAIN, netflix.com.edgesuite.net
 DOMAIN, spotify.com.edgesuite.net
 DOMAIN, lastfm.freetls.fastly.net
+DOMAIN, lastfm-img.freetls.fastly.net
 DOMAIN, mozilla.map.fastly.net
 DOMAIN, nytimes.map.fastly.net
 DOMAIN, spotify.map.fastly.net
@@ -2911,6 +2912,7 @@ DOMAIN-SUFFIX, 110xnxx.com
 DOMAIN-SUFFIX, 112263.com
 DOMAIN-SUFFIX, 11jav.com
 DOMAIN-SUFFIX, 123-hp.com
+DOMAIN-SUFFIX, 123av.com
 DOMAIN-SUFFIX, 123dapp.com
 DOMAIN-SUFFIX, 123dappipad.com
 DOMAIN-SUFFIX, 123dartisan.com
@@ -13920,6 +13922,7 @@ DOMAIN-SUFFIX, rosemarydoll.com
 DOMAIN-SUFFIX, rossiyasegodnya.com
 DOMAIN-SUFFIX, rotten.com
 DOMAIN-SUFFIX, roughebonysex.com
+DOMAIN-SUFFIX, roushuwo.com
 DOMAIN-SUFFIX, routerboard.com
 DOMAIN-SUFFIX, routledgehandbooks.com
 DOMAIN-SUFFIX, rowblocks.com
@@ -16700,6 +16703,7 @@ DOMAIN-SUFFIX, wsjmediakit.com
 DOMAIN-SUFFIX, wsjplus.com
 DOMAIN-SUFFIX, wsjshop.com
 DOMAIN-SUFFIX, wsjwine.com
+DOMAIN-SUFFIX, wtfpass.com
 DOMAIN-SUFFIX, wtfpeople.com
 DOMAIN-SUFFIX, wtmobile.com
 DOMAIN-SUFFIX, wuerkaixi.com
@@ -21201,6 +21205,7 @@ DOMAIN-SUFFIX, volvotrucks.md
 DOMAIN-SUFFIX, yahoo.md
 DOMAIN-SUFFIX, yandex.md
 DOMAIN-SUFFIX, youtube.md
+DOMAIN-SUFFIX, 123av.me
 DOMAIN-SUFFIX, 18mh.me
 DOMAIN-SUFFIX, 18schoolgirlz.me
 DOMAIN-SUFFIX, 2beeg.me
@@ -25626,6 +25631,7 @@ DOMAIN-SUFFIX, rfaweb.org
 DOMAIN-SUFFIX, rferl.org
 DOMAIN-SUFFIX, rigpa.org
 DOMAIN-SUFFIX, roblox.org
+DOMAIN-SUFFIX, roc-taiwan.org
 DOMAIN-SUFFIX, rocksdb.org
 DOMAIN-SUFFIX, rockylinux.org
 DOMAIN-SUFFIX, rolfoundation.org
@@ -25769,6 +25775,7 @@ DOMAIN-SUFFIX, tacem.org
 DOMAIN-SUFFIX, tafm.org
 DOMAIN-SUFFIX, taipeisociety.org
 DOMAIN-SUFFIX, taiwandc.org
+DOMAIN-SUFFIX, taiwanembassy.org
 DOMAIN-SUFFIX, tanc.org
 DOMAIN-SUFFIX, taxiaid.org
 DOMAIN-SUFFIX, taxiguru.org
