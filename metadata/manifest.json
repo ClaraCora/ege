@@ -5,9 +5,9 @@
       "list": "ad.lsr",
       "url": "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Egern/Rules/Ads_AWAvenue.yaml",
       "path": "ad/Ads_AWAvenue.yaml",
-      "sha256": "89704acd0db14f516798eb876260ccd289d2bc63d2795b51c310ccf5f4d25210",
-      "size": 22146,
-      "etag": "\"9d7b33b359d4862903d38da2273479a9266ad4877a7f214cdac9362f63c81400\""
+      "sha256": "a69900016d5b3fb7c4e3b647f18716ebc27cda668d79bae0a3596618e37b2916",
+      "size": 23238,
+      "etag": "\"b8ba325b7e944d7e55b5256f8b510627cc6ad74c389e67c865c2c412da962f25\""
     },
     {
       "list": "ad.lsr",
@@ -21,9 +21,9 @@
       "list": "ad.lsr",
       "url": "https://adrules.top/adrules.list",
       "path": "ad/adrules.list",
-      "sha256": "c141e44f2f7ead22f3f97e736a2cf221203e2aef209eb824682fd865e9a712a1",
-      "size": 6842279,
-      "etag": "\"e851cd38d1c441a2babdeb955be6899a\""
+      "sha256": "3191cfe9ab6e649f7be2ad672c8aed0870730dbaa62fdc9f11f87515ed6ca805",
+      "size": 6849070,
+      "etag": "\"9ee3860f8a239f0980b254beb5254b5f\""
     },
     {
       "list": "geo.lsr",
@@ -53,9 +53,9 @@
       "list": "geo.lsr",
       "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat",
       "path": "geo/geosite.dat",
-      "sha256": "c5fe9448d979391192f5bd553b5e28c39efdc9bd857b7c879a7d995fded0c3fe",
-      "size": 4243905,
-      "etag": "W/\"40c1c1-gdYjQBAe6I32uiHpa+T+tKZ4GRo\""
+      "sha256": "01605ebe6f73896e82d1436e86ce375790c43a5ee4c738179845c1b834ba00e4",
+      "size": 4244077,
+      "etag": "W/\"40c26d-t5OgkT2o1z8+CTtbXjK3yFvreQs\""
     },
     {
       "list": "kelee.lsr",
