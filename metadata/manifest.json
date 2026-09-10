@@ -5,9 +5,9 @@
       "list": "ad.lsr",
       "url": "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Egern/Rules/Ads_AWAvenue.yaml",
       "path": "ad/Ads_AWAvenue.yaml",
-      "sha256": "a69900016d5b3fb7c4e3b647f18716ebc27cda668d79bae0a3596618e37b2916",
-      "size": 23238,
-      "etag": "\"b8ba325b7e944d7e55b5256f8b510627cc6ad74c389e67c865c2c412da962f25\""
+      "sha256": "b842c10e24d574bc0e50c0526958d1b68e14dd4ed8e078266151f13e453c5d3e",
+      "size": 23378,
+      "etag": "\"e605c37b9fc35d69eed94b79792a9881a3c9c9e13894a12af7c8e2adf7b8dbeb\""
     },
     {
       "list": "ad.lsr",
@@ -21,9 +21,9 @@
       "list": "ad.lsr",
       "url": "https://adrules.top/adrules.list",
       "path": "ad/adrules.list",
-      "sha256": "be9d8d4feecc0b190c2996a65e447c064474567f187ca80f1040ff5aa1416393",
-      "size": 6855054,
-      "etag": "\"06d9f3eb5d96cf7cd171b9482cfc34b6\""
+      "sha256": "fb0aa2aca5ffbcbaa068cf59d14bc0f69dfcaa76e1f009f292d8ac6df9366dff",
+      "size": 6862401,
+      "etag": "\"53f3b926c5acdd43db5a99cc109fbe0f\""
     },
     {
       "list": "geo.lsr",
@@ -37,9 +37,9 @@
       "list": "geo.lsr",
       "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb",
       "path": "geo/country.mmdb",
-      "sha256": "031bd6e8dfd62d70b81d2d65ce54a92ed7f21f060add17c66e16a2a0e55d3a41",
-      "size": 7832239,
-      "etag": "W/\"7782af-FLBYaDeZUXtGj7VM8EbGWjjQNQ0\""
+      "sha256": "4790a1479e63c8d3b67af7b47f6cb0b96a8d05a6d01ed568af8385c1d1176c8e",
+      "size": 7824943,
+      "etag": "W/\"77662f-z93hVWqnNzqr6AITw7/pjN1jXKM\""
     },
     {
       "list": "geo.lsr",
@@ -53,9 +53,9 @@
       "list": "geo.lsr",
       "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat",
       "path": "geo/geosite.dat",
-      "sha256": "01605ebe6f73896e82d1436e86ce375790c43a5ee4c738179845c1b834ba00e4",
-      "size": 4244077,
-      "etag": "W/\"40c26d-t5OgkT2o1z8+CTtbXjK3yFvreQs\""
+      "sha256": "83e5023cfc134700fd373d800880c62c9cb1e8b97aef59052d7779d817c27be0",
+      "size": 4244097,
+      "etag": "W/\"40c281-NQe3OvIc32yuRGLzaSSjMG4Gnto\""
     },
     {
       "list": "kelee.lsr",
