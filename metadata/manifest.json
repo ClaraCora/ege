@@ -13,25 +13,25 @@
       "list": "ad.lsr",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Advertising/Advertising.list",
       "path": "ad/Advertising.list",
-      "sha256": "e5a1bd74ea92a14402b7c9fc6a629d318e548a6a24c3bd5f5e362cc2d0f948f9",
+      "sha256": "2f7f97d2525423767b0cfe89c5705514dbd11f8a93fa4a3ab54a48dae575a674",
       "size": 26870,
-      "etag": "\"fb61708465f982396b9d76af148b7aa8809fbca1db090083b940600584c91e5f\""
+      "etag": "\"cdd3173b7676b21edf3c237a2314011250c26ec528a462c96c609745ba4a5559\""
     },
     {
       "list": "ad.lsr",
       "url": "https://adrules.top/adrules.list",
       "path": "ad/adrules.list",
-      "sha256": "3191cfe9ab6e649f7be2ad672c8aed0870730dbaa62fdc9f11f87515ed6ca805",
-      "size": 6849070,
-      "etag": "\"9ee3860f8a239f0980b254beb5254b5f\""
+      "sha256": "be9d8d4feecc0b190c2996a65e447c064474567f187ca80f1040ff5aa1416393",
+      "size": 6855054,
+      "etag": "\"06d9f3eb5d96cf7cd171b9482cfc34b6\""
     },
     {
       "list": "geo.lsr",
       "url": "https://gh-proxy.org/https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb",
       "path": "geo/GeoLite2-ASN.mmdb",
-      "sha256": "37279508b91bb26fe6043897490fe2ba02d95a7521a8263e70e566239355b479",
-      "size": 12106294,
-      "etag": "\"0x8DF095E388ABEB3\""
+      "sha256": "7c42cdc21c08ecdcee331c231fc2601a031a420877f8beb7df0b9a9b92d997c9",
+      "size": 12106670,
+      "etag": "\"0x8DF0EDE7ABCA165\""
     },
     {
       "list": "geo.lsr",
