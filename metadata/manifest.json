@@ -13,17 +13,17 @@
       "list": "ad.lsr",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Advertising/Advertising.list",
       "path": "ad/Advertising.list",
-      "sha256": "1e8785c870ba51bebc86353175296fe2db82cf9237eadd0be0708abed5c39212",
+      "sha256": "5315edad3d59241ed67849d3664ed9880dada6a7acb59257e6430a197b30a143",
       "size": 26870,
-      "etag": "\"a7f959b996dbb7a2d00a941f697ce0f619cbcd557c46aa5d740deb233f620c2a\""
+      "etag": "\"cb98072aaa4982a1854253445edbb0844cb27f4a66fbb0a5e6d7bb99fd9b9800\""
     },
     {
       "list": "ad.lsr",
       "url": "https://adrules.top/adrules.list",
       "path": "ad/adrules.list",
-      "sha256": "f52d437a39a566f96a30d8a8fe4d0ae619f761be54de963615f1def63575ae1b",
-      "size": 6897739,
-      "etag": "\"208bd2500c4665769469ea13b5c94b59\""
+      "sha256": "0e3f4b79d3a4691029af7248814b9722b8609b8ba415148ad76ba227723ac8db",
+      "size": 6903066,
+      "etag": "\"8e9259a904ab4df2e0c037cb197e92fe\""
     },
     {
       "list": "geo.lsr",
@@ -53,9 +53,9 @@
       "list": "geo.lsr",
       "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat",
       "path": "geo/geosite.dat",
-      "sha256": "50daa3dba41e12db8463b57c0e336e61eae2ab37a6afec000e753af7f74c1df4",
-      "size": 4244143,
-      "etag": "W/\"40c2af-F1kLx0i589bYs4infk2PfrJByu8\""
+      "sha256": "5d25677f72fa2cf659a81c1c0c70ff527f1f20dc8dec10155ec11e15ca484962",
+      "size": 4244128,
+      "etag": "W/\"40c2a0-U5Q89Pmnn6KSrI4XIWydUZu0dHg\""
     },
     {
       "list": "kelee.lsr",
