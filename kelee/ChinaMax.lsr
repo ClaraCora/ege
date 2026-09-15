@@ -1,5 +1,5 @@
-# UpdateTime：2026-09-13 03:16:03
-# RuleCount：123866
+# UpdateTime：2026-09-15 03:16:16
+# RuleCount：123867
 DOMAIN, livecdnh2.tvanywhere.ae
 DOMAIN, ip.istatmenus.app
 DOMAIN, rtvcdn.com.au
@@ -72828,7 +72828,6 @@ DOMAIN-SUFFIX, spsb114.com
 DOMAIN-SUFFIX, spsicloudport.com
 DOMAIN-SUFFIX, spsisctgroup.com
 DOMAIN-SUFFIX, spsisncl.com
-DOMAIN-SUFFIX, spst2.com
 DOMAIN-SUFFIX, sptcc.com
 DOMAIN-SUFFIX, sptccn.com
 DOMAIN-SUFFIX, spthome.com
@@ -112789,6 +112788,7 @@ IP-CIDR, 81.173.18.0/23, no-resolve
 IP-CIDR, 81.173.20.0/22, no-resolve
 IP-CIDR, 81.173.28.0/24, no-resolve
 IP-CIDR, 82.38.46.0/23, no-resolve
+IP-CIDR, 82.38.80.0/23, no-resolve
 IP-CIDR, 82.156.0.0/15, no-resolve
 IP-CIDR, 85.12.7.192/28, no-resolve
 IP-CIDR, 85.184.245.0/24, no-resolve
@@ -116233,6 +116233,7 @@ IP-CIDR, 140.250.0.0/16, no-resolve
 IP-CIDR, 140.255.0.0/16, no-resolve
 IP-CIDR, 142.70.0.0/16, no-resolve
 IP-CIDR, 142.86.0.0/16, no-resolve
+IP-CIDR, 143.20.70.0/23, no-resolve
 IP-CIDR, 143.64.0.0/16, no-resolve
 IP-CIDR, 143.191.64.0/19, no-resolve
 IP-CIDR, 143.191.96.0/21, no-resolve

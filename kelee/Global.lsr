@@ -1,5 +1,5 @@
-# UpdateTime：2026-09-13 03:17:07
-# RuleCount：35781
+# UpdateTime：2026-09-15 03:17:19
+# RuleCount：35782
 DOMAIN, practivate.adobe
 DOMAIN, scholar.google.ae
 DOMAIN, yangzhi.app
@@ -13609,6 +13609,7 @@ DOMAIN-SUFFIX, roco.qq.com
 DOMAIN-SUFFIX, qq33qq.com
 DOMAIN-SUFFIX, qstatus.com
 DOMAIN-SUFFIX, qtweeter.com
+DOMAIN-SUFFIX, quakemachinex.com
 DOMAIN-SUFFIX, qualcomm.com
 DOMAIN-SUFFIX, qualcomm-email.com
 DOMAIN-SUFFIX, qualcomm-inc.com
