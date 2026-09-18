@@ -13,17 +13,17 @@
       "list": "ad.lsr",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Advertising/Advertising.list",
       "path": "ad/Advertising.list",
-      "sha256": "d6c48ee1e57a43e2573c69a85e315345fb7c17f046dbe84fa93431c786804582",
+      "sha256": "751f516df248d0b23fb07038fb47e73a59a19dccb2db75e23616825e7428d47a",
       "size": 26870,
-      "etag": "\"2b72b874ead776857c18f666290cf34f5568892695b1fc84d8b2e66b304509d2\""
+      "etag": "\"2645c2eb67b3344d50039ce2000ae10dbcf34c8b090b342e062aab1872d8454b\""
     },
     {
       "list": "ad.lsr",
       "url": "https://adrules.top/adrules.list",
       "path": "ad/adrules.list",
-      "sha256": "c410f25ed8e3143546045f8183711f3f0637ca8ff47458da074f7de57b88f8f9",
-      "size": 6937401,
-      "etag": "\"eaa76f7143871e21a87e81f5edc928f1\""
+      "sha256": "72717c16860acebb50a1651ab9b7991463fd19d303426ddc05424da2146bd2a7",
+      "size": 6943128,
+      "etag": "\"3b7cc872096291643b3ad29ba830317a\""
     },
     {
       "list": "geo.lsr",
@@ -53,9 +53,9 @@
       "list": "geo.lsr",
       "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat",
       "path": "geo/geosite.dat",
-      "sha256": "9e37f1c1e764a1772f5331b69b20f741944b033f0584aec4fc358330e2d869dd",
+      "sha256": "e64f329023037e618fe179ac02be0a6600823ed0c27d1321d75d671af8df3a06",
       "size": 4244510,
-      "etag": "W/\"40c41e-ZTmUaB/OLeDtfM4OF/QIn7BgG40\""
+      "etag": "W/\"40c41e-buCGyw+VL5nrEd3Fj3ywFNDVe8Q\""
     },
     {
       "list": "kelee.lsr",
@@ -381,9 +381,9 @@
       "list": "mihomo.lsr",
       "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/ads.mrs",
       "path": "mihomo/ads.mrs",
-      "sha256": "0ea7354fad3f566004fe5aeb4cac6c13c87928b5f2f78041545a280caccf9c86",
-      "size": 859422,
-      "etag": "\"75d5c5b4511a0986cec43b547c3747614397e7fc39ca1b3eaec9fee1ab962222\""
+      "sha256": "e944758f6bb1b43ce8ce4dd479cf9bed0a2dee60a2ab7b47fa16bd547190e1c3",
+      "size": 863090,
+      "etag": "\"0af30d3ac75d7a6cefc5354163b6fbd2a9c0a1628f8b70096ffba9c61188da86\""
     },
     {
       "list": "mihomo.lsr",
