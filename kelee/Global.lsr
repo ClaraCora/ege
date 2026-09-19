@@ -1,5 +1,5 @@
-# UpdateTime：2026-09-17 03:22:12
-# RuleCount：35782
+# UpdateTime：2026-09-19 03:50:19
+# RuleCount：35786
 DOMAIN, practivate.adobe
 DOMAIN, scholar.google.ae
 DOMAIN, yangzhi.app
@@ -294,6 +294,7 @@ DOMAIN, yt3.googleusercontent.com
 DOMAIN, deutschewelle.h-cdn.com
 DOMAIN, supercell.helpshift.com
 DOMAIN, wego.here.com
+DOMAIN, p16-tiktok-dm-sticker-sign-sg.ibyteimg.com
 DOMAIN, cvws.icloud-content.com
 DOMAIN, imperial.insendi.com
 DOMAIN, cbsi.live.ott.irdeto.com
@@ -17831,6 +17832,7 @@ DOMAIN-SUFFIX, shopify.dev
 DOMAIN-SUFFIX, sourcecraft.dev
 DOMAIN-SUFFIX, stackpath.dev
 DOMAIN-SUFFIX, stadia.dev
+DOMAIN-SUFFIX, stripe.dev
 DOMAIN-SUFFIX, t-tech.dev
 DOMAIN-SUFFIX, termux.dev
 DOMAIN-SUFFIX, tfhub.dev
@@ -18247,6 +18249,7 @@ DOMAIN-SUFFIX, xxxstreams.eu
 DOMAIN-SUFFIX, yandex.eu
 DOMAIN-SUFFIX, youporner.eu
 DOMAIN-SUFFIX, zoho.eu
+DOMAIN-SUFFIX, stripe.events
 DOMAIN-SUFFIX, vercel.events
 DOMAIN-SUFFIX, dydx.exchange
 DOMAIN-SUFFIX, himalaya.exchange
@@ -18592,6 +18595,7 @@ DOMAIN-SUFFIX, nfsc.global
 DOMAIN-SUFFIX, ozon.global
 DOMAIN-SUFFIX, rea.global
 DOMAIN-SUFFIX, stellasora.global
+DOMAIN-SUFFIX, stripe.global
 DOMAIN-SUFFIX, dell.gm
 DOMAIN-SUFFIX, google.gm
 DOMAIN-SUFFIX, intel.gm
