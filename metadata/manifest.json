@@ -21,9 +21,9 @@
       "list": "ad.lsr",
       "url": "https://adrules.top/adrules.list",
       "path": "ad/adrules.list",
-      "sha256": "17e8eb436dcfa709d314da6c30d630e20a41a79f52d91647ee0cab82751557fb",
-      "size": 6972888,
-      "etag": "\"5c275eb956737f9e8c1f6618df472e06\""
+      "sha256": "9042936d3aefc93088e5de3cc7b9ff412c02f62328765a529e3f9ed1adcb4ac5",
+      "size": 6978324,
+      "etag": "\"7d3f161cf0af79f6d56b93bf5455dc12\""
     },
     {
       "list": "geo.lsr",
@@ -53,9 +53,9 @@
       "list": "geo.lsr",
       "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat",
       "path": "geo/geosite.dat",
-      "sha256": "03e53e166f2ecbde04b00e38a8b587aab5bed64a739a6d13c3ef11cb7bf304a4",
-      "size": 4244510,
-      "etag": "W/\"40c41e-QA093x4q+88VOSF0Jrzqaxw/5kg\""
+      "sha256": "dc1657fd28db7e8df305f6363b65a822736a2225a620f8dcd777d7a71ff41f54",
+      "size": 4248402,
+      "etag": "W/\"40d352-ZZf5UEclWyXPePwDu9b+8+77Zgc\""
     },
     {
       "list": "kelee.lsr",
@@ -381,9 +381,9 @@
       "list": "mihomo.lsr",
       "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/ads.mrs",
       "path": "mihomo/ads.mrs",
-      "sha256": "e944758f6bb1b43ce8ce4dd479cf9bed0a2dee60a2ab7b47fa16bd547190e1c3",
-      "size": 863090,
-      "etag": "\"0af30d3ac75d7a6cefc5354163b6fbd2a9c0a1628f8b70096ffba9c61188da86\""
+      "sha256": "afdf026320a02298a10c96520fcbf02293fa095a07c284a76c830ebf76f5ba1c",
+      "size": 868710,
+      "etag": "\"0d9b517fb30cd5a591d861f49d932f2197cb9860e9a5ea6101e5bcd0d985be71\""
     },
     {
       "list": "mihomo.lsr",
@@ -429,9 +429,9 @@
       "list": "mihomo.lsr",
       "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/proxy.mrs",
       "path": "mihomo/proxy.mrs",
-      "sha256": "af2f8f8d1d573e658ebe2f4bdee8ba9ac75cbc85f5fc850bcc45c6791e7927fd",
-      "size": 192587,
-      "etag": "\"925d81e49f6da0f5e68163d7a536849e9f0ea240f8b02e2ce7061087b17a1aa3\""
+      "sha256": "398f09f838d475751b7a4e02c1f4dbdf8f0c778e00d4489289217ecce24c1a4d",
+      "size": 192708,
+      "etag": "\"114a746137e3abcf526bef7c7e79e819fc46c84d8a4e30e6ff87ab3306bd0700\""
     },
     {
       "list": "png.lsr",
