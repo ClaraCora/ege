@@ -5,9 +5,9 @@
       "list": "ad.lsr",
       "url": "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Egern/Rules/Ads_AWAvenue.yaml",
       "path": "ad/Ads_AWAvenue.yaml",
-      "sha256": "b842c10e24d574bc0e50c0526958d1b68e14dd4ed8e078266151f13e453c5d3e",
-      "size": 23378,
-      "etag": "\"e605c37b9fc35d69eed94b79792a9881a3c9c9e13894a12af7c8e2adf7b8dbeb\""
+      "sha256": "c0a3663ebc9b4f50f269809e560668349764ea9625581632ab3b4def8b5ac810",
+      "size": 23641,
+      "etag": "\"3956fc0164a911e7c3ae5763a6dcc04427baf1ec51615388abea7892c72646da\""
     },
     {
       "list": "ad.lsr",
@@ -21,9 +21,9 @@
       "list": "ad.lsr",
       "url": "https://adrules.top/adrules.list",
       "path": "ad/adrules.list",
-      "sha256": "9042936d3aefc93088e5de3cc7b9ff412c02f62328765a529e3f9ed1adcb4ac5",
-      "size": 6978324,
-      "etag": "\"7d3f161cf0af79f6d56b93bf5455dc12\""
+      "sha256": "a75bb3bf55ec37278d10b7d30213c6d1a55bde5d068f12d160217ac5e8e12300",
+      "size": 6985801,
+      "etag": "\"85ec692c6796d966d68d9f84efcb181a\""
     },
     {
       "list": "geo.lsr",
@@ -61,9 +61,9 @@
       "list": "kelee.lsr",
       "url": "https://kelee.one/Tool/Loon/Lsr/AI.lsr",
       "path": "kelee/AI.lsr",
-      "sha256": "ca8b005a6b750b891951c47e16aa145caabf7c43db31db8d47c2f9c717c8e06a",
-      "size": 3627,
-      "etag": "\"69b4324f2d0d2d767df465011be0e2d3\""
+      "sha256": "863375fc58ce503a9c2dac1a8517b31f502ceaa9c66e29578b44ee6897c4345a",
+      "size": 4014,
+      "etag": "\"f1dbbf4600b580449611173894a6e937\""
     },
     {
       "list": "kelee.lsr",
