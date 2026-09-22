@@ -13,17 +13,17 @@
       "list": "ad.lsr",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Advertising/Advertising.list",
       "path": "ad/Advertising.list",
-      "sha256": "a767315b58dc35094a557ae5659303ebea8f347dac9c6e84027bfcce112b1bef",
+      "sha256": "39da7531485d5fca673841139d30c1e73cf425af84c60c28d9bf3a15e14317bf",
       "size": 26870,
-      "etag": "\"c0bd9119c1c12eece5eea10f393a3a6b99a5dfa55e0966cf0a9868fd7d148033\""
+      "etag": "\"35b98c6b0dc385e2a5fb275918d952da2129ee5dd0534ea786ece675e7b0a17d\""
     },
     {
       "list": "ad.lsr",
       "url": "https://adrules.top/adrules.list",
       "path": "ad/adrules.list",
-      "sha256": "a75bb3bf55ec37278d10b7d30213c6d1a55bde5d068f12d160217ac5e8e12300",
-      "size": 6985801,
-      "etag": "\"85ec692c6796d966d68d9f84efcb181a\""
+      "sha256": "597fa05f5a668e2a1b92936423193ab364c2fd98a10811a02c55593ddf67a822",
+      "size": 6990492,
+      "etag": "\"752b7857ae961ba591f7618580b22c38\""
     },
     {
       "list": "geo.lsr",
@@ -53,9 +53,9 @@
       "list": "geo.lsr",
       "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat",
       "path": "geo/geosite.dat",
-      "sha256": "dc1657fd28db7e8df305f6363b65a822736a2225a620f8dcd777d7a71ff41f54",
-      "size": 4248402,
-      "etag": "W/\"40d352-ZZf5UEclWyXPePwDu9b+8+77Zgc\""
+      "sha256": "9ac232ceb7e350f31e05c0d1a973a4b12eab96726f7fc1b59cb052bc5c6519ca",
+      "size": 4248636,
+      "etag": "W/\"40d43c-4838bBKmInIcRMawtvwzyqzkX0U\""
     },
     {
       "list": "kelee.lsr",
@@ -69,161 +69,161 @@
       "list": "kelee.lsr",
       "url": "https://rule.kelee.one/Loon/Alibaba.lsr",
       "path": "kelee/Alibaba.lsr",
-      "sha256": "55413a0d538ad4c53e584bf4d9fdd76279312a1971ef4a95e3fb3badf1d69f49",
+      "sha256": "e05b628df919906f003471c5f39747a7f26fce8a8453754e93302118100b9985",
       "size": 38814,
-      "etag": "\"bd7ea05f78e9a288d713093bbbacdc0c\""
+      "etag": "\"154a45d71c363008793570c4f837de1f\""
     },
     {
       "list": "kelee.lsr",
       "url": "https://rule.kelee.one/Loon/Apple.lsr",
       "path": "kelee/Apple.lsr",
-      "sha256": "3ed6a0c2cca6c1778e0dc921c60b5b6dc43978e6cc5ab0a26dc16050a30a1c26",
+      "sha256": "4d2edfa705ae30110a7ec57b7556846f4dd9185513c16fb7b32439527ab576ef",
       "size": 61055,
-      "etag": "\"0d0707b5a5d05d27cf791b2b90b41fcd\""
+      "etag": "\"71da2e12baf288a0bdbc3ec9b8001fec\""
     },
     {
       "list": "kelee.lsr",
       "url": "https://rule.kelee.one/Loon/Baidu.lsr",
       "path": "kelee/Baidu.lsr",
-      "sha256": "f08ed79dec81a6a1bb87083a6801683cfbc826e05117f73b546dad91accafa04",
+      "sha256": "3c314f2f0d5d0165ba6a97dc07b87b0c1aff3d188192ed42d353787c77fb53c6",
       "size": 7126,
-      "etag": "\"ef40136dabfebd633fca330cb6897ae6\""
+      "etag": "\"3b763ad3f7ef2657f2d22c0a0c79e878\""
     },
     {
       "list": "kelee.lsr",
       "url": "https://rule.kelee.one/Loon/BiliBili.lsr",
       "path": "kelee/BiliBili.lsr",
-      "sha256": "f94a53b20dd38b84d67b27313820cc9f31a71a7e56d2cc625e929b0b4d3f3f0a",
+      "sha256": "c839a3f34afbca4ba4a629c05380e531fc63598209c440fe5139c2e421156a7f",
       "size": 4508,
-      "etag": "\"15e7f9661258729f7dda22703fe7cf0d\""
+      "etag": "\"3797a7eee53d3dd77eb5d84749010e50\""
     },
     {
       "list": "kelee.lsr",
       "url": "https://rule.kelee.one/Loon/ChinaASN.lsr",
       "path": "kelee/ChinaASN.lsr",
-      "sha256": "5f1e8367fe083370399608e4f0735ea977eaa9ee7bd03e07099d7679f415615f",
+      "sha256": "5b71d7d1634c13c708ce2bef03cce145fcfce476fe041e04edb2d82c1c36d36b",
       "size": 26895,
-      "etag": "\"a0de19296f0d3638109c7edddf414029\""
+      "etag": "\"69d7c0bd7b47a9708d804b6f0e40410d\""
     },
     {
       "list": "kelee.lsr",
       "url": "https://rule.kelee.one/Loon/ChinaMax.lsr",
       "path": "kelee/ChinaMax.lsr",
-      "sha256": "c5a6011d174bb8b30c0302f7c9dc3c7b3993cc284be07a7bd59b7767b1ac888a",
-      "size": 3557026,
-      "etag": "\"138a78780c311ff1b16042312b7c135b\""
+      "sha256": "d2df106ada24ce809823a667caf6338c76c2b1f9414529dc6b42116dd4e8cd87",
+      "size": 3556877,
+      "etag": "\"a83df52af35e9d76151933245a5f039c\""
     },
     {
       "list": "kelee.lsr",
       "url": "https://rule.kelee.one/Loon/ChinaMobile.lsr",
       "path": "kelee/ChinaMobile.lsr",
-      "sha256": "889ab54dc2d69519fd1b00f7405c627571209f109dc956556ba45227875c4154",
+      "sha256": "f4dfa720f7d8c120a6bbb02dae6c0a4987401c560fedf332a6db8a6dd802fb00",
       "size": 1051,
-      "etag": "\"70d0d02ca65f34bc0262a08eab557ade\""
+      "etag": "\"c959ceda24450d4018b0f3f03826b8fe\""
     },
     {
       "list": "kelee.lsr",
       "url": "https://rule.kelee.one/Loon/ChinaTelecom.lsr",
       "path": "kelee/ChinaTelecom.lsr",
-      "sha256": "de6d9d486e356c26f1930a2f88c482ce40359fe72087471ef3d6cd8007f1e8e0",
+      "sha256": "865eacdf003e7b4f05999eab148123939a362515ba284821a76875ee549cc4f4",
       "size": 2306,
-      "etag": "\"a519a813f681388eab366648a10eff8b\""
+      "etag": "\"e140973d6b6a0eacae4d851671649162\""
     },
     {
       "list": "kelee.lsr",
       "url": "https://rule.kelee.one/Loon/DouYin.lsr",
       "path": "kelee/DouYin.lsr",
-      "sha256": "480ac72683e40b04f5723a753100f6dfbf3f14e20fdedef6dc1bdb93d14fb317",
+      "sha256": "27d4d878dc1c9c09006d42f82bb7988fe17d30788368a13d4026359c2e7a66a9",
       "size": 428,
-      "etag": "\"c0c59f59296ab7aa9f4a0ba7b6309e73\""
+      "etag": "\"7e509a1dfe5b36ee37f65b1f370bdc16\""
     },
     {
       "list": "kelee.lsr",
       "url": "https://rule.kelee.one/Loon/GaoDe.lsr",
       "path": "kelee/GaoDe.lsr",
-      "sha256": "105ff1422a9b3437d92c810db0b945e277659e63a614404983d749647e9eb66c",
+      "sha256": "5a4eba77bc74b54af8d7199f1601350c69899265dc499e53fecf9be43a1342b2",
       "size": 278,
-      "etag": "\"25c935c4161a49b0a1542ff81b1aede4\""
+      "etag": "\"547554d36f0da3243eb0d74a50c3114a\""
     },
     {
       "list": "kelee.lsr",
       "url": "https://rule.kelee.one/Loon/GitHub.lsr",
       "path": "kelee/GitHub.lsr",
-      "sha256": "b71ff88b389b45cf21199bfd0da389c98393bcd8457c902768397169025fc6ad",
+      "sha256": "4778c5862d24719f07fad3ec6daeb4ab790e2cd636371e5b3bf5099551b285e7",
       "size": 1022,
-      "etag": "\"5abe1c28e860334f17bc33e6e4ed9fdc\""
+      "etag": "\"402580bf6b05033fc999e58e0fe29d22\""
     },
     {
       "list": "kelee.lsr",
       "url": "https://rule.kelee.one/Loon/Global.lsr",
       "path": "kelee/Global.lsr",
-      "sha256": "e5b6764f77358ecd7489aed43ede704b0e9a0e10514a7ad98ab02d119383b589",
+      "sha256": "aea42fe7f5600d22debb54505f4244269d8796b779c4450025b5fb6e69935cf6",
       "size": 1067891,
-      "etag": "\"fa64bc034dcd84c9f5036167109fff86\""
+      "etag": "\"47d733f6f5634d0797e0064aeb3055f6\""
     },
     {
       "list": "kelee.lsr",
       "url": "https://rule.kelee.one/Loon/Google.lsr",
       "path": "kelee/Google.lsr",
-      "sha256": "d4e2839e1e7a812bded2e94d6bc1f52ce8a7b3fb5b311617c88aff420f36486c",
+      "sha256": "f1c1820a49eeb706c93e884248451038e5109ae4aed0ca40e69c60f2c4ce542b",
       "size": 20707,
-      "etag": "\"6a9d7f37d5b090d7034d9c9e9e31c4ca\""
+      "etag": "\"81b647fafef9a6859039b3f9619c8e80\""
     },
     {
       "list": "kelee.lsr",
       "url": "https://rule.kelee.one/Loon/Instagram.lsr",
       "path": "kelee/Instagram.lsr",
-      "sha256": "5f259ab2821b7d324f832be9b8875d258ace48fcaa4e7b137926d3105e3d1925",
+      "sha256": "1217a36587ee95e718fd4bd362e1e4375778a9bdab95a35d1675ec3bfbb95b11",
       "size": 163,
-      "etag": "\"7c05daf86e10000ec16b7d6f33b922e9\""
+      "etag": "\"a72e20ba739daba7ff6fcca5fb706c4f\""
     },
     {
       "list": "kelee.lsr",
       "url": "https://rule.kelee.one/Loon/JingDong.lsr",
       "path": "kelee/JingDong.lsr",
-      "sha256": "f481a91356c26ea9c8ae15173c91c149957fef278d8a187dc8bd470342efd2e2",
+      "sha256": "ce83710a8f6113d89fdb423a170d2fe203c6cbb692ea3708cf6b72b3493028ab",
       "size": 7384,
-      "etag": "\"34e4d07949a7b4f86f71c377bf70820f\""
+      "etag": "\"5fa168e0330f335bf890e7a7a0d09e8b\""
     },
     {
       "list": "kelee.lsr",
       "url": "https://rule.kelee.one/Loon/KugouKuwo.lsr",
       "path": "kelee/KugouKuwo.lsr",
-      "sha256": "5f8c836565cc36f93f8b348ea9b8909313da19c598fa51170e8b7d7877b1869d",
+      "sha256": "81668ff7b801e098ab21eeba917042aff778044cfd4e7977cfb8d0be72689eec",
       "size": 3857,
-      "etag": "\"0b9839cdc77d65f0b2447c426ddf1e24\""
+      "etag": "\"8157e3c46b87c170a7ebc7ce31836be1\""
     },
     {
       "list": "kelee.lsr",
       "url": "https://rule.kelee.one/Loon/Microsoft.lsr",
       "path": "kelee/Microsoft.lsr",
-      "sha256": "877b4979cc7c1ceb6d464b99b08ed470a83be08a0d0eb5da1560fc889a1d6fb9",
+      "sha256": "b9668a73808a1b2e0e04f824dc68ceab811214f477ee9219c2e2ab81ef484bda",
       "size": 22491,
-      "etag": "\"79adb52cc4f48422de08f2a622f3440d\""
+      "etag": "\"6e53e3a31561c41fe19b8ae769284da1\""
     },
     {
       "list": "kelee.lsr",
       "url": "https://rule.kelee.one/Loon/NetEase.lsr",
       "path": "kelee/NetEase.lsr",
-      "sha256": "702acda075310c5a0b17acdd06249d3fa09fb1eee242dc47fc42a4562840233f",
+      "sha256": "0aa20f92896b800d52f890bb3deb46881a929baa8274282ed73d3448aab3f4f5",
       "size": 4326,
-      "etag": "\"428f298e9c17cda3cb9a1de5e04a79e5\""
+      "etag": "\"de2b96ff82012a0014db15b571c7d298\""
     },
     {
       "list": "kelee.lsr",
       "url": "https://rule.kelee.one/Loon/NetEaseMusic.lsr",
       "path": "kelee/NetEaseMusic.lsr",
-      "sha256": "2aa568bdedba76392013f1a0af2f46de0b3e0b38d8453df7087459cc03d547ef",
+      "sha256": "ff0b206db3b113ec7503315e9ba680310f4974d67ccd81e5ff447a62fefc8813",
       "size": 1133,
-      "etag": "\"d6c088975ad00df1510a8bc8760b3ad8\""
+      "etag": "\"470fdb4a288a6e7ba51b76751f3041b5\""
     },
     {
       "list": "kelee.lsr",
       "url": "https://rule.kelee.one/Loon/Pinduoduo.lsr",
       "path": "kelee/Pinduoduo.lsr",
-      "sha256": "a6a7714aa5d40fa5f3c59cb213bad92f8a8a88675c8efb21bff9f24fd45ff0ab",
+      "sha256": "6435bb50339cf74ded9dd44d8791471d881ef977d0a1e135df006a336a8672b1",
       "size": 134,
-      "etag": "\"1345dbddb43f32d0486604be603c44d7\""
+      "etag": "\"bf3e17c43bc34d00177fbdf93cc1810c\""
     },
     {
       "list": "kelee.lsr",
@@ -237,65 +237,65 @@
       "list": "kelee.lsr",
       "url": "https://rule.kelee.one/Loon/Telegram.lsr",
       "path": "kelee/Telegram.lsr",
-      "sha256": "433f235af317c8845070e361f1045122c355a04ff60745dc9d9ea7b304dcb6d3",
+      "sha256": "3476b6886168e7a3b3ebfcd3e72172796381f8665ac3f85f85202ab8a8a60cf0",
       "size": 1231,
-      "etag": "\"006a0353f84dd7e55fbe6569aa5992d0\""
+      "etag": "\"d6769d5aabf7592b132cce07f2b95eca\""
     },
     {
       "list": "kelee.lsr",
       "url": "https://rule.kelee.one/Loon/Tencent.lsr",
       "path": "kelee/Tencent.lsr",
-      "sha256": "f4c8a37fe0e56a2b79ec0bca0508279a243d4cc9c0107abae459ac5c85e71f65",
+      "sha256": "eaf2efa5463e7d32f8bf8500f74510b7943fe65844c022ee3d0bbeceaf3c39be",
       "size": 75795,
-      "etag": "\"c82e1964f998574d2fc1a61796f9f6b7\""
+      "etag": "\"f06c3d1c44230c56d621a9e59182a732\""
     },
     {
       "list": "kelee.lsr",
       "url": "https://rule.kelee.one/Loon/TestFlight.lsr",
       "path": "kelee/TestFlight.lsr",
-      "sha256": "e85f9cd4a02e035084f14a9430e2c6d36152f77eaebd41e80d0a82cf9380857d",
+      "sha256": "0d37cb28c5ca1af7747e98618b5c97b38370908afb164ad10d591d95ff525d12",
       "size": 129,
-      "etag": "\"96a25c5f3c53ca008d788ddaef92ef40\""
+      "etag": "\"8db4c0e8ddd1993c3b3c5e23874aa9ee\""
     },
     {
       "list": "kelee.lsr",
       "url": "https://rule.kelee.one/Loon/TikTok.lsr",
       "path": "kelee/TikTok.lsr",
-      "sha256": "cf42e109152d5f18cabcf465b6e2e545bba19ef327eb60d0b30e3e25805eb35b",
+      "sha256": "6b7822c4e5d2d82df94f09f9ee40cc85f9524bf65c8a29e5357ec843d2609868",
       "size": 978,
-      "etag": "\"ab150485882a154881fbeac8812f15db\""
+      "etag": "\"26ddbe8c2976548321dda7f4fa4da606\""
     },
     {
       "list": "kelee.lsr",
       "url": "https://rule.kelee.one/Loon/Twitter.lsr",
       "path": "kelee/Twitter.lsr",
-      "sha256": "beabe6d9bea9c602cc1c694001b2e4e2653590ff591b9723ee16206ed4c87c83",
+      "sha256": "bd97a12e33a9ef4c01c8f26880f474ce58e088ef2a093b80902e1d79f4d8b89a",
       "size": 1015,
-      "etag": "\"732ca55edc6cfa593975dd96c79aa1bd\""
+      "etag": "\"312a14c435b10b2d7acb35b1a42762d3\""
     },
     {
       "list": "kelee.lsr",
       "url": "https://rule.kelee.one/Loon/WeChat.lsr",
       "path": "kelee/WeChat.lsr",
-      "sha256": "5c624c68ca6fec30b4bbd309f6f8faeff0fbb10f9826f8df2864aedde2576df9",
+      "sha256": "8e1ef7c91580526aaf4eb334fda009ac0a5b96cec880fe96ee25e7cb0d203c01",
       "size": 1247,
-      "etag": "\"53b4c108104b6ffd869d7a1abbce7e79\""
+      "etag": "\"5f75257bfe23c9dd170cf45b249a38b4\""
     },
     {
       "list": "kelee.lsr",
       "url": "https://rule.kelee.one/Loon/XiaoMi.lsr",
       "path": "kelee/XiaoMi.lsr",
-      "sha256": "a5600385eedc35f2b2c53e91b596199d7be9d2b5fc3c886d26905a180824d9e8",
+      "sha256": "8f1ecc280b63140cb2e5eb00e6441b403e6c5c2e275165f78ecdb0016b7418c6",
       "size": 4726,
-      "etag": "\"df2f4bef39fa97b8bcf03280c59a4c0e\""
+      "etag": "\"e83207d83f750250a6eb882852024556\""
     },
     {
       "list": "kelee.lsr",
       "url": "https://rule.kelee.one/Loon/YouTube.lsr",
       "path": "kelee/YouTube.lsr",
-      "sha256": "2351aa9084a4855b0273acced7d16446828b2abe7505c1c4f4ec8ab29414e83b",
+      "sha256": "048eeeb00b04d67ba64a1e005825ae3c33d757abe99e9614d4e5f3229c37d78b",
       "size": 5553,
-      "etag": "\"7c315d5f54472774d11ec60159158621\""
+      "etag": "\"bc98e775f30229265f6ca79d621f36fe\""
     },
     {
       "list": "mihomo.lsr",
@@ -429,9 +429,9 @@
       "list": "mihomo.lsr",
       "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/proxy.mrs",
       "path": "mihomo/proxy.mrs",
-      "sha256": "398f09f838d475751b7a4e02c1f4dbdf8f0c778e00d4489289217ecce24c1a4d",
-      "size": 192708,
-      "etag": "\"114a746137e3abcf526bef7c7e79e819fc46c84d8a4e30e6ff87ab3306bd0700\""
+      "sha256": "5daa500c7e43811d4a9cd8852c26a3ff9ce0081c6d192b42bdcdb401b70b1321",
+      "size": 192806,
+      "etag": "\"f6d04970036f2dc6de03709143d210b57e19e4683de7677dcd80ee8733a4dee0\""
     },
     {
       "list": "png.lsr",
