@@ -3,9 +3,9 @@
   "sources": [
     {
       "source": "kelee/AI.lsr",
-      "source_sha256": "863375fc58ce503a9c2dac1a8517b31f502ceaa9c66e29578b44ee6897c4345a",
+      "source_sha256": "35b2aff90bae4cf1fddb3685f86cf4c7c773dc5ca9e8dedbf53e2547f1ec989e",
       "counts": {
-        "domain": 101,
+        "domain": 236,
         "ipcidr": 2,
         "classical": 3,
         "unsupported": 0
@@ -14,8 +14,8 @@
         {
           "behavior": "domain",
           "path": "domain/AI.mrs",
-          "sha256": "5f91757eff2831b6ccee87e4b3ab1f70680b457b5c36d59ae232b5c53706444e",
-          "size": 1177
+          "sha256": "e7ab1a1a43450e38e14cda365eb051cac0f51ce2f81c010828b185946d2766a2",
+          "size": 2581
         },
         {
           "behavior": "ipcidr",
