@@ -13,17 +13,17 @@
       "list": "ad.lsr",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Advertising/Advertising.list",
       "path": "ad/Advertising.list",
-      "sha256": "1b1251d150bf3890d702b8c607658b1eefed7c9b056ffa29e21cb09ba19af0e4",
+      "sha256": "aeae363428ffc944594cbf9163023f617ce9ac3ee14d96b2deb05577d386224f",
       "size": 26870,
-      "etag": "\"7ab85b6ea73a7a736a3f4b41d7032ee54c7774e8ef4e47b8de9aae9012d500c9\""
+      "etag": "\"c8aec52a05b2997ab6f4a3967b569d1527e58e358fa91312222844fc41583326\""
     },
     {
       "list": "ad.lsr",
       "url": "https://adrules.top/adrules.list",
       "path": "ad/adrules.list",
-      "sha256": "a3a9b1ef1f9dadf9859cf0fd1ffb4da9f3e04a4e2fce46a438ca07519a87e2de",
-      "size": 7050054,
-      "etag": "\"e4b596133bdce6540b4b27d42c05eb74\""
+      "sha256": "6ed06fb1df0a308731d5242ba3d5e885d46120dced70e36e5f4f3bbba8d8c40d",
+      "size": 7054940,
+      "etag": "\"743c3e60ebabf16f39ece6fd5ccabaa1\""
     },
     {
       "list": "geo.lsr",
