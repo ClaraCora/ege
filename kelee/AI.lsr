@@ -1,4 +1,4 @@
-# 2026-09-22 17:43:59
+# 2026-09-30 15:40:36
 # OpenAI
 AND, ((DOMAIN-KEYWORD, chatgpt-async-webps-prod-), (DOMAIN-SUFFIX, webpubsub.azure.com))
 AND, ((DOMAIN-KEYWORD, openaicom-api-), (DOMAIN-SUFFIX, azurefd.net))
@@ -25,6 +25,7 @@ DOMAIN, api.githubcopilot.com
 DOMAIN, copilot-proxy.githubusercontent.com
 DOMAIN, copilot.microsoft.com
 DOMAIN, sydney.bing.com
+DOMAIN, titles.prod.mos.microsoft.com
 
 # Github Copilot
 DOMAIN, api.githubcopilot.com
