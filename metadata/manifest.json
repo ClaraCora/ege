@@ -21,9 +21,9 @@
       "list": "ad.lsr",
       "url": "https://adrules.top/adrules.list",
       "path": "ad/adrules.list",
-      "sha256": "77d2e3c6df960739c6a93820d2e9ec87f68a03b45766b11eecda467f11051bfa",
-      "size": 6836784,
-      "etag": "\"6f4d595747d3601966151a53dca8d7f3\""
+      "sha256": "3d1e91482bc99f46a765d665cff8b065a51071f2c2af22c700513f5671d73495",
+      "size": 6841303,
+      "etag": "\"54e1d81dd69a8b9a19c0dbff37371df3\""
     },
     {
       "list": "geo.lsr",
@@ -37,9 +37,9 @@
       "list": "geo.lsr",
       "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb",
       "path": "geo/country.mmdb",
-      "sha256": "f35228dd74b70ae0ac72dcd2b86d03e0510264e20a0ec21ebb6aa32fa4f85c38",
-      "size": 7705141,
-      "etag": "W/\"759235-TlPtGWa35bt4Myo16UDlAVCR0XI\""
+      "sha256": "2fb5cfa8be2ddc84345090705d999d26613e42342ee1b80cdeedf35ff00bc0d0",
+      "size": 7666489,
+      "etag": "W/\"74fb39-emlf0wsm1quIShV1DKhaoxbetko\""
     },
     {
       "list": "geo.lsr",
