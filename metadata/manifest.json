@@ -13,17 +13,17 @@
       "list": "ad.lsr",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Advertising/Advertising.list",
       "path": "ad/Advertising.list",
-      "sha256": "a1ec36a1ec5eac580624cbe1a368e4815ce036f442d6834fb188033571576917",
+      "sha256": "ea371fc89f2f912b6ad54b80ccb1a5914c94c86a31857192a3098ac769462c59",
       "size": 26870,
-      "etag": "\"4b79dc4bcb4162c3ebb86b5727bd229b30715837bc0f22457b7c6c2dce6f9d8a\""
+      "etag": "\"d575634bce0b55fe6defb6550fd59c8fad623261246aa74e4f2a24959fc4c443\""
     },
     {
       "list": "ad.lsr",
       "url": "https://adrules.top/adrules.list",
       "path": "ad/adrules.list",
-      "sha256": "3d1e91482bc99f46a765d665cff8b065a51071f2c2af22c700513f5671d73495",
-      "size": 6841303,
-      "etag": "\"54e1d81dd69a8b9a19c0dbff37371df3\""
+      "sha256": "27efce334bdc39580f58896c2cca0ab8b7f15545f2621e331cd1410a901e9848",
+      "size": 6847769,
+      "etag": "\"c45fdb1be82c6f768e5df1bf36a2c250\""
     },
     {
       "list": "geo.lsr",
@@ -45,17 +45,17 @@
       "list": "geo.lsr",
       "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat",
       "path": "geo/geoip.dat",
-      "sha256": "3e21484fe4b72d788439e6f16a29bf7967892dd9e82f17e087608837cb260639",
-      "size": 16514644,
-      "etag": "W/\"fbfe54-NrQyL16BOwPHNcrtlbbiMhjnGIU\""
+      "sha256": "391b522361c52804e486a98b53d97f3d9c1d3e4e4217bb34954774a0b456b9fd",
+      "size": 16515432,
+      "etag": "W/\"fc0168-NkQYvLTKYHcyXZXg6cH5NpcxtSI\""
     },
     {
       "list": "geo.lsr",
       "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat",
       "path": "geo/geosite.dat",
-      "sha256": "012e87fb009b46a89a649ab5127f866e4525c40084da5841b01935770a636d69",
-      "size": 4253424,
-      "etag": "W/\"40e6f0-wDYwSdXFbGiSixtSEERJdxOWzXM\""
+      "sha256": "d8b751e6af6063bbacf0cbc23385fd37caac1c0e04e05292b5e97213a98ef5fc",
+      "size": 4253442,
+      "etag": "W/\"40e702-BVVSpy4q+gCUsZenzwDmBM9+tcY\""
     },
     {
       "list": "kelee.lsr",
