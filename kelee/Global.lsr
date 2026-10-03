@@ -1,5 +1,5 @@
-# UpdateTime：2026-10-01 03:16:50
-# RuleCount：35784
+# UpdateTime：2026-10-03 03:16:28
+# RuleCount：35791
 DOMAIN, practivate.adobe
 DOMAIN, scholar.google.ae
 DOMAIN, yangzhi.app
@@ -249,9 +249,11 @@ DOMAIN, alt5-mtalk.google.com
 DOMAIN, alt6-mtalk.google.com
 DOMAIN, alt7-mtalk.google.com
 DOMAIN, alt8-mtalk.google.com
+DOMAIN, geminiweb-pa.clients.google.com
 DOMAIN, clients1.google.com
 DOMAIN, alkalicore-pa.clients6.google.com
 DOMAIN, alkalimakersuite-pa.clients6.google.com
+DOMAIN, geminiweb-pa.clients6.google.com
 DOMAIN, webchannel-alkalimakersuite-pa.clients6.google.com
 DOMAIN, lens.l.google.com
 DOMAIN, scholar.l.google.com
@@ -889,8 +891,10 @@ DOMAIN-SUFFIX, missav.ai
 DOMAIN-SUFFIX, mistral.ai
 DOMAIN-SUFFIX, mlc.ai
 DOMAIN-SUFFIX, mozilla.ai
+DOMAIN-SUFFIX, muse.ai
 DOMAIN-SUFFIX, openart.ai
 DOMAIN-SUFFIX, openclaw.ai
+DOMAIN-SUFFIX, opencode.ai
 DOMAIN-SUFFIX, openrouter.ai
 DOMAIN-SUFFIX, openvino.ai
 DOMAIN-SUFFIX, oshiete.ai
@@ -8351,6 +8355,7 @@ DOMAIN-SUFFIX, fututrade.com
 DOMAIN-SUFFIX, fututrustee.com
 DOMAIN-SUFFIX, fux.com
 DOMAIN-SUFFIX, fuxporn.com
+DOMAIN-SUFFIX, fuyin116.com
 DOMAIN-SUFFIX, fuzokudx.com
 DOMAIN-SUFFIX, fxcm-chinese.com
 DOMAIN-SUFFIX, fxcorporate.com
@@ -11189,6 +11194,7 @@ DOMAIN-SUFFIX, messengerdevelopers.com
 DOMAIN-SUFFIX, messytube.com
 DOMAIN-SUFFIX, met-nude.com
 DOMAIN-SUFFIX, meta.com
+DOMAIN-SUFFIX, metaaivm.com
 DOMAIN-SUFFIX, metacafe.com
 DOMAIN-SUFFIX, metacloud.com
 DOMAIN-SUFFIX, metacritic.com
@@ -35056,6 +35062,7 @@ DOMAIN-SUFFIX, stash.wiki
 DOMAIN-SUFFIX, thefappening.wiki
 DOMAIN-SUFFIX, w.wiki
 DOMAIN-SUFFIX, freexxx.win
+DOMAIN-SUFFIX, huarun.win
 DOMAIN-SUFFIX, pornoweb.win
 DOMAIN-SUFFIX, pornxvideos.win
 DOMAIN-SUFFIX, xnxx-xxx.win
