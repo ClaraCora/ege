@@ -1,5 +1,5 @@
-# UpdateTime：2026-10-03 03:16:28
-# RuleCount：35791
+# UpdateTime：2026-10-05 03:16:51
+# RuleCount：35794
 DOMAIN, practivate.adobe
 DOMAIN, scholar.google.ae
 DOMAIN, yangzhi.app
@@ -17797,6 +17797,7 @@ DOMAIN-SUFFIX, aws.dev
 DOMAIN-SUFFIX, bdn.dev
 DOMAIN-SUFFIX, chromeos.dev
 DOMAIN-SUFFIX, clashverge.dev
+DOMAIN-SUFFIX, claude.dev
 DOMAIN-SUFFIX, cloudflare.dev
 DOMAIN-SUFFIX, da3dsoul.dev
 DOMAIN-SUFFIX, dart.dev
@@ -26026,6 +26027,7 @@ DOMAIN-SUFFIX, wi-fi.org
 DOMAIN-SUFFIX, wikia.org
 DOMAIN-SUFFIX, wikibooks.org
 DOMAIN-SUFFIX, wikidata.org
+DOMAIN-SUFFIX, wikifunctions.org
 DOMAIN-SUFFIX, wikileaks.org
 DOMAIN-SUFFIX, wikimapia.org
 DOMAIN-SUFFIX, wikimedia.org
@@ -26035,6 +26037,7 @@ DOMAIN-SUFFIX, wikinews.org
 DOMAIN-SUFFIX, wikipedia.org
 DOMAIN-SUFFIX, wikiquote.org
 DOMAIN-SUFFIX, wikisource.org
+DOMAIN-SUFFIX, wikispecies.org
 DOMAIN-SUFFIX, wikiunblocked.org
 DOMAIN-SUFFIX, wikiversity.org
 DOMAIN-SUFFIX, wikivoyage.org
