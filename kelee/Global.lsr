@@ -1,5 +1,5 @@
-# UpdateTime：2026-10-05 03:16:51
-# RuleCount：35794
+# UpdateTime：2026-10-07 03:16:46
+# RuleCount：35795
 DOMAIN, practivate.adobe
 DOMAIN, scholar.google.ae
 DOMAIN, yangzhi.app
@@ -8762,6 +8762,7 @@ DOMAIN-SUFFIX, googleoptimize-cn.com
 DOMAIN-SUFFIX, googlepagecreator.com
 DOMAIN-SUFFIX, googlephotos.com
 DOMAIN-SUFFIX, googleplay.com
+DOMAIN-SUFFIX, googleplaycensorship.com
 DOMAIN-SUFFIX, googleplex.com
 DOMAIN-SUFFIX, googleplus.com
 DOMAIN-SUFFIX, accounts.googlers.com
