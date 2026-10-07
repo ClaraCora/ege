@@ -3,9 +3,9 @@
   "sources": [
     {
       "source": "kelee/AI.lsr",
-      "source_sha256": "93bbcec39d0adf23c85faadc46b47a87d0e51e4d8cabcbbf0fda2d774b8d2810",
+      "source_sha256": "90c2c5ccb950f885ef5e70c1f600fbd6db9e9764915b8285b4bac338ababf841",
       "counts": {
-        "domain": 237,
+        "domain": 238,
         "ipcidr": 2,
         "classical": 3,
         "unsupported": 0
@@ -14,8 +14,8 @@
         {
           "behavior": "domain",
           "path": "domain/AI.mrs",
-          "sha256": "117d2433b8a0f985ca014fc5f025820bfb4315a0192aca4473ce6a71250b08b0",
-          "size": 2599
+          "sha256": "2936120c5b7447710ec3e2b0822203858de07f9d1e6dc849636dd183e77b4b0a",
+          "size": 2610
         },
         {
           "behavior": "ipcidr",
@@ -537,9 +537,9 @@
     },
     {
       "source": "kelee/SpeedtestInternational.lsr",
-      "source_sha256": "869f4ca55ab0c510506a41c426bdd402901811e3792b9ecc308e8e2cb1d1fecb",
+      "source_sha256": "5a624798c0295ecdaf3b3a8339776a8433027fe6d4bccaa265da3c1f45621d1f",
       "counts": {
-        "domain": 17956,
+        "domain": 18491,
         "ipcidr": 9,
         "classical": 0,
         "unsupported": 0
@@ -548,8 +548,8 @@
         {
           "behavior": "domain",
           "path": "domain/SpeedtestInternational.mrs",
-          "sha256": "1af6d551e96f2e8fe39ac24cedb6cbc509a01c5508d3cb68b3736551f9a838ad",
-          "size": 172508
+          "sha256": "22528a0bdd8914e4a2cad43ccde55c141acbc6292c908b4476f03a0b67805685",
+          "size": 176899
         },
         {
           "behavior": "ipcidr",

@@ -21,9 +21,9 @@
       "list": "ad.lsr",
       "url": "https://adrules.top/adrules.list",
       "path": "ad/adrules.list",
-      "sha256": "dbda08298631bff889b4a6a6cd6548ecc5d38b06c75cb1c5506f3a2a56a5950e",
-      "size": 6901740,
-      "etag": "\"a8436492c7409ac67803683d5e5478a6\""
+      "sha256": "d24a2e9cceeb4c3fb9d1708afaccb78ccd0791e812427da74e2de215823c402f",
+      "size": 6905306,
+      "etag": "\"b44c3fc4fa0e76102bb538ebf51b256e\""
     },
     {
       "list": "geo.lsr",
@@ -53,17 +53,17 @@
       "list": "geo.lsr",
       "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat",
       "path": "geo/geosite.dat",
-      "sha256": "fbb80643f8172bd4ea6231a6f6636a5931063aec00d150d8c166266ec706e168",
-      "size": 4253623,
-      "etag": "W/\"40e7b7-36JylwlKfq5ChDzim3y1IAWodV0\""
+      "sha256": "dac4b8b3b5bce1d8e59f75f5f2cb3f61e336aa5f4ac7ce465f9dee5e5b0e0457",
+      "size": 4254742,
+      "etag": "W/\"40ec16-sJvrDl7FuNjhwaN8J8b/0aQlJsU\""
     },
     {
       "list": "kelee.lsr",
       "url": "https://kelee.one/Tool/Loon/Lsr/AI.lsr",
       "path": "kelee/AI.lsr",
-      "sha256": "93bbcec39d0adf23c85faadc46b47a87d0e51e4d8cabcbbf0fda2d774b8d2810",
-      "size": 9563,
-      "etag": "\"79076bd3b36260f388ed14bd81f13372\""
+      "sha256": "90c2c5ccb950f885ef5e70c1f600fbd6db9e9764915b8285b4bac338ababf841",
+      "size": 9589,
+      "etag": "\"570a312eab6c7c9007b35db28faf77b6\""
     },
     {
       "list": "kelee.lsr",
@@ -229,9 +229,9 @@
       "list": "kelee.lsr",
       "url": "https://kelee.one/Tool/Loon/Lsr/SpeedtestInternational.lsr",
       "path": "kelee/SpeedtestInternational.lsr",
-      "sha256": "869f4ca55ab0c510506a41c426bdd402901811e3792b9ecc308e8e2cb1d1fecb",
-      "size": 613635,
-      "etag": "\"ff34f884221c1838cb8db624853f3406\""
+      "sha256": "5a624798c0295ecdaf3b3a8339776a8433027fe6d4bccaa265da3c1f45621d1f",
+      "size": 631927,
+      "etag": "\"da39878c0335653c272a429f55f7b40f\""
     },
     {
       "list": "kelee.lsr",
