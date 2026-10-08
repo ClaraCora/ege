@@ -13,25 +13,25 @@
       "list": "ad.lsr",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Advertising/Advertising.list",
       "path": "ad/Advertising.list",
-      "sha256": "7c12bad4c33f1332d6905a60aa35ed5b32002b31a933d7cbd1cf10870df3d26f",
+      "sha256": "b232dcc8a8bdbbb22530c266a1dc108610957ff11f526b96c7d3bca5690a3be6",
       "size": 26870,
-      "etag": "\"a7a665da5ba8ffead92d6f6b7ffa8e17a46f33607b6fea45fa80f39c31f0d784\""
+      "etag": "\"cf2ed647177f68eaa31ba55bd7b9b8e41bcd69f2e0d3690be3b689bb189c0c07\""
     },
     {
       "list": "ad.lsr",
       "url": "https://adrules.top/adrules.list",
       "path": "ad/adrules.list",
-      "sha256": "d24a2e9cceeb4c3fb9d1708afaccb78ccd0791e812427da74e2de215823c402f",
-      "size": 6905306,
-      "etag": "\"b44c3fc4fa0e76102bb538ebf51b256e\""
+      "sha256": "36494537620809ac3acbc6e7c4b8ef978a615069dbc501ac3d1124aeb2360988",
+      "size": 6911525,
+      "etag": "\"73086d5bcbc5fc61c93dcdf2b1c3aaf4\""
     },
     {
       "list": "geo.lsr",
       "url": "https://gh-proxy.org/https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb",
       "path": "geo/GeoLite2-ASN.mmdb",
-      "sha256": "e16e2db7ed72adc4443e16d7e33a25120ca58bd8d0f2e902b49ac6c50c3f4815",
-      "size": 12069758,
-      "etag": "\"0x8DF1F675D3FC930\""
+      "sha256": "d82d2f39ea82a175a3d63484c8b4723040d134ba1edf4b27d6819c2f96c14a9b",
+      "size": 8969559,
+      "etag": "\"0x8DF24EB7F52AC23\""
     },
     {
       "list": "geo.lsr",
@@ -429,9 +429,9 @@
       "list": "mihomo.lsr",
       "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/proxy.mrs",
       "path": "mihomo/proxy.mrs",
-      "sha256": "d6ea70382e0aabb2cabd76328c4ccb38b521d808b61fb94500f3c761abf128ad",
-      "size": 193002,
-      "etag": "\"0c166fa7950e0764029e6fd1bbac7be249a655ee4bbcb34aefbbc86652309c07\""
+      "sha256": "ea45c72afef8b3d3f4d94b320ce1a0c854d32fdf3880980f7f5381acdd4cc851",
+      "size": 192992,
+      "etag": "\"08fb1c8052b3f405d21690f40ae25618a9f10576f7c0534fb48a15cd2faff7da\""
     },
     {
       "list": "png.lsr",
