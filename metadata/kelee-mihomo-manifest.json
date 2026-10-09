@@ -33,7 +33,7 @@
     },
     {
       "source": "kelee/Alibaba.lsr",
-      "source_sha256": "1dc5f3b06a39334a5cfe13f08fff356a33b9720f5572c5261fb762e29d6d8e57",
+      "source_sha256": "8fa034c676e80730fed76f72bfa8ce23185bd86c99fbded89b4a547aa1af66b2",
       "counts": {
         "domain": 1266,
         "ipcidr": 54,
@@ -57,7 +57,7 @@
     },
     {
       "source": "kelee/Apple.lsr",
-      "source_sha256": "a6c1d3a2d97c9cb665fbfc0c824c8da5c8b964b872b5499684a8bbc5be2b45c7",
+      "source_sha256": "2f84151c55ef6080766850bb3b8b2a1d39215808ebd94f79f2201d9a1ead06f0",
       "counts": {
         "domain": 1823,
         "ipcidr": 13,
@@ -93,7 +93,7 @@
     },
     {
       "source": "kelee/Baidu.lsr",
-      "source_sha256": "23bd4e864fca70c21d5d3de4fc223d6cecbe6eeb8c1d5763d91a3dfcf1ee485d",
+      "source_sha256": "1e918a515311a340f0b796624622ce81ff9b9bcea0e7b0510b871e4d466af3e9",
       "counts": {
         "domain": 251,
         "ipcidr": 0,
@@ -111,7 +111,7 @@
     },
     {
       "source": "kelee/BiliBili.lsr",
-      "source_sha256": "4684e1968a2d163cd97b6ec6748ce46e82685c6dddfcd78033c35b100f7a8e7b",
+      "source_sha256": "e102801430f7049e9e29b7f69b55c3d0affad8d55ddef304998efb1161c76f13",
       "counts": {
         "domain": 115,
         "ipcidr": 8,
@@ -141,7 +141,7 @@
     },
     {
       "source": "kelee/ChinaASN.lsr",
-      "source_sha256": "d5d94755075e1b97266f9733ca33d44fca1b422f2a88e2988f25c2ee91628bc6",
+      "source_sha256": "1479562e904547966b367d158218bdc76aa3d82d88b29d1b59f1d3fd08d745a5",
       "counts": {
         "domain": 0,
         "ipcidr": 0,
@@ -159,10 +159,10 @@
     },
     {
       "source": "kelee/ChinaMax.lsr",
-      "source_sha256": "c11603cb09afb04bc49649204bbf22188abd8c881d76552bbeaf1f95d7c4b0c8",
+      "source_sha256": "2a70949fd3c2088513105ab5918452f805f6b71061a3c5ed15aa7e5242448e86",
       "counts": {
         "domain": 111522,
-        "ipcidr": 12514,
+        "ipcidr": 12512,
         "classical": 14,
         "unsupported": 61
       },
@@ -176,8 +176,8 @@
         {
           "behavior": "ipcidr",
           "path": "ipcidr/ChinaMax.mrs",
-          "sha256": "3c4374b955d4e8066e3b790d326fef5e87c4c3078e8c75f66fd3a9007cb177b1",
-          "size": 51400
+          "sha256": "74c1a2e728d05a83c29bb3156cc48c97d273ad8ced8d3b4ca7e197588da7b682",
+          "size": 51371
         },
         {
           "behavior": "classical",
@@ -195,7 +195,7 @@
     },
     {
       "source": "kelee/ChinaMobile.lsr",
-      "source_sha256": "1852a3a8edc7ea8795747c8b422c6e3394f8a5c4b928f00a0961b5641fc7d578",
+      "source_sha256": "0640c133276b0a92c4474fd339920792925bd2755ee53cd16aeb13379ac0c86c",
       "counts": {
         "domain": 37,
         "ipcidr": 1,
@@ -219,7 +219,7 @@
     },
     {
       "source": "kelee/ChinaTelecom.lsr",
-      "source_sha256": "2ca5e8260a4fb3a47b2991d7653a3755ad06907a61e44f4b810b24c7dc88518e",
+      "source_sha256": "015f35254ab3d599b989b8261a3376767cb9799dc11fe65ced6c56a3f71dd545",
       "counts": {
         "domain": 83,
         "ipcidr": 0,
@@ -237,7 +237,7 @@
     },
     {
       "source": "kelee/DouYin.lsr",
-      "source_sha256": "c33c457e46700f4963c076e3ed00f294094b6e253de3df1a8f6882a953832cd7",
+      "source_sha256": "3ea53f9fce86b19dcedf3a394ae71688be509c8939d8549800b04121a2b5b591",
       "counts": {
         "domain": 13,
         "ipcidr": 0,
@@ -255,7 +255,7 @@
     },
     {
       "source": "kelee/GaoDe.lsr",
-      "source_sha256": "e19cbd701ba71c7310ed5fd3bdcb542d8491e4bb326ece0ae08c9690b74620d4",
+      "source_sha256": "22e22fb04cccdc6a7e71190fb743da11b28182d71d42735bf863eff4a564d412",
       "counts": {
         "domain": 9,
         "ipcidr": 0,
@@ -273,7 +273,7 @@
     },
     {
       "source": "kelee/GitHub.lsr",
-      "source_sha256": "a9bd1f02a24de4dda7d4f5ebe02eeb77d57fc2632851af3069ca738e603dc0b4",
+      "source_sha256": "cf3eb6bb8f6957f4bf806592207cc6cf6dffb77663da947b95bda4dfe54fc77f",
       "counts": {
         "domain": 30,
         "ipcidr": 0,
@@ -297,9 +297,9 @@
     },
     {
       "source": "kelee/Global.lsr",
-      "source_sha256": "24aa033a6e14118db7bea8f2890b8b14b7c024c99ea37dd1d927e2afa41cb8d7",
+      "source_sha256": "44fe45772ce058e6689dcb76f406711bef5a7936ce4af44f8b1612cc89af1a78",
       "counts": {
-        "domain": 35594,
+        "domain": 35621,
         "ipcidr": 119,
         "classical": 36,
         "unsupported": 46
@@ -308,8 +308,8 @@
         {
           "behavior": "domain",
           "path": "domain/Global.mrs",
-          "sha256": "ffb56e78438f2eefb07e8e5d8daeff53a9e75e76c3086cba62c5d1f59f6c0c8c",
-          "size": 245267
+          "sha256": "d045a91d13d93ccbbb4bdfcb9ff02a15b4d3a7e23b49ab1aca2c8d7a1e59f0aa",
+          "size": 245500
         },
         {
           "behavior": "ipcidr",
@@ -333,7 +333,7 @@
     },
     {
       "source": "kelee/Google.lsr",
-      "source_sha256": "08ace9c19f20932329d84ad74e333fa96602e877a4e59211229be10814cbf34f",
+      "source_sha256": "d4c83af7a3d7563efd6f41b0dbb874b84d33be0a16e56caead574fdacf2f3903",
       "counts": {
         "domain": 698,
         "ipcidr": 5,
@@ -369,7 +369,7 @@
     },
     {
       "source": "kelee/Instagram.lsr",
-      "source_sha256": "e9ab08f96b731c6d1560235bddc8223c63839e3142cb13da34ee2d032aae7747",
+      "source_sha256": "6ef9d0c41f942e5fcc624b7132fde68da258f37b7ef0fa198d266e6bd34c9f97",
       "counts": {
         "domain": 3,
         "ipcidr": 0,
@@ -393,7 +393,7 @@
     },
     {
       "source": "kelee/JingDong.lsr",
-      "source_sha256": "93d42a00b04a2935718f57e75d9450a50654fe4984ad3f0a3e766ebca1c6e3cd",
+      "source_sha256": "f8ff39345c76aecb134a0cfbbd6dd6c2e9543b52622150e5808b635ffec8a830",
       "counts": {
         "domain": 249,
         "ipcidr": 0,
@@ -411,7 +411,7 @@
     },
     {
       "source": "kelee/KugouKuwo.lsr",
-      "source_sha256": "8002247e13d5f82830839a79f5f6ab69250050e5112d764390ef360407164a79",
+      "source_sha256": "4b3093edb38dbfb34e3a8302aee4a076d416e68658dc66a5d6fb7421eb63c79a",
       "counts": {
         "domain": 19,
         "ipcidr": 90,
@@ -435,7 +435,7 @@
     },
     {
       "source": "kelee/Microsoft.lsr",
-      "source_sha256": "a20f8b3b4e2e022553103dce871242206e6b2037eef0b638f2fae31aaa37c279",
+      "source_sha256": "c893306ca4bcfeba8e4dbe842d48d97329334c581d7b5efe9e407c8d903d9388",
       "counts": {
         "domain": 704,
         "ipcidr": 0,
@@ -465,7 +465,7 @@
     },
     {
       "source": "kelee/NetEase.lsr",
-      "source_sha256": "d61220aa757cb5e3d6bc64443259339a3b17811d2178a1f24a9ff965dddd0bb6",
+      "source_sha256": "8c200f4ba7661224814ac0c3e1efcb954c2ed91b212f6ab78ca9d8880a22fb70",
       "counts": {
         "domain": 118,
         "ipcidr": 28,
@@ -489,7 +489,7 @@
     },
     {
       "source": "kelee/NetEaseMusic.lsr",
-      "source_sha256": "84f859764e579399d754499ea47590ccc913eb0fa83376b273e0748b7e11e7f6",
+      "source_sha256": "bb0cf92d032b6e6a704502c7fc4a02d7b8ac7aa47eaa42a225838dce569b38b0",
       "counts": {
         "domain": 10,
         "ipcidr": 18,
@@ -519,7 +519,7 @@
     },
     {
       "source": "kelee/Pinduoduo.lsr",
-      "source_sha256": "948a96ebda16e6eb175d6c69a1305d940b0e57f21fdd211357a4c41fd056830e",
+      "source_sha256": "427a81b51f120f1a53f7ef582c39976c1f9dcc16f7f2a54e92eecad62b6ae4eb",
       "counts": {
         "domain": 3,
         "ipcidr": 0,
@@ -561,7 +561,7 @@
     },
     {
       "source": "kelee/Telegram.lsr",
-      "source_sha256": "00636725afd0a5dbbadfecf6eba489acf06f5ba9d2f00eeb5c47f4b04dda6d46",
+      "source_sha256": "d1a1627ff476610ed8d96aa8c6acfdd5768d06b7a0aabd6fa4ec42912c0424d8",
       "counts": {
         "domain": 24,
         "ipcidr": 10,
@@ -591,7 +591,7 @@
     },
     {
       "source": "kelee/Tencent.lsr",
-      "source_sha256": "3e99f362f2b0605a042017b67562ed377671648b26a96b3510b62f8acac3aa3f",
+      "source_sha256": "1c207a125bf99319624a8ee8c2c01a82dff51ea7e10dbc36a813de4eae2a7280",
       "counts": {
         "domain": 2498,
         "ipcidr": 20,
@@ -621,7 +621,7 @@
     },
     {
       "source": "kelee/TestFlight.lsr",
-      "source_sha256": "f6c0b1ee1b95d17c135e45967fc9f1e47ec8654af147f8a1fb4f5899141a31a1",
+      "source_sha256": "49c434ddf73264130482adf7fcc6f864082f615ac4dcf705f9d80dbc108381db",
       "counts": {
         "domain": 2,
         "ipcidr": 0,
@@ -645,7 +645,7 @@
     },
     {
       "source": "kelee/TikTok.lsr",
-      "source_sha256": "14c7b961d15d4a4098530f7fa8dc40e0ee42cc2d3c9ecc630a8c1e6343518a92",
+      "source_sha256": "e109e94c22084bea2f877737cf25d58671ef865c496593e5f2fbff99e556ad3b",
       "counts": {
         "domain": 29,
         "ipcidr": 0,
@@ -675,7 +675,7 @@
     },
     {
       "source": "kelee/Twitter.lsr",
-      "source_sha256": "71403a8d3a65ba3fb057ff5eea11cba470d0aa6fe4b2fce9c8a825127946d4b3",
+      "source_sha256": "1d61d0ebbcfbad56b5deaef2975c06c5bdab2235e533ea49f40f5720b19baa1b",
       "counts": {
         "domain": 26,
         "ipcidr": 6,
@@ -705,7 +705,7 @@
     },
     {
       "source": "kelee/WeChat.lsr",
-      "source_sha256": "90625c7dc22def0a85017dbb17e406a5c3a884f9ff677b4cf74142ef6e57495c",
+      "source_sha256": "d27d2a87ee25f34ac7f1ac2340d0adf918471faa76aeaebb7bc1a2b63eeeb212",
       "counts": {
         "domain": 40,
         "ipcidr": 0,
@@ -735,7 +735,7 @@
     },
     {
       "source": "kelee/XiaoMi.lsr",
-      "source_sha256": "5a1017bdee6a0b26a751f77d15d46733b207153f3d8a3526136694cee45cb132",
+      "source_sha256": "ecb695c43ad4affa5c4f25d147c159295194f1bac23933fc51562560fe1fe53c",
       "counts": {
         "domain": 148,
         "ipcidr": 9,
@@ -759,7 +759,7 @@
     },
     {
       "source": "kelee/YouTube.lsr",
-      "source_sha256": "232d160afc1c3f21addf6364227ef97b3c69000987c97800528a4dc4d3578552",
+      "source_sha256": "3b45d69f85ae856a33c6b522e067129c01ea8bb0b41c98b152a82f5e25f8e615",
       "counts": {
         "domain": 182,
         "ipcidr": 3,
