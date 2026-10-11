@@ -1,5 +1,5 @@
-# UpdateTime：2026-10-09 03:18:10
-# RuleCount：35822
+# UpdateTime：2026-10-11 03:16:58
+# RuleCount：35829
 DOMAIN, practivate.adobe
 DOMAIN, scholar.google.ae
 DOMAIN, yangzhi.app
@@ -241,6 +241,8 @@ DOMAIN, translomatic.foxfortmobile.com
 DOMAIN, straitsx-826709081262441084-b790f87a2ae6fd417434295.freshchat.com
 DOMAIN, copilot-workspace.githubnext.com
 DOMAIN, copilot-proxy.githubusercontent.com
+DOMAIN, copilot-telemetry.githubusercontent.com
+DOMAIN, copilot-telemetry-service.githubusercontent.com
 DOMAIN, alt1-mtalk.google.com
 DOMAIN, alt2-mtalk.google.com
 DOMAIN, alt3-mtalk.google.com
@@ -690,6 +692,7 @@ DOMAIN, nvidia.tt.omtrdc.net
 DOMAIN, standchartbank.tt.omtrdc.net
 DOMAIN, vmware.tt.omtrdc.net
 DOMAIN, ood.opsource.net
+DOMAIN, incoming-telemetry.thunderbird.net
 DOMAIN, bingsettingssearch.trafficmanager.net
 DOMAIN, client-teamviewer-com.trafficmanager.net
 DOMAIN, vscode-sync.trafficmanager.net
@@ -739,6 +742,7 @@ DOMAIN, rsshub2.asailor.org
 DOMAIN, chinapower.csis.org
 DOMAIN, ocsp.int-x3.letsencrypt.org
 DOMAIN, addons.mozilla.org
+DOMAIN, incoming.telemetry.mozilla.org
 DOMAIN, mdn.mozillademos.org
 DOMAIN, firstsearch.oclc.org
 DOMAIN, databank.worldbank.org
@@ -11159,6 +11163,7 @@ DOMAIN-SUFFIX, megapornfreehd.com
 DOMAIN-SUFFIX, megapornpics.com
 DOMAIN-SUFFIX, megaproxy.com
 DOMAIN-SUFFIX, megarotic.com
+DOMAIN-SUFFIX, megas4.com
 DOMAIN-SUFFIX, megatitsminka.com
 DOMAIN-SUFFIX, megaupload.com
 DOMAIN-SUFFIX, megavideo.com
@@ -20125,6 +20130,7 @@ DOMAIN-SUFFIX, skyoceanrescue.it
 DOMAIN-SUFFIX, sony.it
 DOMAIN-SUFFIX, starbucks.it
 DOMAIN-SUFFIX, tettediferro.it
+DOMAIN-SUFFIX, transfer.it
 DOMAIN-SUFFIX, travelex.it
 DOMAIN-SUFFIX, uderzo.it
 DOMAIN-SUFFIX, vanish.it
@@ -24184,6 +24190,8 @@ DOMAIN-SUFFIX, youtube.co.nz
 DOMAIN-SUFFIX, google.com.nz
 DOMAIN-SUFFIX, intel.nz
 DOMAIN-SUFFIX, mega.nz
+DOMAIN-SUFFIX, megaad.nz
+DOMAIN-SUFFIX, megapay.nz
 DOMAIN-SUFFIX, nzchinese.net.nz
 DOMAIN-SUFFIX, therock.net.nz
 DOMAIN-SUFFIX, dalailamavisit.org.nz
@@ -26355,7 +26363,6 @@ DOMAIN-SUFFIX, 91porn.plus
 DOMAIN-SUFFIX, 928.plus
 DOMAIN-SUFFIX, kucoin.plus
 DOMAIN-SUFFIX, pornohd.plus
-DOMAIN-SUFFIX, prts.plus
 DOMAIN-SUFFIX, warp.plus
 DOMAIN-SUFFIX, booth.pm
 DOMAIN-SUFFIX, hex.pm
