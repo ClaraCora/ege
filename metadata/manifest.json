@@ -13,17 +13,17 @@
       "list": "ad.lsr",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Advertising/Advertising.list",
       "path": "ad/Advertising.list",
-      "sha256": "d956c57d6b7ab6001027b7c78d8b0bd05429411a5858311deb747223e6f3f310",
+      "sha256": "e2d680caadaccd14dd72ec65abafcc1e367c83499d770ff227db54e2dbce14d9",
       "size": 26870,
-      "etag": "\"73a99e3af48a6765d6c8fc574799d8eb3e0c133329e6ce3d8089d0f3435138b4\""
+      "etag": "\"153f2f949f2b850358b303817a47877025cc21fb04adb8455a4716007d0d36c1\""
     },
     {
       "list": "ad.lsr",
       "url": "https://adrules.top/adrules.list",
       "path": "ad/adrules.list",
-      "sha256": "2e6756c98395ab95bf64b548d94ce5528eab14358e2ee163f134d4cd10cc0894",
-      "size": 7017719,
-      "etag": "\"057a8a31deedeb3a35f10849d645eed7\""
+      "sha256": "adb979a6c0585682f9a406dfad0387ca07c52299fd211a95ad597805113675ec",
+      "size": 7022006,
+      "etag": "\"85fbea947590dfd48b7345a062fd1e2b\""
     },
     {
       "list": "geo.lsr",
@@ -381,9 +381,9 @@
       "list": "mihomo.lsr",
       "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/ads.mrs",
       "path": "mihomo/ads.mrs",
-      "sha256": "2be623ffbd56750110439c86006ded7bd66489297f4d9826295f0155c161a14c",
-      "size": 871643,
-      "etag": "\"9e899c797c3acad3254929e9ede68a279bbbd588ab06f79435fee16133af3841\""
+      "sha256": "f7391e36174f604240cdfe4db74014fb20cc55d8b478f835caa43fdc129cd660",
+      "size": 875880,
+      "etag": "\"086e59cc51810dac2ee6f3dbb3612cfbd0401fe467b7a13995bb5dcbee792d38\""
     },
     {
       "list": "mihomo.lsr",
