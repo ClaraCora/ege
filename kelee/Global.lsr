@@ -1,5 +1,5 @@
-# UpdateTime：2026-10-13 03:17:30
-# RuleCount：35914
+# UpdateTime：2026-10-15 03:17:12
+# RuleCount：35915
 DOMAIN, practivate.adobe
 DOMAIN, scholar.google.ae
 DOMAIN, yangzhi.app
@@ -3220,6 +3220,7 @@ DOMAIN-SUFFIX, 91qk41rf.com
 DOMAIN-SUFFIX, 91quanji.com
 DOMAIN-SUFFIX, 91rb.com
 DOMAIN-SUFFIX, 91rb99.com
+DOMAIN-SUFFIX, 91short.com
 DOMAIN-SUFFIX, 91vhome.com
 DOMAIN-SUFFIX, 920share.com
 DOMAIN-SUFFIX, 921bb.com
