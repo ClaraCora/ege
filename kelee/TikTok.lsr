@@ -1,5 +1,5 @@
-# UpdateTime：2026-10-15 03:14:46
-# RuleCount：32
+# UpdateTime：2026-10-17 03:15:06
+# RuleCount：35
 DOMAIN, lf16-effectcdn.byteeffecttos-g.com
 DOMAIN, lf16-pkgcdn.pitaya-clientai.com
 DOMAIN, trae-api-sg.mchost.guru
@@ -11,6 +11,8 @@ DOMAIN-SUFFIX, bytegecko-i18n.com
 DOMAIN-SUFFIX, byteintlapi.com
 DOMAIN-SUFFIX, byteoversea.com
 DOMAIN-SUFFIX, capcut.com
+DOMAIN-SUFFIX, capcutapi.com
+DOMAIN-SUFFIX, capcutstatic.com
 DOMAIN-SUFFIX, ibytedtos.com
 DOMAIN-SUFFIX, ibyteimg.com
 DOMAIN-SUFFIX, ipstatp.com
@@ -28,6 +30,7 @@ DOMAIN-SUFFIX, ttwebview.com
 DOMAIN-SUFFIX, musical.ly
 DOMAIN-SUFFIX, tiktokd.net
 DOMAIN-SUFFIX, tiktokd.org
+DOMAIN-SUFFIX, capcutapi.us
 DOMAIN-SUFFIX, tiktokv.us
 DOMAIN-KEYWORD, tiktok
 DOMAIN-KEYWORD, musical.ly
