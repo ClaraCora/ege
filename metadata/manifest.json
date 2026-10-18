@@ -13,17 +13,17 @@
       "list": "ad.lsr",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Advertising/Advertising.list",
       "path": "ad/Advertising.list",
-      "sha256": "c68c0dcc30d2e6cc8ea427e55381642a0452b8a5eaeb1877aa44c3f97e6f0253",
+      "sha256": "c7353651d5333ae80147fa23bff3f3e33003c0d336918d2bc5e35e8ffefd5f8c",
       "size": 26870,
-      "etag": "\"56614d436774a5cb7409cc16234a165ac9605dfdb2de73ae5483a6fe8bcdb58b\""
+      "etag": "\"9a0b150dfc4070d6488a8762220af17172de9bc53049db0c7c95e10f2b6ede36\""
     },
     {
       "list": "ad.lsr",
       "url": "https://adrules.top/adrules.list",
       "path": "ad/adrules.list",
-      "sha256": "9d13dc2e3965b764cb8479029b6e68141f15550bc668af831b96684d4214f657",
-      "size": 7153765,
-      "etag": "\"84eb4789effa31c739e4e52a11f5f1e1\""
+      "sha256": "5940a140bf38cf55c3d2432b04b0b39214330ef29b0333b23f1d40bbca2cb66e",
+      "size": 7159665,
+      "etag": "\"4952ecb0b34ce166bc1df77a4c2b8348\""
     },
     {
       "list": "geo.lsr",
@@ -37,9 +37,9 @@
       "list": "geo.lsr",
       "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb",
       "path": "geo/country.mmdb",
-      "sha256": "656023ffb50d464dee083b499c3f4f8292a43b72c9b4ff12a37f3e0a3944fbeb",
-      "size": 7647379,
-      "etag": "W/\"74b093-2c5344ff52a0cc73\""
+      "sha256": "64809d264be87ecfb7ac3ad19b7678893b6275038a7d4bf9eec72464a6c4f9fe",
+      "size": 7647361,
+      "etag": "W/\"74b081-7322e43ad7ae1c9f\""
     },
     {
       "list": "geo.lsr",
@@ -413,9 +413,9 @@
       "list": "mihomo.lsr",
       "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/private.mrs",
       "path": "mihomo/private-1fa87d08.mrs",
-      "sha256": "0f9ba48d4d0b0d192a4e7c3548486dde05e5a92e6e58e8ea8c9cc302712a1420",
-      "size": 742,
-      "etag": "\"dba95be9d0d4184af1b0e7b5e7ca85204c1c11614ea07566c0cdac614c9b28aa\""
+      "sha256": "df452ab1bfb572f366f00001fa4525f16f137dc670aed2c60af0100dc397d3ec",
+      "size": 781,
+      "etag": "\"211e279ffa7c153014b56915893af7b2a9f066ca594548b86838ac6da920048a\""
     },
     {
       "list": "mihomo.lsr",
@@ -429,9 +429,9 @@
       "list": "mihomo.lsr",
       "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/proxy.mrs",
       "path": "mihomo/proxy.mrs",
-      "sha256": "46f9fd6d8ce1e8ee3a2ef78499b4ca10bea1561f3f820db0dd4b5989a60a52e6",
-      "size": 193309,
-      "etag": "\"e21aded9d4a4678eb40930e63a7f7f818c32001afe98f5428d30ce7d5f5ab193\""
+      "sha256": "d27ecaafe0ada348aa71c99bef41a2815aded865ff89e6e9e957e6d97b26f2df",
+      "size": 193238,
+      "etag": "\"aed530cd02f63988561dc38efeadad9517e7fa9474b95ad31470d8660a96eb60\""
     },
     {
       "list": "png.lsr",
