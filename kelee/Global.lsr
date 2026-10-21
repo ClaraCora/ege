@@ -1,5 +1,5 @@
-# UpdateTime：2026-10-19 03:16:35
-# RuleCount：35921
+# UpdateTime：2026-10-21 03:17:17
+# RuleCount：35939
 DOMAIN, practivate.adobe
 DOMAIN, scholar.google.ae
 DOMAIN, yangzhi.app
@@ -176,6 +176,7 @@ DOMAIN, notary-submissions-prod.s3-accelerate.amazonaws.com
 DOMAIN, s3-ap-northeast-1.amazonaws.com
 DOMAIN, s3-ap-southeast-2.amazonaws.com
 DOMAIN, ebay-25-assets.s3-us-west-1.amazonaws.com
+DOMAIN, devforum-uploads.s3.dualstack.us-east-2.amazonaws.com
 DOMAIN, roblox-load-generator-configuration.s3.us-east-2.amazonaws.com
 DOMAIN, notary-submissions-prod.s3.us-west-2.amazonaws.com
 DOMAIN, vsmarketplacebadge.apphb.com
@@ -536,7 +537,6 @@ DOMAIN, vs-cmaf-push-uk-live.akamaized.net
 DOMAIN, vs-cmaf-pushb-ww-live.akamaized.net
 DOMAIN, vs-hls-push-uk-live.akamaized.net
 DOMAIN, vs-hls-pushb-uk-live.akamaized.net
-DOMAIN, flightsimulator.azureedge.net
 DOMAIN, gigabyte2.azureedge.net
 DOMAIN, openaiapi-site.azureedge.net
 DOMAIN, production-openaicom-storage.azureedge.net
@@ -590,6 +590,7 @@ DOMAIN, d2wy8f7a9ursnm.cloudfront.net
 DOMAIN, d2xmjdvx03ij56.cloudfront.net
 DOMAIN, d31dormfno8pk4.cloudfront.net
 DOMAIN, d33wubrfki0l68.cloudfront.net
+DOMAIN, d348twzf7a8p5.cloudfront.net
 DOMAIN, d36jcksde1wxzq.cloudfront.net
 DOMAIN, d36nr0u3xmc4mm.cloudfront.net
 DOMAIN, d3aqoihi2n8ty8.cloudfront.net
@@ -609,6 +610,7 @@ DOMAIN, ddpjwstwtpszg.cloudfront.net
 DOMAIN, dfp6rglgjqszk.cloudfront.net
 DOMAIN, dgeft87wbj63p.cloudfront.net
 DOMAIN, dmqdd6hw24ucf.cloudfront.net
+DOMAIN, doy2mn9upadnk.cloudfront.net
 DOMAIN, dqd0jw5gvbchn.cloudfront.net
 DOMAIN, dqrpb9wgowsf5.cloudfront.net
 DOMAIN, ds0h3roq6wcgc.cloudfront.net
@@ -919,6 +921,7 @@ DOMAIN-SUFFIX, tinkoff.ai
 DOMAIN-SUFFIX, trae.ai
 DOMAIN-SUFFIX, tripo3d.ai
 DOMAIN-SUFFIX, tsi.ai
+DOMAIN-SUFFIX, typesafe.ai
 DOMAIN-SUFFIX, ukit.ai
 DOMAIN-SUFFIX, videoindexer.ai
 DOMAIN-SUFFIX, wombo.ai
@@ -970,6 +973,7 @@ DOMAIN-SUFFIX, adguard.app
 DOMAIN-SUFFIX, attestation.app
 DOMAIN-SUFFIX, authpass.app
 DOMAIN-SUFFIX, bbc-reporting-api.app
+DOMAIN-SUFFIX, beget.app
 DOMAIN-SUFFIX, blurams.app
 DOMAIN-SUFFIX, bsky.app
 DOMAIN-SUFFIX, carrotquest.app
@@ -2603,6 +2607,8 @@ DOMAIN-SUFFIX, 1lib.cloud
 DOMAIN-SUFFIX, anaconda.cloud
 DOMAIN-SUFFIX, appdomain.cloud
 DOMAIN-SUFFIX, appleone.cloud
+DOMAIN-SUFFIX, beget.cloud
+DOMAIN-SUFFIX, begetcdn.cloud
 DOMAIN-SUFFIX, binance.cloud
 DOMAIN-SUFFIX, bybit.cloud
 DOMAIN-SUFFIX, epoch.cloud
@@ -4056,7 +4062,6 @@ DOMAIN-SUFFIX, askstudent.com
 DOMAIN-SUFFIX, askubuntu.com
 DOMAIN-SUFFIX, asmhentai.com
 DOMAIN-SUFFIX, asmrbuluo.com
-DOMAIN-SUFFIX, asobostudio.com
 DOMAIN-SUFFIX, asp-cc.com
 DOMAIN-SUFFIX, aspenpublishing.com
 DOMAIN-SUFFIX, aspnetcdn.com
@@ -6271,6 +6276,7 @@ DOMAIN-SUFFIX, curseforge.com
 DOMAIN-SUFFIX, cursor.com
 DOMAIN-SUFFIX, cursor-cdn.com
 DOMAIN-SUFFIX, cursorapi.com
+DOMAIN-SUFFIX, cursorvm.com
 DOMAIN-SUFFIX, curvefish.com
 DOMAIN-SUFFIX, curvybbwwives.com
 DOMAIN-SUFFIX, curvyerotic.com
@@ -7939,7 +7945,6 @@ DOMAIN-SUFFIX, flexibits.com
 DOMAIN-SUFFIX, flexsig.com
 DOMAIN-SUFFIX, flickr.com
 DOMAIN-SUFFIX, flickriver.com
-DOMAIN-SUFFIX, flightsimulator.com
 DOMAIN-SUFFIX, fling.com
 DOMAIN-SUFFIX, flipboard.com
 DOMAIN-SUFFIX, flipfap.com
@@ -14117,6 +14122,7 @@ DOMAIN-SUFFIX, schemer.com
 DOMAIN-SUFFIX, schiffvitamins.com
 DOMAIN-SUFFIX, schwab.com
 DOMAIN-SUFFIX, schwabassetmanagement.com
+DOMAIN-SUFFIX, schwabcdn.com
 DOMAIN-SUFFIX, schwabplan.com
 DOMAIN-SUFFIX, science.com
 DOMAIN-SUFFIX, sciencedaily.com
@@ -17596,6 +17602,7 @@ DOMAIN-SUFFIX, applestore.de
 DOMAIN-SUFFIX, archlinux.de
 DOMAIN-SUFFIX, asianwomensfilm.de
 DOMAIN-SUFFIX, barton.de
+DOMAIN-SUFFIX, beget.de
 DOMAIN-SUFFIX, berlinerbericht.de
 DOMAIN-SUFFIX, bestsrv.de
 DOMAIN-SUFFIX, bild.de
@@ -19063,6 +19070,7 @@ DOMAIN-SUFFIX, ipad.host
 DOMAIN-SUFFIX, iphone.host
 DOMAIN-SUFFIX, mastodon.host
 DOMAIN-SUFFIX, sexvideos.host
+DOMAIN-SUFFIX, beget.hosting
 DOMAIN-SUFFIX, vps.hosting
 DOMAIN-SUFFIX, devsitetest.how
 DOMAIN-SUFFIX, get.how
@@ -19951,6 +19959,7 @@ DOMAIN-SUFFIX, solscan.io
 DOMAIN-SUFFIX, soup.io
 DOMAIN-SUFFIX, spatial.io
 DOMAIN-SUFFIX, spring.io
+DOMAIN-SUFFIX, sprut.io
 DOMAIN-SUFFIX, statically.io
 DOMAIN-SUFFIX, statuspage.io
 DOMAIN-SUFFIX, stealthex.io
@@ -20915,6 +20924,7 @@ DOMAIN-SUFFIX, mastercard.kz
 DOMAIN-SUFFIX, mini.kz
 DOMAIN-SUFFIX, ozon.kz
 DOMAIN-SUFFIX, sony.kz
+DOMAIN-SUFFIX, timewebcloud.kz
 DOMAIN-SUFFIX, ucoz.kz
 DOMAIN-SUFFIX, vk.kz
 DOMAIN-SUFFIX, vkcloud.kz
@@ -23345,6 +23355,7 @@ DOMAIN-SUFFIX, pussy-pics.net
 DOMAIN-SUFFIX, pussyboy.net
 DOMAIN-SUFFIX, pussyspace.net
 DOMAIN-SUFFIX, putinho.net
+DOMAIN-SUFFIX, pv-cdn.net
 DOMAIN-SUFFIX, pvp.net
 DOMAIN-SUFFIX, pximg.net
 DOMAIN-SUFFIX, pypl.net
@@ -25463,6 +25474,7 @@ DOMAIN-SUFFIX, onionshare.org
 DOMAIN-SUFFIX, onlynudes.org
 DOMAIN-SUFFIX, onmypc.org
 DOMAIN-SUFFIX, ooni.org
+DOMAIN-SUFFIX, openai.org
 DOMAIN-SUFFIX, opencreate.org
 DOMAIN-SUFFIX, opendesktop.org
 DOMAIN-SUFFIX, opendroneid.org
@@ -26392,6 +26404,7 @@ DOMAIN-SUFFIX, 3xxx.pro
 DOMAIN-SUFFIX, anyxxx.pro
 DOMAIN-SUFFIX, babes34.pro
 DOMAIN-SUFFIX, barss1207.pro
+DOMAIN-SUFFIX, beget.pro
 DOMAIN-SUFFIX, binancezh.pro
 DOMAIN-SUFFIX, bsxm1213.pro
 DOMAIN-SUFFIX, cutout.pro
@@ -26745,8 +26758,10 @@ DOMAIN-SUFFIX, beescrm.ru
 DOMAIN-SUFFIX, beget.ru
 DOMAIN-SUFFIX, berizaryad.ru
 DOMAIN-SUFFIX, beru.ru
+DOMAIN-SUFFIX, beserver.ru
 DOMAIN-SUFFIX, bestchange.ru
 DOMAIN-SUFFIX, bfa.ru
+DOMAIN-SUFFIX, bget.ru
 DOMAIN-SUFFIX, bimsaas.ru
 DOMAIN-SUFFIX, biqle.ru
 DOMAIN-SUFFIX, bk.ru
@@ -27936,6 +27951,7 @@ DOMAIN-SUFFIX, x.team
 DOMAIN-SUFFIX, 2gis.tech
 DOMAIN-SUFFIX, appleone.tech
 DOMAIN-SUFFIX, atomyze.tech
+DOMAIN-SUFFIX, beget.tech
 DOMAIN-SUFFIX, bystys.tech
 DOMAIN-SUFFIX, deepfreeze.tech
 DOMAIN-SUFFIX, dert.tech
@@ -27961,6 +27977,7 @@ DOMAIN-SUFFIX, rtnewsde.tech
 DOMAIN-SUFFIX, rwbautomation.tech
 DOMAIN-SUFFIX, safeliner.tech
 DOMAIN-SUFFIX, sage-observability.tech
+DOMAIN-SUFFIX, timeweb.tech
 DOMAIN-SUFFIX, v2mm.tech
 DOMAIN-SUFFIX, wbautomation.tech
 DOMAIN-SUFFIX, wbwh.tech
@@ -35288,6 +35305,7 @@ DOMAIN-SUFFIX, xn--80arpq.xn--p1ai
 DOMAIN-SUFFIX, xn--80asgb.xn--p1ai
 DOMAIN-SUFFIX, xn--90ab2c.xn--p1ai
 DOMAIN-SUFFIX, xn--90absjljw3g.xn--p1ai
+DOMAIN-SUFFIX, xn--90aefb9d.xn--p1ai
 DOMAIN-SUFFIX, xn--c1acbl2abdlkab1og.xn--p1ai
 DOMAIN-SUFFIX, xn--d1acpjx3f.xn--p1ai
 DOMAIN-SUFFIX, xn--e1aigb.xn--p1ai
