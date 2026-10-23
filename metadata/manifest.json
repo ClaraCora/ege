@@ -5,9 +5,9 @@
       "list": "ad.lsr",
       "url": "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Egern/Rules/Ads_AWAvenue.yaml",
       "path": "ad/Ads_AWAvenue.yaml",
-      "sha256": "d2066b27e14fd2b037b9e27e2ad7c07508491878a60d61123818376103a9d0f3",
-      "size": 23702,
-      "etag": "\"73efdec7d5ae0da3d9df5a84998333cdf22abf7ea292b56bf75ced017370db37\""
+      "sha256": "adde8f4e2e3a47bb9dfc8ae96e0c9ecc1f2bdd27676b215477442fded7b4788b",
+      "size": 23996,
+      "etag": "\"2abeec51e9edaa3f1af9da754526a53b752da1528e5f6a6ab36e2ccb112b9802\""
     },
     {
       "list": "ad.lsr",
@@ -21,9 +21,9 @@
       "list": "ad.lsr",
       "url": "https://adrules.top/adrules.list",
       "path": "ad/adrules.list",
-      "sha256": "1e35dfb594c9b4bdb4e0df3e5c0f45693c995730eacb5b817df0500431b3ad28",
-      "size": 7341204,
-      "etag": "\"c9ceaacd900c12d58808cf303c5e7ffd\""
+      "sha256": "a75e0d981cd8775279b4e2d1f004c7f7d0eb7bb4fcc05ed4819383e50bcacc3f",
+      "size": 7348015,
+      "etag": "\"f81f69c8aa180e134332dd7b06a7a7e2\""
     },
     {
       "list": "geo.lsr",
@@ -53,9 +53,9 @@
       "list": "geo.lsr",
       "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat",
       "path": "geo/geosite.dat",
-      "sha256": "3260a11390c30172ec64213df26e9f9eed4eb9694ce52b899f5699edff369e47",
-      "size": 4304339,
-      "etag": "W/\"41add3-346da1dd45ee0f30\""
+      "sha256": "56bf88abb2d44144b718a9bace777f27b9146dadd3075950592e1b3326478fa9",
+      "size": 4305877,
+      "etag": "W/\"41b3d5-5713aca4cf7ef242\""
     },
     {
       "list": "kelee.lsr",
