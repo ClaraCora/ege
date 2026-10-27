@@ -1,5 +1,5 @@
-# UpdateTime：2026-10-25 03:18:01
-# RuleCount：35993
+# UpdateTime：2026-10-27 03:17:45
+# RuleCount：36003
 DOMAIN, practivate.adobe
 DOMAIN, scholar.google.ae
 DOMAIN, yangzhi.app
@@ -4903,6 +4903,7 @@ DOMAIN-SUFFIX, bigtitterrynova.com
 DOMAIN-SUFFIX, bigtitvenera.com
 DOMAIN-SUFFIX, bigtopsites.com
 DOMAIN-SUFFIX, biitii.com
+DOMAIN-SUFFIX, bikawebapp.com
 DOMAIN-SUFFIX, bili888.com
 DOMAIN-SUFFIX, bili999.com
 DOMAIN-SUFFIX, bilinovel.com
@@ -5688,6 +5689,8 @@ DOMAIN-SUFFIX, cdninstagram.com
 DOMAIN-SUFFIX, cdnjs.com
 DOMAIN-SUFFIX, cdnpure.com
 DOMAIN-SUFFIX, cdnvideohub.com
+DOMAIN-SUFFIX, cdprojekt.com
+DOMAIN-SUFFIX, cdprojektred.com
 DOMAIN-SUFFIX, cdw.com
 DOMAIN-SUFFIX, cebay.com
 DOMAIN-SUFFIX, ceicdata.com
@@ -9538,6 +9541,7 @@ DOMAIN-SUFFIX, htyj-bj.com
 DOMAIN-SUFFIX, hu1u.com
 DOMAIN-SUFFIX, huabansp.com
 DOMAIN-SUFFIX, huaglad.com
+DOMAIN-SUFFIX, huakacomic.com
 DOMAIN-SUFFIX, huangyiyu.com
 DOMAIN-SUFFIX, huanyuju.com
 DOMAIN-SUFFIX, huaren4us.com
@@ -11455,6 +11459,7 @@ DOMAIN-SUFFIX, minivilledequebec.com
 DOMAIN-SUFFIX, miniwholesaleconnect.com
 DOMAIN-SUFFIX, miniwindsor.com
 DOMAIN-SUFFIX, miniworkshop.com
+DOMAIN-SUFFIX, minkch.com
 DOMAIN-SUFFIX, minnano-av.com
 DOMAIN-SUFFIX, minne.com
 DOMAIN-SUFFIX, minneapolisbmw.com
@@ -12370,6 +12375,7 @@ DOMAIN-SUFFIX, niuc2.com
 DOMAIN-SUFFIX, niusnews.com
 DOMAIN-SUFFIX, nivodz.com
 DOMAIN-SUFFIX, nixlang.com
+DOMAIN-SUFFIX, njav.com
 DOMAIN-SUFFIX, njavtv.com
 DOMAIN-SUFFIX, njpw1972.com
 DOMAIN-SUFFIX, njuice.com
@@ -13047,6 +13053,7 @@ DOMAIN-SUFFIX, phuquocservices.com
 DOMAIN-SUFFIX, phxbmw.com
 DOMAIN-SUFFIX, pi-vr.com
 DOMAIN-SUFFIX, piaotia.com
+DOMAIN-SUFFIX, pica-id.com
 DOMAIN-SUFFIX, picacg2022.com
 DOMAIN-SUFFIX, picacgy.com
 DOMAIN-SUFFIX, picacomic.com
@@ -13127,6 +13134,7 @@ DOMAIN-SUFFIX, playbydurex.com
 DOMAIN-SUFFIX, playfab.com
 DOMAIN-SUFFIX, playfabapi.com
 DOMAIN-SUFFIX, playforceone.com
+DOMAIN-SUFFIX, playgwent.com
 DOMAIN-SUFFIX, playhearthstone.com
 DOMAIN-SUFFIX, playmation.com
 DOMAIN-SUFFIX, playmeow.com
@@ -13161,6 +13169,7 @@ DOMAIN-SUFFIX, plusone8.com
 DOMAIN-SUFFIX, plzpf.com
 DOMAIN-SUFFIX, pmatehunter.com
 DOMAIN-SUFFIX, pmates.com
+DOMAIN-SUFFIX, po-kaki-to.com
 DOMAIN-SUFFIX, po2b.com
 DOMAIN-SUFFIX, pobl-content.com
 DOMAIN-SUFFIX, pocketbiketrader.com
@@ -15403,6 +15412,7 @@ DOMAIN-SUFFIX, thevivekspot.com
 DOMAIN-SUFFIX, thewaltdisneycompany.com
 DOMAIN-SUFFIX, theweek.com
 DOMAIN-SUFFIX, thewirechina.com
+DOMAIN-SUFFIX, thewitcher.com
 DOMAIN-SUFFIX, thewonderful101.com
 DOMAIN-SUFFIX, theync.com
 DOMAIN-SUFFIX, theyxxx.com
@@ -17457,6 +17467,7 @@ DOMAIN-SUFFIX, zopim.com
 DOMAIN-SUFFIX, zorglist.com
 DOMAIN-SUFFIX, zorrovpn.com
 DOMAIN-SUFFIX, zozotown.com
+DOMAIN-SUFFIX, zozovideo.com
 DOMAIN-SUFFIX, zpath.com
 DOMAIN-SUFFIX, zqqpwz.com
 DOMAIN-SUFFIX, zscaler.com
@@ -17839,6 +17850,7 @@ DOMAIN-SUFFIX, misskey.design
 DOMAIN-SUFFIX, rea.design
 DOMAIN-SUFFIX, spotify.design
 DOMAIN-SUFFIX, vk.design
+DOMAIN-SUFFIX, 1password.dev
 DOMAIN-SUFFIX, 2022.dev
 DOMAIN-SUFFIX, ai.dev
 DOMAIN-SUFFIX, ai-sdk.dev
@@ -19074,17 +19086,11 @@ DOMAIN-SUFFIX, volvobuses.hk
 DOMAIN-SUFFIX, volvotrucks.hk
 DOMAIN-SUFFIX, windows8.hk
 DOMAIN-SUFFIX, xn--qhrx81fxh2a.xn--55qx5d.hk
-DOMAIN-SUFFIX, xn--fiqs8s1bxp3anr7a.hk
-DOMAIN-SUFFIX, xn--fiqs8s1byzqyvl.hk
-DOMAIN-SUFFIX, xn--gdt08a.hk
-DOMAIN-SUFFIX, xn--mxtq18a.hk
+DOMAIN-SUFFIX, xn--fiq80y.hk
+DOMAIN-SUFFIX, xn--fiq80y3xbiwr.hk
+DOMAIN-SUFFIX, xn--fiq80y3xbiwrs0kiu9d.hk
 DOMAIN-SUFFIX, xn--pssu7ci2j23mp9ny48b.hk
-DOMAIN-SUFFIX, xn--pssu7cv61af1tcs59bnvd.hk
 DOMAIN-SUFFIX, xn--pssu7cv61af44b.hk
-DOMAIN-SUFFIX, xn--pssu7cv61ahw8aq79bztd.hk
-DOMAIN-SUFFIX, xn--pssu7cv61ahwcb1p2yk.hk
-DOMAIN-SUFFIX, xn--wcv22d.hk
-DOMAIN-SUFFIX, xn--wcvs22d1m.hk
 DOMAIN-SUFFIX, xtom.hk
 DOMAIN-SUFFIX, yahoo.hk
 DOMAIN-SUFFIX, youngspiration.hk
@@ -19906,6 +19912,7 @@ DOMAIN-SUFFIX, ius.io
 DOMAIN-SUFFIX, jenkins.io
 DOMAIN-SUFFIX, jitpack.io
 DOMAIN-SUFFIX, jiuse.io
+DOMAIN-SUFFIX, ga.jspm.io
 DOMAIN-SUFFIX, k8s.io
 DOMAIN-SUFFIX, kaggle.io
 DOMAIN-SUFFIX, kakaobank.io
@@ -22390,6 +22397,7 @@ DOMAIN-SUFFIX, ctfriend.net
 DOMAIN-SUFFIX, cuiweiping.net
 DOMAIN-SUFFIX, currently.net
 DOMAIN-SUFFIX, cutscenes.net
+DOMAIN-SUFFIX, cyberpunk.net
 DOMAIN-SUFFIX, d-trust.net
 DOMAIN-SUFFIX, d0z.net
 DOMAIN-SUFFIX, d100.net
@@ -22983,6 +22991,7 @@ DOMAIN-SUFFIX, kendincos.net
 DOMAIN-SUFFIX, kenyaraha.net
 DOMAIN-SUFFIX, keontech.net
 DOMAIN-SUFFIX, khangar.net
+DOMAIN-SUFFIX, kimootoko.net
 DOMAIN-SUFFIX, kinescopecdn.net
 DOMAIN-SUFFIX, kinguin.net
 DOMAIN-SUFFIX, kir2kos.net
@@ -24353,6 +24362,7 @@ DOMAIN-SUFFIX, xshr.online
 DOMAIN-SUFFIX, zatrahal.online
 DOMAIN-SUFFIX, 01.org
 DOMAIN-SUFFIX, 100ke.org
+DOMAIN-SUFFIX, 123av.org
 DOMAIN-SUFFIX, 18comic.org
 DOMAIN-SUFFIX, 18sex.org
 DOMAIN-SUFFIX, 1949er.org
@@ -26634,6 +26644,7 @@ DOMAIN-SUFFIX, yande.re
 DOMAIN-SUFFIX, v.recipes
 DOMAIN-SUFFIX, 1917live.red
 DOMAIN-SUFFIX, amazon.red
+DOMAIN-SUFFIX, cdprojekt.red
 DOMAIN-SUFFIX, hacg.red
 DOMAIN-SUFFIX, hentaihaven.red
 DOMAIN-SUFFIX, lenporno.red
@@ -27571,6 +27582,7 @@ DOMAIN-SUFFIX, z-library.se
 DOMAIN-SUFFIX, chronicle.security
 DOMAIN-SUFFIX, f6.security
 DOMAIN-SUFFIX, brightcove.services
+DOMAIN-SUFFIX, cdpred.services
 DOMAIN-SUFFIX, gateio.services
 DOMAIN-SUFFIX, plex.services
 DOMAIN-SUFFIX, tesla.services
@@ -35329,19 +35341,15 @@ DOMAIN-SUFFIX, xn--gtvq61aiijy0b.xn--hxt814e
 DOMAIN-SUFFIX, xn--gtvz22d.xn--hxt814e
 DOMAIN-SUFFIX, xn--kput3imi374g.xn--hxt814e
 DOMAIN-SUFFIX, xn--ruq8a011kt6y.xn--hxt814e
-DOMAIN-SUFFIX, xn--fiqs8s1bxp3anr7a.xn--j6w193g
-DOMAIN-SUFFIX, xn--fiqs8s1byzqyvl.xn--j6w193g
-DOMAIN-SUFFIX, xn--gdt08a.xn--j6w193g
-DOMAIN-SUFFIX, xn--mxtq18a.xn--j6w193g
+DOMAIN-SUFFIX, xn--fiq80y.xn--j6w193g
+DOMAIN-SUFFIX, xn--fiq80y3xbiwr.xn--j6w193g
+DOMAIN-SUFFIX, xn--fiq80y3xbiwrs0kiu9d.xn--j6w193g
 DOMAIN-SUFFIX, xn--pssu7ci2j23mp9ny48b.xn--j6w193g
-DOMAIN-SUFFIX, xn--pssu7cv61af1tcs59bnvd.xn--j6w193g
+DOMAIN-SUFFIX, xn--pssu7ci3q5oge0ai91q.xn--j6w193g
 DOMAIN-SUFFIX, xn--pssu7cv61af44b.xn--j6w193g
-DOMAIN-SUFFIX, xn--pssu7cv61ahw8aq79bztd.xn--j6w193g
-DOMAIN-SUFFIX, xn--pssu7cv61ahwcb1p2yk.xn--j6w193g
+DOMAIN-SUFFIX, xn--pssu7cz8nr8ibkx1e8a.xn--j6w193g
 DOMAIN-SUFFIX, xn--uis44a.xn--j6w193g
-DOMAIN-SUFFIX, xn--wcv22d.xn--j6w193g
 DOMAIN-SUFFIX, xn--wcvs22d.xn--j6w193g
-DOMAIN-SUFFIX, xn--wcvs22d1m.xn--j6w193g
 DOMAIN-SUFFIX, xn--90aifd0azb.xn--p1acf
 DOMAIN-SUFFIX, xn----7sbhmncai5a0arm7c1e.xn--p1ai
 DOMAIN-SUFFIX, xn----8sbahiqzthbd0bn.xn--p1ai
@@ -35517,6 +35525,7 @@ DOMAIN-SUFFIX, bhggn.xyz
 DOMAIN-SUFFIX, biaoqs.xyz
 DOMAIN-SUFFIX, biaoqs1.xyz
 DOMAIN-SUFFIX, biaoqs2.xyz
+DOMAIN-SUFFIX, bidobido.xyz
 DOMAIN-SUFFIX, bikaa.xyz
 DOMAIN-SUFFIX, bikac.xyz
 DOMAIN-SUFFIX, bikaios.xyz
@@ -35682,6 +35691,7 @@ DOMAIN-SUFFIX, tctsx28d.xyz
 DOMAIN-SUFFIX, temetube.xyz
 DOMAIN-SUFFIX, theav.xyz
 DOMAIN-SUFFIX, ting53.xyz
+DOMAIN-SUFFIX, tipatipa.xyz
 DOMAIN-SUFFIX, tkb008.xyz
 DOMAIN-SUFFIX, truyen18.xyz
 DOMAIN-SUFFIX, truyenhentai.xyz
