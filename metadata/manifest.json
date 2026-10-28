@@ -13,17 +13,17 @@
       "list": "ad.lsr",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Advertising/Advertising.list",
       "path": "ad/Advertising.list",
-      "sha256": "f2b7679fb53aa686960061d2e2aa640e3b9b8741a45b845c48a8c46afee7328a",
+      "sha256": "725475be2973065fcfba1d3455b7754b0da95c3006657de2f0dc0d68aae9d723",
       "size": 26870,
-      "etag": "\"4299352c469181a74b17cad2452723704a47aeade3d4779d8d0f92555c434ff7\""
+      "etag": "\"129cecd16df3d1aa6fd9ddab5437fda7786aee2267f21e8a8425ea4e34345988\""
     },
     {
       "list": "ad.lsr",
       "url": "https://adrules.top/adrules.list",
       "path": "ad/adrules.list",
-      "sha256": "0879e9ba75c21de04b8d7b0ffe4885b035a605bf1af4feff235791df1f4b1d30",
-      "size": 7141442,
-      "etag": "\"8c4d72d0524e2fe6d17dfd80e3e775d8\""
+      "sha256": "c2c84815ca4c4d01db6d952454cd9b11ec70178adfc99815a3bd8b5898ca1c6b",
+      "size": 7146678,
+      "etag": "\"3aacdf8efe8919a091a17577f99425f4\""
     },
     {
       "list": "geo.lsr",
@@ -429,9 +429,9 @@
       "list": "mihomo.lsr",
       "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/proxy.mrs",
       "path": "mihomo/proxy.mrs",
-      "sha256": "cb477f5a59a79d9938bdca41ed64022f78a03e231da37ffc5ee34c603b20decc",
-      "size": 193438,
-      "etag": "\"d3fd79f9556985a92ba4f8bff33b5366c9618ab0c6f43b92379d67c75683de79\""
+      "sha256": "f2763966a9c2905206c3ff68730b3f558b4975f2ab0fe3157ca67589fdbb0a94",
+      "size": 193491,
+      "etag": "\"f1825484f12bf39071b0dcd94720d3e186a1345430fbc978032304dd77194f40\""
     },
     {
       "list": "png.lsr",
