@@ -416,7 +416,7 @@ function buildSmallWidget(state) {
               {
                 type: "text",
                 text: state.exitIp || "--",
-                font: { size: "footnote", weight: "bold", family: "Menlo" },
+                font: { size: 11, weight: "bold", family: "Menlo" },
                 textColor: { light: "#000000", dark: "#FFFFFF" },
               },
             ],
@@ -502,20 +502,26 @@ function buildMediumWidget(ctx, state) {
             type: "text",
             text: isPinned ? "📌" + slotOf[ip] : "•",
             font: { size: 8.5, weight: "bold" },
-            textColor: isPinned ? "#FF9500" : "#8E8E93",
+            textColor: isPinned
+              ? "#FF9500"
+              : isCurrent
+              ? { light: "#248A3D", dark: "#30D158" }
+              : "#8E8E93",
           },
           {
             type: "text",
             text: ip,
-            font: { size: 9.5, family: "Menlo" },
-            textColor: { light: "#1C1C1E", dark: "#FFFFFF" },
+            font: { size: 9.5, family: "Menlo", weight: isCurrent ? "bold" : "regular" },
+            textColor: isCurrent
+              ? { light: "#248A3D", dark: "#30D158" }
+              : { light: "#1C1C1E", dark: "#FFFFFF" },
           },
           { type: "spacer" },
           {
             type: "text",
             text: isCurrent ? "本机" : "",
             font: { size: 8.5, weight: "bold" },
-            textColor: "#34C759",
+            textColor: { light: "#248A3D", dark: "#30D158" },
           },
         ],
       });
@@ -534,12 +540,12 @@ function buildMediumWidget(ctx, state) {
         alignItems: "center",
         gap: 10,
         children: [
-          // 左侧：概览与当前 IP 信息 (固定宽度 118)
+          // 左侧：概览与当前 IP 信息 (固定宽度 120)
           {
             type: "stack",
             direction: "column",
             alignItems: "start",
-            width: 118,
+            width: 120,
             gap: 4,
             children: [
               {
@@ -573,7 +579,7 @@ function buildMediumWidget(ctx, state) {
               {
                 type: "text",
                 text: state.exitIp || "--",
-                font: { size: "footnote", weight: "bold", family: "Menlo" },
+                font: { size: 11, weight: "bold", family: "Menlo" },
                 textColor: { light: "#000000", dark: "#FFFFFF" },
               },
               {
@@ -688,20 +694,26 @@ function buildLargeWidget(ctx, state) {
               type: "text",
               text: isPinned ? "📌" + st.slotOf[ip] : "•",
               font: { size: "caption2", weight: "bold" },
-              textColor: isPinned ? "#FF9500" : "#8E8E93",
+              textColor: isPinned
+                ? "#FF9500"
+                : isCurrent
+                ? { light: "#248A3D", dark: "#30D158" }
+                : "#8E8E93",
             },
             {
               type: "text",
               text: ip,
-              font: { size: "caption2", family: "Menlo" },
-              textColor: { light: "#1C1C1E", dark: "#FFFFFF" },
+              font: { size: "caption2", family: "Menlo", weight: isCurrent ? "bold" : "regular" },
+              textColor: isCurrent
+                ? { light: "#248A3D", dark: "#30D158" }
+                : { light: "#1C1C1E", dark: "#FFFFFF" },
             },
             { type: "spacer" },
             {
               type: "text",
               text: isCurrent ? "本机出口" : "",
               font: { size: "caption2", weight: "semibold" },
-              textColor: "#34C759",
+              textColor: { light: "#248A3D", dark: "#30D158" },
             },
           ],
         });
