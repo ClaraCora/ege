@@ -398,7 +398,7 @@ function buildSmallWidget(state) {
         alignItems: "start",
         gap: 8,
         children: [
-          // 顶行：图标 + 标题 + 状态徽标
+          // 顶行：图标 + 标题 + 刷新与状态
           {
             type: "stack",
             direction: "row",
@@ -473,7 +473,7 @@ function buildSmallWidget(state) {
             ],
           },
           { type: "spacer" },
-          // 底行：槽位数量与时间
+          // 底行：槽位数量与刷新时间按钮
           {
             type: "stack",
             direction: "row",
@@ -486,11 +486,31 @@ function buildSmallWidget(state) {
                 textColor: { light: "#3C3C43", dark: "#EBEBF5" },
               },
               { type: "spacer" },
+              // 刷新按钮 (点击唤醒 Egern 执行实时刷新)
               {
-                type: "text",
-                text: formatTime(state.ts),
-                font: { size: "caption2" },
-                textColor: "#8E8E93",
+                type: "stack",
+                direction: "row",
+                alignItems: "center",
+                gap: 3,
+                padding: [2, 6, 2, 6],
+                backgroundColor: { light: "#E5E5EA", dark: "#3A3A3C" },
+                borderRadius: 6,
+                url: "egern://",
+                children: [
+                  {
+                    type: "image",
+                    src: "sf-symbol:arrow.clockwise",
+                    color: { light: "#007AFF", dark: "#0A84FF" },
+                    width: 9,
+                    height: 9,
+                  },
+                  {
+                    type: "text",
+                    text: formatTime(state.ts),
+                    font: { size: "caption2", weight: "medium" },
+                    textColor: { light: "#007AFF", dark: "#0A84FF" },
+                  },
+                ],
               },
             ],
           },
@@ -506,8 +526,6 @@ function buildMediumWidget(ctx, state) {
   const limit = (firstMachine && firstMachine.limit) || 5;
   const rawWl = (firstMachine && firstMachine.whitelist) || [];
   const slotOf = (firstMachine && firstMachine.slotOf) || {};
-
-  // 右侧白名单最多展示 4 条
   const displayItems = rawWl.slice(0, 4);
 
   const rightListChildren = [
@@ -528,6 +546,33 @@ function buildMediumWidget(ctx, state) {
           text: rawWl.length + "/" + limit + " 坑位",
           font: { size: "caption2" },
           textColor: "#8E8E93",
+        },
+        { type: "spacer", length: 6 },
+        // 白名单列表右侧的【刷新】按钮 (参考 Surge 模块风格)
+        {
+          type: "stack",
+          direction: "row",
+          alignItems: "center",
+          gap: 3,
+          padding: [2, 6, 2, 6],
+          backgroundColor: { light: "#E5E5EA", dark: "#3A3A3C" },
+          borderRadius: 6,
+          url: "egern://",
+          children: [
+            {
+              type: "image",
+              src: "sf-symbol:arrow.clockwise",
+              color: { light: "#007AFF", dark: "#0A84FF" },
+              width: 10,
+              height: 10,
+            },
+            {
+              type: "text",
+              text: "刷新",
+              font: { size: "caption2", weight: "semibold" },
+              textColor: { light: "#007AFF", dark: "#0A84FF" },
+            },
+          ],
         },
       ],
     },
@@ -672,7 +717,7 @@ function buildMediumWidget(ctx, state) {
               },
             ],
           },
-          // 右侧：白名单坑位卡片 (占满剩余宽度)
+          // 右侧：白名单列表卡片 (包含右上角刷新按钮)
           {
             type: "stack",
             direction: "column",
@@ -782,7 +827,7 @@ function buildLargeWidget(ctx, state) {
         direction: "column",
         gap: 8,
         children: [
-          // 顶部横条
+          // 顶部横条：标题与刷新按钮
           {
             type: "stack",
             direction: "row",
@@ -802,11 +847,31 @@ function buildLargeWidget(ctx, state) {
                 textColor: { light: "#1C1C1E", dark: "#FFFFFF" },
               },
               { type: "spacer" },
+              // 刷新按钮 (唤醒 Egern 刷新)
               {
-                type: "text",
-                text: "更新于 " + formatTime(state.ts),
-                font: { size: "caption2" },
-                textColor: "#8E8E93",
+                type: "stack",
+                direction: "row",
+                alignItems: "center",
+                gap: 4,
+                padding: [3, 8, 3, 8],
+                backgroundColor: { light: "#E5E5EA", dark: "#3A3A3C" },
+                borderRadius: 8,
+                url: "egern://",
+                children: [
+                  {
+                    type: "image",
+                    src: "sf-symbol:arrow.clockwise",
+                    color: { light: "#007AFF", dark: "#0A84FF" },
+                    width: 11,
+                    height: 11,
+                  },
+                  {
+                    type: "text",
+                    text: "刷新",
+                    font: { size: "caption2", weight: "semibold" },
+                    textColor: { light: "#007AFF", dark: "#0A84FF" },
+                  },
+                ],
               },
             ],
           },
@@ -863,11 +928,11 @@ async function renderWidget(ctx) {
   const cellular = onCellular(ctx);
   const cache = readWidgetCache(ctx);
   const now = Date.now();
-  // 缓存 3 分钟以内直接复用，保障秒级渲染
-  const isCacheFresh = cache && now - (cache.ts || 0) < 3 * 60 * 1000;
+  // 15 秒防抖（避免几秒内重复并发请求），15 秒后触发即可实时加白与查询
+  const isTooFrequent = cache && now - (cache.ts || 0) < 15 * 1000;
 
   let state = null;
-  if (isCacheFresh) {
+  if (isTooFrequent) {
     state = cache;
   } else {
     try {
