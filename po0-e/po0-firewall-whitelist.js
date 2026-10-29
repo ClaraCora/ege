@@ -506,7 +506,8 @@ function buildMediumWidget(ctx, state) {
   const limit = (firstMachine && firstMachine.limit) || 5;
   const rawWl = (firstMachine && firstMachine.whitelist) || [];
   const slotOf = (firstMachine && firstMachine.slotOf) || {};
-  const displayItems = rawWl.slice(0, 4);
+  // 紧凑展示最多 5 个槽位位置
+  const displayItems = rawWl.slice(0, 5);
 
   const rightListChildren = [
     {
@@ -517,14 +518,14 @@ function buildMediumWidget(ctx, state) {
         {
           type: "text",
           text: "白名单列表",
-          font: { size: "caption2", weight: "bold" },
+          font: { size: 9.5, weight: "bold" },
           textColor: "#8E8E93",
         },
         { type: "spacer" },
         {
           type: "text",
           text: rawWl.length + "/" + limit + " 坑位",
-          font: { size: "caption2" },
+          font: { size: 9.5 },
           textColor: "#8E8E93",
         },
       ],
@@ -535,7 +536,7 @@ function buildMediumWidget(ctx, state) {
     rightListChildren.push({
       type: "text",
       text: firstMachine && firstMachine.error ? firstMachine.error : "暂无白名单记录",
-      font: { size: "caption2" },
+      font: { size: 9.5 },
       textColor: firstMachine && firstMachine.error ? "#FF3B30" : "#8E8E93",
     });
   } else {
@@ -546,25 +547,25 @@ function buildMediumWidget(ctx, state) {
         type: "stack",
         direction: "row",
         alignItems: "center",
-        gap: 4,
+        gap: 3,
         children: [
           {
             type: "text",
             text: isPinned ? "📌" + slotOf[ip] : "•",
-            font: { size: "caption2", weight: "bold" },
+            font: { size: 8.5, weight: "bold" },
             textColor: isPinned ? "#FF9500" : "#8E8E93",
           },
           {
             type: "text",
             text: ip,
-            font: { size: "caption2", family: "Menlo" },
+            font: { size: 9.5, family: "Menlo" },
             textColor: { light: "#1C1C1E", dark: "#FFFFFF" },
           },
           { type: "spacer" },
           {
             type: "text",
             text: isCurrent ? "本机" : "",
-            font: { size: "caption2", weight: "bold" },
+            font: { size: 8.5, weight: "bold" },
             textColor: "#34C759",
           },
         ],
@@ -574,7 +575,7 @@ function buildMediumWidget(ctx, state) {
 
   return {
     type: "widget",
-    padding: 12,
+    padding: 10,
     backgroundColor: { light: "#F2F2F7", dark: "#1C1C1E" },
     url: "https://console.po0.io",
     children: [
@@ -582,14 +583,14 @@ function buildMediumWidget(ctx, state) {
         type: "stack",
         direction: "row",
         alignItems: "center",
-        gap: 12,
+        gap: 10,
         children: [
-          // 左侧：概览与当前 IP 信息 (固定宽度 125)
+          // 左侧：概览与当前 IP 信息 (固定宽度 118)
           {
             type: "stack",
             direction: "column",
             alignItems: "start",
-            width: 125,
+            width: 118,
             gap: 4,
             children: [
               {
@@ -670,15 +671,15 @@ function buildMediumWidget(ctx, state) {
               },
             ],
           },
-          // 右侧：白名单列表卡片 (包含右上角刷新按钮)
+          // 右侧：白名单列表卡片 (紧凑展示 5 个坑位)
           {
             type: "stack",
             direction: "column",
             flex: 1,
             backgroundColor: { light: "#FFFFFF", dark: "#2C2C2E" },
-            padding: [8, 10, 8, 10],
-            borderRadius: 10,
-            gap: 4,
+            padding: [5, 7, 5, 7],
+            borderRadius: 8,
+            gap: 2,
             children: rightListChildren,
           },
         ],
