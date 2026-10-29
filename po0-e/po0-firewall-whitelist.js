@@ -251,15 +251,30 @@ function formatTime(d) {
   return pad2(date.getHours()) + ":" + pad2(date.getMinutes());
 }
 
+function getTokens(ctx) {
+  let raw = "";
+  if (ctx && ctx.env && ctx.env.tokens) {
+    raw = ctx.env.tokens;
+  }
+  if (raw === "{{{tokens}}}") {
+    raw = "";
+  }
+  return parseTokens(raw);
+}
+
 function saveWidgetCache(ctx, data) {
   try {
-    ctx.storage.setJSON(WIDGET_CACHE_KEY, data);
+    if (ctx && ctx.storage) {
+      ctx.storage.setJSON(WIDGET_CACHE_KEY, data);
+    }
   } catch (e) {}
 }
 
 function readWidgetCache(ctx) {
   try {
-    return ctx.storage.getJSON(WIDGET_CACHE_KEY);
+    if (ctx && ctx.storage) {
+      return ctx.storage.getJSON(WIDGET_CACHE_KEY);
+    }
   } catch (e) {
     return null;
   }
@@ -838,9 +853,8 @@ function buildLargeWidget(ctx, state) {
 }
 
 async function renderWidget(ctx) {
-  const family = ctx.widgetFamily || "systemMedium";
-  const rawTokens = (ctx.env && ctx.env.tokens) || "";
-  const tokens = parseTokens(rawTokens);
+  const family = (ctx && ctx.widgetFamily) || "systemMedium";
+  const tokens = getTokens(ctx);
 
   if (tokens.length === 0) {
     return renderUnconfiguredWidget(family);
@@ -905,14 +919,15 @@ async function renderWidget(ctx) {
 /* ==================== 后台自动加白运行逻辑 ==================== */
 
 async function runBackground(ctx) {
-  const rawTokens = (ctx.env && ctx.env.tokens) || "";
-  const tokens = parseTokens(rawTokens);
+  const tokens = getTokens(ctx);
   if (tokens.length === 0) {
-    ctx.notify({
-      title: "po0 防火墙加白",
-      subtitle: "未配置 token",
-      body: "请在 Egern 模块设置中填入 pgnfw_ 开头的 token",
-    });
+    if (ctx && typeof ctx.notify === "function") {
+      ctx.notify({
+        title: "po0 防火墙加白",
+        subtitle: "未配置 token",
+        body: "请在 Egern 模块设置的环境变量 (Env) 中填入 pgnfw_ 开头的 token",
+      });
+    }
     return;
   }
 
@@ -933,9 +948,11 @@ async function runBackground(ctx) {
     lines.push(describe(ctx, i, results[i]));
 
     const state = (st.currentIp || "?") + "|" + (st.applied ? "1" : "0");
-    if (ctx.storage.get(results[i].kvState) !== state) {
-      ctx.storage.set(results[i].kvState, state);
-      changed = true;
+    if (ctx && ctx.storage) {
+      if (ctx.storage.get(results[i].kvState) !== state) {
+        ctx.storage.set(results[i].kvState, state);
+        changed = true;
+      }
     }
   }
 
@@ -963,15 +980,23 @@ async function runBackground(ctx) {
 
   // 关键修复：状态变化，或者存在未生效/报错时发送通知；全成功例行巡检保持安静
   if (changed || !allOk) {
-    ctx.notify({ title: "po0 防火墙加白", subtitle: title, body: lines.join("\n") });
+    if (ctx && typeof ctx.notify === "function") {
+      ctx.notify({ title: "po0 防火墙加白", subtitle: title, body: lines.join("\n") });
+    }
   }
 }
 
 /* ==================== 脚本统一入口 ==================== */
 
 export default async function (ctx) {
-  if (ctx && ctx.widgetFamily) {
+  try {
+    if (ctx && ctx.widgetFamily) {
+      return await renderWidget(ctx);
+    }
+    await runBackground(ctx);
     return await renderWidget(ctx);
+  } catch (err) {
+    const family = (ctx && ctx.widgetFamily) || "systemMedium";
+    return renderErrorWidget(family, String((err && err.message) || err));
   }
-  return await runBackground(ctx);
 }
