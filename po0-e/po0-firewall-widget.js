@@ -422,7 +422,7 @@ function buildSmallWidget(state) {
             ],
           },
           { type: "spacer" },
-          // 底行：槽位数量与刷新时间按钮
+          // 底行：槽位数量与更新时间
           {
             type: "stack",
             direction: "row",
@@ -435,31 +435,11 @@ function buildSmallWidget(state) {
                 textColor: { light: "#3C3C43", dark: "#EBEBF5" },
               },
               { type: "spacer" },
-              // 刷新按钮 (点击唤醒 Egern 执行实时刷新)
               {
-                type: "stack",
-                direction: "row",
-                alignItems: "center",
-                gap: 3,
-                padding: [2, 6, 2, 6],
-                backgroundColor: { light: "#E5E5EA", dark: "#3A3A3C" },
-                borderRadius: 6,
-                url: "egern://",
-                children: [
-                  {
-                    type: "image",
-                    src: "sf-symbol:arrow.clockwise",
-                    color: { light: "#007AFF", dark: "#0A84FF" },
-                    width: 9,
-                    height: 9,
-                  },
-                  {
-                    type: "text",
-                    text: formatTime(state.ts),
-                    font: { size: "caption2", weight: "medium" },
-                    textColor: { light: "#007AFF", dark: "#0A84FF" },
-                  },
-                ],
+                type: "text",
+                text: "更新于 " + formatTime(state.ts),
+                font: { size: "caption2" },
+                textColor: "#8E8E93",
               },
             ],
           },
@@ -495,33 +475,6 @@ function buildMediumWidget(ctx, state) {
           text: rawWl.length + "/" + limit + " 坑位",
           font: { size: "caption2" },
           textColor: "#8E8E93",
-        },
-        { type: "spacer", length: 6 },
-        // 白名单列表右侧的【刷新】按钮 (参考 Surge 模块风格)
-        {
-          type: "stack",
-          direction: "row",
-          alignItems: "center",
-          gap: 3,
-          padding: [2, 6, 2, 6],
-          backgroundColor: { light: "#E5E5EA", dark: "#3A3A3C" },
-          borderRadius: 6,
-          url: "egern://",
-          children: [
-            {
-              type: "image",
-              src: "sf-symbol:arrow.clockwise",
-              color: { light: "#007AFF", dark: "#0A84FF" },
-              width: 10,
-              height: 10,
-            },
-            {
-              type: "text",
-              text: "刷新",
-              font: { size: "caption2", weight: "semibold" },
-              textColor: { light: "#007AFF", dark: "#0A84FF" },
-            },
-          ],
         },
       ],
     },
@@ -612,7 +565,7 @@ function buildMediumWidget(ctx, state) {
               { type: "spacer" },
               {
                 type: "text",
-                text: allOk ? "✅ 全部已加白" : "❌ 加白异常",
+                text: allOk ? "✅ 已加白" : "❌ 未生效",
                 font: { size: "caption1", weight: "semibold" },
                 textColor: allOk ? "#34C759" : "#FF3B30",
               },
@@ -776,7 +729,7 @@ function buildLargeWidget(ctx, state) {
         direction: "column",
         gap: 8,
         children: [
-          // 顶部横条：标题与刷新按钮
+          // 顶部横条
           {
             type: "stack",
             direction: "row",
@@ -796,31 +749,11 @@ function buildLargeWidget(ctx, state) {
                 textColor: { light: "#1C1C1E", dark: "#FFFFFF" },
               },
               { type: "spacer" },
-              // 刷新按钮 (唤醒 Egern 刷新)
               {
-                type: "stack",
-                direction: "row",
-                alignItems: "center",
-                gap: 4,
-                padding: [3, 8, 3, 8],
-                backgroundColor: { light: "#E5E5EA", dark: "#3A3A3C" },
-                borderRadius: 8,
-                url: "egern://",
-                children: [
-                  {
-                    type: "image",
-                    src: "sf-symbol:arrow.clockwise",
-                    color: { light: "#007AFF", dark: "#0A84FF" },
-                    width: 11,
-                    height: 11,
-                  },
-                  {
-                    type: "text",
-                    text: "刷新",
-                    font: { size: "caption2", weight: "semibold" },
-                    textColor: { light: "#007AFF", dark: "#0A84FF" },
-                  },
-                ],
+                type: "text",
+                text: "更新于 " + formatTime(state.ts),
+                font: { size: "caption2" },
+                textColor: "#8E8E93",
               },
             ],
           },
@@ -921,13 +854,18 @@ async function renderWidget(ctx) {
     }
   }
 
+  let res;
   if (family === "systemSmall") {
-    return buildSmallWidget(state);
+    res = buildSmallWidget(state);
   } else if (family === "systemLarge") {
-    return buildLargeWidget(ctx, state);
+    res = buildLargeWidget(ctx, state);
   } else {
-    return buildMediumWidget(ctx, state);
+    res = buildMediumWidget(ctx, state);
   }
+
+  // 告知 iOS 系统与 Egern：在 10 分钟后自动执行下一次小组件时间线刷新
+  res.refreshAfter = new Date(Date.now() + 10 * 60 * 1000).toISOString();
+  return res;
 }
 
 export default async function (ctx) {
