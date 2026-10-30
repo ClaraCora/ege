@@ -143,6 +143,58 @@ def load_manifest() -> dict:
     return value
 
 
+def load_verified_backup(previous: dict | None, url: str, path: str) -> bytes:
+    """Reuse only the exact source's last backup, verified against its manifest."""
+    if previous is None or previous.get("url") != url or previous.get("path") != path:
+        raise RuntimeError("no backup recorded for this source")
+    try:
+        data = (ROOT / path).read_bytes()
+    except OSError as exc:
+        raise RuntimeError(f"cannot read existing backup: {exc}") from exc
+    if (
+        hashlib.sha256(data).hexdigest() != previous.get("sha256")
+        or len(data) != previous.get("size")
+    ):
+        raise RuntimeError("existing backup does not match its manifest")
+    validate_content(path, data)
+    return data
+
+
+def report_cached_resource(path: str, reason: str) -> None:
+    message = f"{path}: using verified previous backup; source download failed: {reason}"
+    print(f"  WARNING: {message}")
+    if os.environ.get("GITHUB_ACTIONS") == "true":
+        escaped = message.replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
+        print(f"::warning::{escaped}")
+
+
+def write_run_summary(resources: list[dict], failures: list[tuple[str, str]]) -> None:
+    summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
+    if not summary_path:
+        return
+    cached = [item for item in resources if item.get("status") == "cached"]
+    lines = [
+        "## Resource backup",
+        "",
+        f"Downloaded: {len(resources) - len(cached)}; reused verified backups: "
+        f"{len(cached)}; unavailable without a verified backup: {len(failures)}.",
+        "",
+    ]
+    if failures:
+        lines.extend(["No resource files or manifest were updated.", ""])
+    if cached:
+        lines.extend(["### Sources requiring attention", ""])
+        for item in cached:
+            lines.append(f"- `{item['path']}`: <{item['url']}> (using previous backup)")
+        lines.append("")
+    if failures:
+        lines.extend(["### Failed sources", ""])
+        lines.extend(f"- <{url}>" for url, _ in failures)
+        lines.append("")
+    with open(summary_path, "a", encoding="utf-8") as handle:
+        handle.write("\n".join(lines) + "\n")
+
+
 def write_json_atomic(path: Path, value: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.NamedTemporaryFile(
@@ -167,6 +219,13 @@ def main() -> int:
         for item in previous_manifest.get("resources", [])
         if isinstance(item, dict) and isinstance(item.get("path"), str)
     }
+    previous_resources = {
+        (item.get("url"), item.get("path")): item
+        for item in previous_manifest["resources"]
+        if isinstance(item, dict)
+        and isinstance(item.get("url"), str)
+        and isinstance(item.get("path"), str)
+    }
 
     new_resources: list[dict] = []
     failures: list[tuple[str, str]] = []
@@ -180,29 +239,40 @@ def main() -> int:
             try:
                 data, etag = download(url)
                 validate_content(repository_path, data)
-            except RuntimeError as exc:
-                print(f"  FAILED: {exc}")
-                failures.append((url, str(exc)))
-                continue
-            staged_path = staging / repository_path
-            staged_path.parent.mkdir(parents=True, exist_ok=True)
-            staged_path.write_bytes(data)
-            digest = hashlib.sha256(data).hexdigest()
-            new_resources.append(
-                {
+                resource = {
                     "list": f"{list_name}.lsr",
                     "url": url,
                     "path": repository_path,
-                    "sha256": digest,
+                    "sha256": hashlib.sha256(data).hexdigest(),
                     "size": len(data),
                     **({"etag": etag} if etag else {}),
                 }
-            )
+            except RuntimeError as exc:
+                previous = previous_resources.get((url, repository_path))
+                try:
+                    data = load_verified_backup(previous, url, repository_path)
+                except RuntimeError as backup_error:
+                    reason = f"{exc}; cannot reuse backup: {backup_error}"
+                    print(f"  FAILED: {reason}")
+                    failures.append((url, reason))
+                    continue
+                resource = {
+                    **previous,
+                    "list": f"{list_name}.lsr",
+                    "status": "cached",
+                    "download_error": str(exc),
+                }
+                report_cached_resource(repository_path, str(exc))
+            staged_path = staging / repository_path
+            staged_path.parent.mkdir(parents=True, exist_ok=True)
+            staged_path.write_bytes(data)
+            new_resources.append(resource)
             total_bytes += len(data)
 
         # Nothing has left the staging directory yet, so aborting here leaves the
         # committed files untouched rather than half-updated.
         if failures:
+            write_run_summary(new_resources, failures)
             print(f"\n{len(failures)} of {len(all_entries)} resources failed:")
             for url, reason in failures:
                 print(f"  {url}\n    {reason}")
@@ -228,8 +298,13 @@ def main() -> int:
                     old_file.unlink()
 
         write_json_atomic(STATE_PATH, new_manifest)
+        write_run_summary(new_resources, failures)
 
-    print(f"Synced {len(new_resources)} resources ({total_bytes} bytes)")
+    cached_count = sum(item.get("status") == "cached" for item in new_resources)
+    print(
+        f"Synced {len(new_resources)} resources ({total_bytes} bytes): "
+        f"{len(new_resources) - cached_count} downloaded, {cached_count} verified backups reused"
+    )
     return 0
 
 

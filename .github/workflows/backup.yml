@@ -21,8 +21,11 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: Test backup failure handling
+        run: python3 -m unittest discover -s tests -v
+
       - name: Download and validate resources
-        run: python3 scripts/backup.py
+        run: python3 -u scripts/backup.py
 
       - name: Install Mihomo converter
         shell: bash

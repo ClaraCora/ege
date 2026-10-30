@@ -136,6 +136,7 @@ def labelled(paths: list[str]) -> list[tuple[str, str]]:
 def main() -> int:
     manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
     downloaded = len(manifest.get("resources", []))
+    cached = [item for item in manifest.get("resources", []) if item.get("status") == "cached"]
     kelee_manifest = json.loads(KELEE_MANIFEST_PATH.read_text(encoding="utf-8"))
     mihomo_version = kelee_manifest.get("mihomo_version", "unknown")
     kelee_sources = len(kelee_manifest.get("sources", []))
@@ -187,6 +188,14 @@ def main() -> int:
         "",
     ]
 
+    if cached:
+        out.extend([
+            f"> ⚠️ **{len(cached)} 个来源下载失败，正在使用通过 SHA-256 校验的上次备份。** "
+            "这些文件未刷新，其余资源正常更新；详情见 Actions 运行摘要及 `metadata/manifest.json`。",
+            "> " + "、".join(f"`{item['path']}`" for item in cached),
+            "",
+        ])
+
     for title, entries in FEATURED:
         out.extend(grid(title, list(entries)))
 
@@ -235,7 +244,7 @@ def main() -> int:
             "| `ad/` | `ad.lsr` 下载的广告资源 | 是 |",
             "| `geo/` | `geo.lsr` 下载的地理数据库 | 是 |",
             "| `mihomo/` | Mihomo 原生资源，以及 Kelee 转换结果子目录 | 是 |",
-            "| `metadata/manifest.json` | 来源 URL、目标路径、SHA-256、大小和 ETag | 是 |",
+            "| `metadata/manifest.json` | 来源 URL、目标路径、SHA-256、大小、ETag；复用旧备份时含状态和错误 | 是 |",
             "| `metadata/kelee-mihomo-manifest.json` | Kelee 规则的分类数量、输出路径和校验值 | 是 |",
             "| `scripts/backup.py` | 下载、校验、保存资源，清理已移除来源的旧文件 | 否 |",
             "| `scripts/convert_kelee.py` | 调用 Mihomo 生成 MRS 和文本 Provider | 否 |",
@@ -247,9 +256,12 @@ def main() -> int:
             "1. 工作流在 UTC `00:17` 和 `12:17` 运行（北京时间约 `08:17` 和 `20:17`），"
             "也可在 Actions 页面用 **Run workflow** 手动触发。",
             "2. GitHub 的定时调度可能延迟数十分钟，且**不会补跑**错过的时段；需要立刻更新时请手动触发。",
-            "3. 下载失败、空文件、HTML 拦截页、超大响应或损坏的 PNG 都会让本次运行失败，"
-            "此时不会覆盖任何已有文件——备份要么整体更新，要么保持原样。",
-            "4. 单次运行会汇总报告所有失败的资源，而不是遇到第一个错误就停下，便于一次定位全部问题源。",
+            "3. 下载失败、空文件、HTML 拦截页、超大响应或损坏的 PNG 不会覆盖已有备份。"
+            "只有来源 URL 和路径一致，且已有文件通过清单 SHA-256、大小和内容校验时，才会复用上次备份，"
+            "并继续更新其他资源；Actions 会产生警告和运行摘要，README 会提示未刷新的文件，"
+            "清单中以 `status: cached` 和 `download_error` 记录。来源恢复后自动清除这些标记。",
+            "4. 若任一失败资源没有可验证的备份，本次运行会汇总所有不可用来源并失败，"
+            "不修改任何资源或清单；所有资源准备就绪后才整体更新。",
             "5. Kelee 的 `DOMAIN` 和 `DOMAIN-SUFFIX` 生成 `mihomo/domain/` 下的 MRS；"
             "`IP-CIDR` 和 `IP-CIDR6` 生成 `mihomo/ipcidr/` 下的 MRS。",
             "6. `DOMAIN-KEYWORD`、`IP-ASN`、`AND`、`OR`、`NOT` 生成 `mihomo/classical/` 下的文本 Provider。",

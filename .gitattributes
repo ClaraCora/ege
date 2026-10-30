@@ -1,0 +1,9 @@
+# Keep source files consistent across runners and local checkouts.
+* text=auto eol=lf
+
+# Resource checksums describe downloaded bytes; never rewrite their line endings.
+/kelee/** -text
+/png/** -text
+/ad/** -text
+/geo/** -text
+/mihomo/** -text
