@@ -18,6 +18,9 @@
 
 ## 快速开始
 
+> ⚠️ **2 个来源下载失败，正在使用通过 SHA-256 校验的上次备份。** 这些文件未刷新，其余资源正常更新；详情见 Actions 运行摘要及 `metadata/manifest.json`。
+> `kelee/AI.lsr`、`kelee/SpeedtestInternational.lsr`
+
 |⭐ Loon / Egern 规则|  |  |  |  |
 | ---- | ---- | ---- | ---- | ---- |
 |[AI](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/AI.lsr) |[Apple](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Apple.lsr) |[ChinaMax](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/ChinaMax.lsr) |[Global](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Global.lsr) |[Microsoft](https://raw.githubusercontent.com/ClaraCora/ege/main/kelee/Microsoft.lsr) |

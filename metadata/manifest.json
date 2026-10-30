@@ -21,9 +21,9 @@
       "list": "ad.lsr",
       "url": "https://adrules.top/adrules.list",
       "path": "ad/adrules.list",
-      "sha256": "5be02821da5d14588205c98e019df589d896700548587b3a9f4edd58cfc9c342",
-      "size": 7158286,
-      "etag": "\"29ff640e555d94ceb37bc662808295ab\""
+      "sha256": "1c02f7cefd144bc1d7e449cfae855230cfff4222fb3954da834dd05063b035d8",
+      "size": 7175506,
+      "etag": "\"cb560dca5f2c81c150b31375725f8b19\""
     },
     {
       "list": "geo.lsr",
@@ -37,25 +37,25 @@
       "list": "geo.lsr",
       "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb",
       "path": "geo/country.mmdb",
-      "sha256": "ccec4d6fa69de3a79960a460c377ac9a23c1a90e5f9052dae3488921e56201df",
-      "size": 7649827,
-      "etag": "W/\"74ba23-843eb681ee932513\""
+      "sha256": "9a485c40b6fda868f3d3b981f928b8ab3d1e400fac1bf9cc8d27ebc08ae9bb0b",
+      "size": 7651117,
+      "etag": "W/\"74bf2d-d3b04a6ac94640e5\""
     },
     {
       "list": "geo.lsr",
       "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat",
       "path": "geo/geoip.dat",
-      "sha256": "a6271d3c96361d96156e6d3f7cf1550ef21b00d2f951deb772f464db91e89ac5",
-      "size": 16570425,
-      "etag": "W/\"fcd839-6e0b1e357fae04f0\""
+      "sha256": "fbf747a085be25eb61ecac8c27140b4ab0bf8181af6fdb104caa325bd93cf117",
+      "size": 16549675,
+      "etag": "W/\"fc872b-73ca027d65778900\""
     },
     {
       "list": "geo.lsr",
       "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat",
       "path": "geo/geosite.dat",
-      "sha256": "38aac2a107485a3818501106292efbbc92214588aa1d62ac5fb5d8a1d1a335f7",
+      "sha256": "b4d3807aa45b4f5532ae236672f244a562452622483c0b489c63dd2aadaa821f",
       "size": 4353587,
-      "etag": "W/\"426e33-74dd32a265e362d3\""
+      "etag": "W/\"426e33-df601113408c4cc5\""
     },
     {
       "list": "kelee.lsr",
@@ -63,7 +63,9 @@
       "path": "kelee/AI.lsr",
       "sha256": "90c2c5ccb950f885ef5e70c1f600fbd6db9e9764915b8285b4bac338ababf841",
       "size": 9589,
-      "etag": "\"570a312eab6c7c9007b35db28faf77b6\""
+      "etag": "\"570a312eab6c7c9007b35db28faf77b6\"",
+      "status": "cached",
+      "download_error": "download failed for https://kelee.one/Tool/Loon/Lsr/AI.lsr: <urlopen error [Errno -5] No address associated with hostname>"
     },
     {
       "list": "kelee.lsr",
@@ -231,7 +233,9 @@
       "path": "kelee/SpeedtestInternational.lsr",
       "sha256": "5a624798c0295ecdaf3b3a8339776a8433027fe6d4bccaa265da3c1f45621d1f",
       "size": 631927,
-      "etag": "\"da39878c0335653c272a429f55f7b40f\""
+      "etag": "\"da39878c0335653c272a429f55f7b40f\"",
+      "status": "cached",
+      "download_error": "download failed for https://kelee.one/Tool/Loon/Lsr/SpeedtestInternational.lsr: <urlopen error [Errno -5] No address associated with hostname>"
     },
     {
       "list": "kelee.lsr",
@@ -381,9 +385,9 @@
       "list": "mihomo.lsr",
       "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/ads.mrs",
       "path": "mihomo/ads.mrs",
-      "sha256": "ec759d4c08bfc4408da5ca425d464789d15f40e26fbae5af46d06ccdb101bb35",
-      "size": 900986,
-      "etag": "\"72b8a172dc7b61ca187462ba60f038b35cc1b70a20c38f70724e8d98d2c5e8fb\""
+      "sha256": "43a426ce1721c0202b356ce7124e4dc73621fcaf7e022e37521a2610f9fc86d6",
+      "size": 864675,
+      "etag": "\"6948d43909233178f25b00c2d281fed7665eb3b64ab73704df3d9195e7efb414\""
     },
     {
       "list": "mihomo.lsr",
