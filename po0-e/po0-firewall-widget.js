@@ -3,7 +3,7 @@
  *
  * 专用于 Egern 的 Generic 脚本和小组件（Widget DSL）。
  * 保证 100% 返回带有 type: "widget" 的合法布局对象，彻底避免 Missing required key 'type' 报错。
- * 支持 systemSmall / systemMedium / systemLarge 尺寸，右侧带【刷新】按钮，支持手动实时加白。
+ * 支持 systemSmall / systemMedium / systemLarge 尺寸，中号完整显示 5 条白名单；点按打开控制台。
  */
 
 const API_BASE = "https://124.221.69.228/api/firewall/";
@@ -231,586 +231,304 @@ function saveWidgetCache(ctx, data) {
   } catch (e) {}
 }
 
-function renderUnconfiguredWidget(family) {
-  return {
+/* po0 Widget UI · A 浅色原生（两个独立入口须保持此段一致） */
+const FW_THEME = {
+  background: { light: "#FFFFFF", dark: "#18232F" },
+  panel: { light: "#F2F6FA", dark: "#223242" },
+  text: { light: "#1E2B3C", dark: "#F0F5FA" },
+  muted: { light: "#627082", dark: "#ACBCCC" },
+  ip: { light: "#234765", dark: "#C0DCF2" },
+  line: { light: "#E1E8ED", dark: "#3A4D60" },
+  success: { light: "#24744E", dark: "#8CD9B1" },
+  successTint: { light: "#E8F4EE", dark: "#254338" },
+  warning: { light: "#A85224", dark: "#FFC38E" },
+  warningTint: { light: "#FFF0E5", dark: "#4B372B" },
+  danger: { light: "#B23C3C", dark: "#FFA9A4" },
+  dangerTint: { light: "#FCEDEC", dark: "#4B3034" },
+};
+
+function fwText(text, size, color, weight, options) {
+  return Object.assign({
+    type: "text",
+    text: String(text === null || text === undefined ? "" : text),
+    font: { size: size || 11, weight: weight || "regular" },
+    textColor: color || FW_THEME.text,
+    maxLines: 1,
+    minScale: 0.85,
+  }, options || {});
+}
+
+function fwIp(ip, size, color, weight) {
+  return fwText(ip || "等待获取 IP", size, color || FW_THEME.ip, weight || "semibold", {
+    font: { size: size, weight: weight || "semibold", family: "Menlo" },
+    minScale: 0.58,
+  });
+}
+
+function fwImage(symbol, size, color) {
+  return { type: "image", src: "sf-symbol:" + symbol, width: size, height: size, color: color || FW_THEME.muted };
+}
+
+function fwRow(children, gap, options) {
+  return Object.assign({ type: "stack", direction: "row", alignItems: "center", gap: gap || 0, children: children }, options || {});
+}
+
+function fwColumn(children, gap, options) {
+  return Object.assign({ type: "stack", direction: "column", alignItems: "start", gap: gap || 0, children: children }, options || {});
+}
+
+function fwSpace(length) {
+  return length === undefined ? { type: "spacer" } : { type: "spacer", length: length };
+}
+
+function fwRule() {
+  return fwRow([fwSpace()], 0, { height: 1, backgroundColor: FW_THEME.line });
+}
+
+function fwWidget(children, padding, url) {
+  const widget = {
     type: "widget",
-    padding: 14,
-    backgroundColor: { light: "#F2F2F7", dark: "#1C1C1E" },
-    children: [
-      {
-        type: "stack",
-        direction: "column",
-        alignItems: "start",
-        gap: 6,
-        children: [
-          {
-            type: "stack",
-            direction: "row",
-            alignItems: "center",
-            gap: 6,
-            children: [
-              {
-                type: "image",
-                src: "sf-symbol:exclamationmark.triangle.fill",
-                color: "#FF9500",
-                width: 18,
-                height: 18,
-              },
-              {
-                type: "text",
-                text: "po0 防火墙",
-                font: { size: "headline", weight: "bold" },
-                textColor: { light: "#1C1C1E", dark: "#FFFFFF" },
-              },
-            ],
-          },
-          { type: "spacer" },
-          {
-            type: "text",
-            text: "未配置 Token",
-            font: { size: "subheadline", weight: "semibold" },
-            textColor: { light: "#1C1C1E", dark: "#FFFFFF" },
-          },
-          {
-            type: "text",
-            text: "请在模块的环境变量 (Env) 中填入 tokens",
-            font: { size: "caption2" },
-            textColor: "#8E8E93",
-          },
-        ],
-      },
-    ],
+    backgroundColor: FW_THEME.background,
+    padding: padding,
+    children: [fwColumn(children, 0, { flex: 1 })],
   };
+  if (url) widget.url = url;
+  return widget;
+}
+
+function fwMessage(message) {
+  return String(message || "网络请求失败，请检查连接后重试")
+    .replace(/pgnfw_[A-Za-z0-9_-]+/g, "[Token]")
+    .slice(0, 100);
+}
+
+function fwStatus(state) {
+  const results = state.results || [];
+  if (state.allOk) return { label: "已加白", color: FW_THEME.success, tint: FW_THEME.successTint, symbol: "checkmark" };
+  if (state.okCount > 0) return { label: "部分加白", color: FW_THEME.warning, tint: FW_THEME.warningTint, symbol: "exclamationmark" };
+  if (results.length && results.every(function (r) { return r.st && r.st.error; })) {
+    return { label: "更新失败", color: FW_THEME.warning, tint: FW_THEME.warningTint, symbol: "exclamationmark" };
+  }
+  if (results.length && results.every(function (r) { return r.st && r.st.enabled === false && !r.st.error; })) {
+    return { label: "未启用", color: FW_THEME.warning, tint: FW_THEME.warningTint, symbol: "exclamationmark" };
+  }
+  return { label: "未生效", color: FW_THEME.danger, tint: FW_THEME.dangerTint, symbol: "xmark" };
+}
+
+function fwBadge(status) {
+  return fwRow([fwImage(status.symbol, 9, status.color), fwText(status.label, 10, status.color, "semibold")], 4, {
+    padding: [4, 7, 4, 7], backgroundColor: status.tint, borderRadius: 7,
+  });
+}
+
+function fwHeader(state) {
+  return fwRow([
+    fwRow([fwImage(state.allOk ? "checkmark.shield" : "exclamationmark.shield", 16, fwStatus(state).color), fwText("po0 防火墙", 13, FW_THEME.text, "bold")], 6),
+    fwSpace(),
+    fwBadge(fwStatus(state)),
+  ]);
+}
+
+function fwNetwork(state, size) {
+  return fwRow([
+    fwImage(state.cellular ? "antenna.radiowaves.left.and.right" : "wifi", size || 10, FW_THEME.muted),
+    fwText(state.cellular ? "蜂窝网络" : "Wi-Fi / 有线", size || 10, FW_THEME.muted),
+  ], 4);
+}
+
+function fwCount(state, size) {
+  return fwText(state.okCount + " / " + state.totalCount + " 台已加白", size || 10, FW_THEME.muted);
+}
+
+function fwFirstMachine(state) {
+  return (state.results && state.results[0] && state.results[0].st) || {};
+}
+
+function fwWhitelist(st) {
+  return Array.isArray(st.whitelist) ? st.whitelist : [];
+}
+
+function fwLimit(st) {
+  return Number(st.limit) > 0 ? Number(st.limit) : 5;
+}
+
+function fwExitIp(state) {
+  return state.exitIp && state.exitIp !== "?" && state.exitIp !== "--" ? state.exitIp : "";
+}
+
+function fwSlotLabel(result) {
+  return result && result.slot !== null && result.slot !== undefined && result.slot !== "" ? "固定槽位 " + result.slot : "自动槽位";
+}
+
+function fwEntry(ip, index, st, exitIp, compact) {
+  const slot = (st.slotOf || {})[ip];
+  const pinned = slot !== undefined && slot !== null;
+  const current = sameC24(ip, st.currentIp || exitIp);
+  const color = current ? FW_THEME.success : FW_THEME.text;
+  const leading = pinned
+    ? fwRow([fwImage("pin.fill", compact ? 7 : 8, FW_THEME.muted), fwText(slot, compact ? 8 : 9, FW_THEME.muted)], 1, { width: compact ? 14 : 20 })
+    : fwRow([fwText(pad2(index + 1), compact ? 8.5 : 9.5, FW_THEME.muted)], 0, { width: compact ? 14 : 20 });
+  const address = fwIp(ip, compact ? 10.5 : 12, color, current ? "semibold" : "regular");
+  address.flex = 1;
+  address.minScale = compact ? 0.85 : 0.7;
+  const children = [leading, address];
+  if (current) children.push(fwText("本机", compact ? 8.5 : 10, FW_THEME.success, "medium"));
+  return fwRow(children, compact ? 4 : 5, { height: compact ? 15 : 17 });
+}
+
+function fwSlotMeter(count, limit) {
+  // 槽位数量有上限，避免异常数据生成无限数量的布局节点。
+  const segments = Math.min(10, Math.max(1, limit));
+  const children = [];
+  for (let i = 0; i < segments; i++) {
+    children.push(fwRow([], 0, { flex: 1, height: 4, borderRadius: 2, backgroundColor: i < Math.ceil(count / limit * segments) ? FW_THEME.success : FW_THEME.line }));
+  }
+  return fwRow(children, 3, { width: 50 });
+}
+
+function fwEmptyList(st, compact) {
+  let message = "暂无白名单记录";
+  if (st.error) message = fwMessage(st.error);
+  else if (st.enabled === false) message = "防火墙未启用，请到控制台开启";
+  return fwText(message, compact ? 10 : 10.5, st.error ? FW_THEME.warning : FW_THEME.muted, "regular", { maxLines: compact ? 4 : 2, minScale: 0.9 });
+}
+
+function fwNoticeWidget(family, configured, message) {
+  const small = family === "systemSmall";
+  const large = family === "systemLarge" || family === "systemExtraLarge";
+  const color = configured ? FW_THEME.warning : FW_THEME.muted;
+  const title = configured ? "更新失败" : "等待配置";
+  const description = configured ? fwMessage(message) : "在 Egern 模块设置中填写防火墙 Token";
+  const heading = fwRow([fwImage(configured ? "exclamationmark.triangle" : "key", 16, color), fwText("po0 防火墙", 13, FW_THEME.text, "bold")], 6);
+  const content = [
+    heading,
+    fwSpace(large ? 30 : 16),
+    fwText(title, small ? 22 : 24, configured ? FW_THEME.warning : FW_THEME.text, "semibold"),
+    fwSpace(7),
+    fwText(description, small ? 10.5 : 12, FW_THEME.muted, "regular", { maxLines: small ? 2 : 3, minScale: 0.9 }),
+    fwSpace(),
+    fwRule(),
+    fwSpace(8),
+    fwText(configured ? "请检查连接后重试" : "模块设置 · tokens", 10, FW_THEME.muted),
+  ];
+  return fwWidget(content, small ? 12 : 16, configured ? "https://console.po0.io" : null);
+}
+
+function renderUnconfiguredWidget(family) {
+  return fwNoticeWidget(family, false, "");
 }
 
 function renderErrorWidget(family, msg) {
-  return {
-    type: "widget",
-    padding: 14,
-    backgroundColor: { light: "#F2F2F7", dark: "#1C1C1E" },
-    children: [
-      {
-        type: "stack",
-        direction: "column",
-        alignItems: "start",
-        gap: 6,
-        children: [
-          {
-            type: "stack",
-            direction: "row",
-            alignItems: "center",
-            gap: 6,
-            children: [
-              {
-                type: "image",
-                src: "sf-symbol:xmark.octagon.fill",
-                color: "#FF3B30",
-                width: 18,
-                height: 18,
-              },
-              {
-                type: "text",
-                text: "po0 加白异常",
-                font: { size: "headline", weight: "bold" },
-                textColor: { light: "#1C1C1E", dark: "#FFFFFF" },
-              },
-            ],
-          },
-          { type: "spacer" },
-          {
-            type: "text",
-            text: String(msg || "数据加载失败").slice(0, 60),
-            font: { size: "caption1" },
-            textColor: "#FF3B30",
-          },
-        ],
-      },
-    ],
-  };
+  return fwNoticeWidget(family, true, msg);
 }
 
 function buildSmallWidget(state) {
-  const allOk = state.allOk;
-  const firstMachine = state.results && state.results[0] && state.results[0].st;
-  const limit = (firstMachine && firstMachine.limit) || 5;
-  const wlCount = (firstMachine && firstMachine.whitelist && firstMachine.whitelist.length) || 0;
-
-  return {
-    type: "widget",
-    padding: 14,
-    backgroundColor: { light: "#F2F2F7", dark: "#1C1C1E" },
-    url: "https://console.po0.io",
-    children: [
-      {
-        type: "stack",
-        direction: "column",
-        alignItems: "start",
-        gap: 8,
-        children: [
-          // 顶行：图标 + 标题 + 刷新与状态
-          {
-            type: "stack",
-            direction: "row",
-            alignItems: "center",
-            gap: 6,
-            children: [
-              {
-                type: "image",
-                src: allOk ? "sf-symbol:checkmark.shield.fill" : "sf-symbol:exclamationmark.shield.fill",
-                color: allOk ? "#34C759" : "#FF3B30",
-                width: 18,
-                height: 18,
-              },
-              {
-                type: "text",
-                text: "po0 加白",
-                font: { size: "subheadline", weight: "bold" },
-                textColor: { light: "#1C1C1E", dark: "#FFFFFF" },
-              },
-              { type: "spacer" },
-              {
-                type: "text",
-                text: allOk ? "已加白" : "未生效",
-                font: { size: "caption2", weight: "bold" },
-                textColor: allOk ? "#34C759" : "#FF3B30",
-              },
-            ],
-          },
-          // 中间卡片：出口 IP 与状态
-          {
-            type: "stack",
-            direction: "column",
-            backgroundColor: { light: "#FFFFFF", dark: "#2C2C2E" },
-            padding: [6, 8, 6, 8],
-            borderRadius: 8,
-            gap: 2,
-            children: [
-              {
-                type: "stack",
-                direction: "row",
-                alignItems: "center",
-                gap: 4,
-                children: [
-                  {
-                    type: "image",
-                    src: state.cellular ? "sf-symbol:antenna.radiowaves.left.and.right" : "sf-symbol:wifi",
-                    color: "#8E8E93",
-                    width: 11,
-                    height: 11,
-                  },
-                  {
-                    type: "text",
-                    text: state.cellular ? "蜂窝网络" : "Wi-Fi 出口",
-                    font: { size: "caption2" },
-                    textColor: "#8E8E93",
-                  },
-                  { type: "spacer" },
-                  {
-                    type: "text",
-                    text: state.okCount + "/" + state.totalCount + " 台",
-                    font: { size: "caption2", weight: "semibold" },
-                    textColor: allOk ? "#34C759" : "#FF9500",
-                  },
-                ],
-              },
-              {
-                type: "text",
-                text: state.exitIp || "--",
-                font: { size: 11, weight: "bold", family: "Menlo" },
-                textColor: { light: "#000000", dark: "#FFFFFF" },
-              },
-            ],
-          },
-          { type: "spacer" },
-          // 底行：槽位数量与更新时间
-          {
-            type: "stack",
-            direction: "row",
-            alignItems: "center",
-            children: [
-              {
-                type: "text",
-                text: "槽位 " + wlCount + "/" + limit,
-                font: { size: "caption1", weight: "medium" },
-                textColor: { light: "#3C3C43", dark: "#EBEBF5" },
-              },
-              { type: "spacer" },
-              {
-                type: "text",
-                text: "更新于 " + formatTime(state.ts),
-                font: { size: "caption2" },
-                textColor: "#8E8E93",
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  };
+  const st = fwFirstMachine(state);
+  const status = fwStatus(state);
+  const ip = fwExitIp(state);
+  if (!ip && st.error) return renderErrorWidget("systemSmall", st.error);
+  const note = st.error ? fwMessage(st.error) : state.allOk ? state.okCount + " / " + state.totalCount + " 台机器正常" : state.okCount + " / " + state.totalCount + " 台已加白";
+  return fwWidget([
+    fwRow([
+      fwRow([fwImage(state.allOk ? "checkmark.shield" : "exclamationmark.shield", 16, status.color), fwText("po0", 13, FW_THEME.text, "bold")], 6),
+      fwSpace(), fwText("防火墙", 9, FW_THEME.muted),
+    ]),
+    fwSpace(12),
+    fwText(status.label, 23, status.color, "semibold"),
+    fwSpace(5),
+    fwIp(ip, 13, FW_THEME.text),
+    fwSpace(5),
+    fwText(note, 10, FW_THEME.muted, "regular", { maxLines: 1 }),
+    fwSpace(),
+    fwRule(),
+    fwSpace(8),
+    fwRow([fwText("槽位 " + fwWhitelist(st).length + " / " + fwLimit(st), 9.5, FW_THEME.muted), fwSpace(), fwText(formatTime(state.ts), 9.5, FW_THEME.muted)]),
+  ], 12, "https://console.po0.io");
 }
 
 function buildMediumWidget(ctx, state) {
-  const allOk = state.allOk;
-  const firstMachine = state.results && state.results[0] && state.results[0].st;
-  const limit = (firstMachine && firstMachine.limit) || 5;
-  const rawWl = (firstMachine && firstMachine.whitelist) || [];
-  const slotOf = (firstMachine && firstMachine.slotOf) || {};
-  // 紧凑展示最多 5 个槽位位置
-  const displayItems = rawWl.slice(0, 5);
-
-  const rightListChildren = [
-    {
-      type: "stack",
-      direction: "row",
-      alignItems: "center",
-      children: [
-        {
-          type: "text",
-          text: "白名单列表",
-          font: { size: 9.5, weight: "bold" },
-          textColor: "#8E8E93",
-        },
-        { type: "spacer" },
-        {
-          type: "text",
-          text: rawWl.length + "/" + limit + " 坑位",
-          font: { size: 9.5 },
-          textColor: "#8E8E93",
-        },
-      ],
-    },
+  const st = fwFirstMachine(state);
+  const whitelist = fwWhitelist(st);
+  const right = [
+    fwRow([
+      fwText(state.totalCount > 1 ? "白名单 #1" : "白名单", 9.5, FW_THEME.muted, "medium"),
+      fwSpace(), fwText(whitelist.length + " / " + fwLimit(st), 9.5, FW_THEME.muted),
+    ]),
+    fwSpace(3),
   ];
+  // 中号始终逐条展示最多 5 个真实 IP，不使用“+N”折叠。
+  whitelist.slice(0, 5).forEach(function (ip, index) {
+    right.push(fwEntry(ip, index, st, state.exitIp, true));
+  });
+  if (!whitelist.length) right.push(fwEmptyList(st, true));
+  const summary = fwColumn([
+    fwRow([fwImage(state.cellular ? "antenna.radiowaves.left.and.right" : "wifi", 10), fwText("当前出口 IP", 9.5, FW_THEME.muted)], 4),
+    fwSpace(6),
+    fwIp(fwExitIp(state), 18),
+    fwSpace(11),
+    fwCount(state, 10),
+    fwSpace(7),
+    fwNetwork(state, 9.5),
+    fwSpace(7),
+    fwText("更新于 " + formatTime(state.ts), 9.5, FW_THEME.muted),
+  ], 0, { flex: 1 });
+  return fwWidget([
+    fwHeader(state),
+    fwSpace(8),
+    fwRow([
+      summary,
+      fwColumn(right, 0, { flex: 1.45, padding: [6, 8, 6, 8], borderRadius: 12, backgroundColor: FW_THEME.panel }),
+    ], 12, { flex: 1, alignItems: "center" }),
+  ], 12, "https://console.po0.io");
+}
 
-  if (displayItems.length === 0) {
-    rightListChildren.push({
-      type: "text",
-      text: firstMachine && firstMachine.error ? firstMachine.error : "暂无白名单记录",
-      font: { size: 9.5 },
-      textColor: firstMachine && firstMachine.error ? "#FF3B30" : "#8E8E93",
-    });
-  } else {
-    displayItems.forEach(function (ip) {
-      const isPinned = slotOf[ip] !== undefined;
-      const isCurrent = sameC24(ip, state.exitIp);
-      rightListChildren.push({
-        type: "stack",
-        direction: "row",
-        alignItems: "center",
-        gap: 3,
-        children: [
-          {
-            type: "text",
-            text: isPinned ? "📌" + slotOf[ip] : "•",
-            font: { size: 8.5, weight: "bold" },
-            textColor: isPinned
-              ? "#FF9500"
-              : isCurrent
-              ? { light: "#248A3D", dark: "#30D158" }
-              : "#8E8E93",
-          },
-          {
-            type: "text",
-            text: ip,
-            font: { size: 9.5, family: "Menlo", weight: isCurrent ? "bold" : "regular" },
-            textColor: isCurrent
-              ? { light: "#248A3D", dark: "#30D158" }
-              : { light: "#1C1C1E", dark: "#FFFFFF" },
-          },
-          { type: "spacer" },
-          {
-            type: "text",
-            text: isCurrent ? "本机" : "",
-            font: { size: 8.5, weight: "bold" },
-            textColor: { light: "#248A3D", dark: "#30D158" },
-          },
-        ],
-      });
-    });
+function fwMachineSection(result, index, state, maxEntries) {
+  const st = result.st || {};
+  const whitelist = fwWhitelist(st);
+  const count = whitelist.length;
+  const title = "机器 " + pad2(index + 1);
+  const children = [fwRow([
+    fwRow([fwImage("server.rack", 12), fwText(title, 11, FW_THEME.text, "semibold")], 5),
+    fwSpace(),
+    fwText(st.error ? "请求失败" : st.applied ? count + " / " + fwLimit(st) + " 槽位" : st.enabled === false ? "未启用" : "未生效", 9.5, st.applied && !st.error ? FW_THEME.muted : FW_THEME.warning),
+    st.applied && !st.error ? fwSlotMeter(count, fwLimit(st)) : fwImage("exclamationmark.circle", 11, FW_THEME.warning),
+  ], 6), fwSpace(5)];
+  if (st.error || !count) children.push(fwEmptyList(st, false));
+  else {
+    whitelist.slice(0, maxEntries).forEach(function (ip, entryIndex) { children.push(fwEntry(ip, entryIndex, st, state.exitIp, false)); });
+    if (count > maxEntries) children.push(fwText("另 " + (count - maxEntries) + " 条 · 点按查看全部", 9, FW_THEME.muted));
   }
-
-  return {
-    type: "widget",
-    padding: 10,
-    backgroundColor: { light: "#F2F2F7", dark: "#1C1C1E" },
-    url: "https://console.po0.io",
-    children: [
-      {
-        type: "stack",
-        direction: "row",
-        alignItems: "center",
-        gap: 10,
-        children: [
-          // 左侧：概览与当前 IP 信息 (固定宽度 120)
-          {
-            type: "stack",
-            direction: "column",
-            alignItems: "start",
-            width: 120,
-            gap: 4,
-            children: [
-              {
-                type: "stack",
-                direction: "row",
-                alignItems: "center",
-                gap: 5,
-                children: [
-                  {
-                    type: "image",
-                    src: allOk ? "sf-symbol:checkmark.shield.fill" : "sf-symbol:exclamationmark.shield.fill",
-                    color: allOk ? "#34C759" : "#FF3B30",
-                    width: 16,
-                    height: 16,
-                  },
-                  {
-                    type: "text",
-                    text: "po0 防火墙",
-                    font: { size: "subheadline", weight: "bold" },
-                    textColor: { light: "#1C1C1E", dark: "#FFFFFF" },
-                  },
-                ],
-              },
-              { type: "spacer" },
-              {
-                type: "text",
-                text: allOk ? "✅ 已加白" : "❌ 未生效",
-                font: { size: "caption1", weight: "semibold" },
-                textColor: allOk ? "#34C759" : "#FF3B30",
-              },
-              {
-                type: "text",
-                text: state.exitIp || "--",
-                font: { size: 11, weight: "bold", family: "Menlo" },
-                textColor: { light: "#000000", dark: "#FFFFFF" },
-              },
-              {
-                type: "stack",
-                direction: "row",
-                alignItems: "center",
-                gap: 4,
-                children: [
-                  {
-                    type: "image",
-                    src: state.cellular ? "sf-symbol:antenna.radiowaves.left.and.right" : "sf-symbol:wifi",
-                    color: "#8E8E93",
-                    width: 11,
-                    height: 11,
-                  },
-                  {
-                    type: "text",
-                    text: state.cellular ? "蜂窝出口" : "局域网出口",
-                    font: { size: "caption2" },
-                    textColor: "#8E8E93",
-                  },
-                ],
-              },
-              { type: "spacer" },
-              {
-                type: "stack",
-                direction: "row",
-                alignItems: "center",
-                children: [
-                  {
-                    type: "text",
-                    text: state.okCount + "/" + state.totalCount + " 台",
-                    font: { size: "caption2" },
-                    textColor: "#8E8E93",
-                  },
-                  { type: "spacer" },
-                  {
-                    type: "text",
-                    text: formatTime(state.ts),
-                    font: { size: "caption2" },
-                    textColor: "#8E8E93",
-                  },
-                ],
-              },
-            ],
-          },
-          // 右侧：白名单列表卡片 (紧凑展示 5 个坑位)
-          {
-            type: "stack",
-            direction: "column",
-            flex: 1,
-            backgroundColor: { light: "#FFFFFF", dark: "#2C2C2E" },
-            padding: [5, 7, 5, 7],
-            borderRadius: 8,
-            gap: 2,
-            children: rightListChildren,
-          },
-        ],
-      },
-    ],
-  };
+  return fwColumn(children);
 }
 
 function buildLargeWidget(ctx, state) {
-  const allOk = state.allOk;
-  const machineCards = [];
-
-  state.results.forEach(function (r, idx) {
-    const st = r.st;
-    const pin = r.slot !== null && r.slot !== undefined ? " 📌" + r.slot : "";
-    const titleText = "机器 #" + (idx + 1) + pin;
-    const statusText = st.error
-      ? "❌ " + st.error
-      : st.applied
-      ? "✅ 已加白 (" + (st.whitelist ? st.whitelist.length : 0) + "/" + (st.limit || 5) + ")"
-      : "❌ 未生效";
-
-    const rows = [
-      {
-        type: "stack",
-        direction: "row",
-        alignItems: "center",
-        children: [
-          {
-            type: "text",
-            text: titleText,
-            font: { size: "caption1", weight: "bold" },
-            textColor: { light: "#1C1C1E", dark: "#FFFFFF" },
-          },
-          { type: "spacer" },
-          {
-            type: "text",
-            text: statusText,
-            font: { size: "caption2", weight: "semibold" },
-            textColor: st.applied ? "#34C759" : "#FF3B30",
-          },
-        ],
-      },
-    ];
-
-    if (st.whitelist && st.whitelist.length > 0) {
-      st.whitelist.forEach(function (ip) {
-        const isPinned = st.slotOf && st.slotOf[ip] !== undefined;
-        const isCurrent = sameC24(ip, state.exitIp);
-        rows.push({
-          type: "stack",
-          direction: "row",
-          alignItems: "center",
-          gap: 4,
-          children: [
-            {
-              type: "text",
-              text: isPinned ? "📌" + st.slotOf[ip] : "•",
-              font: { size: "caption2", weight: "bold" },
-              textColor: isPinned
-                ? "#FF9500"
-                : isCurrent
-                ? { light: "#248A3D", dark: "#30D158" }
-                : "#8E8E93",
-            },
-            {
-              type: "text",
-              text: ip,
-              font: { size: "caption2", family: "Menlo", weight: isCurrent ? "bold" : "regular" },
-              textColor: isCurrent
-                ? { light: "#248A3D", dark: "#30D158" }
-                : { light: "#1C1C1E", dark: "#FFFFFF" },
-            },
-            { type: "spacer" },
-            {
-              type: "text",
-              text: isCurrent ? "本机出口" : "",
-              font: { size: "caption2", weight: "semibold" },
-              textColor: { light: "#248A3D", dark: "#30D158" },
-            },
-          ],
-        });
-      });
-    }
-
-    machineCards.push({
-      type: "stack",
-      direction: "column",
-      backgroundColor: { light: "#FFFFFF", dark: "#2C2C2E" },
-      padding: [8, 10, 8, 10],
-      borderRadius: 10,
-      gap: 3,
-      children: rows,
-    });
+  const results = state.results || [];
+  const visible = results.slice(0, 3);
+  // 小屏大号也留足底部空间；能放下时展示全部条目。
+  const entryCount = visible.reduce(function (sum, r) { return sum + fwWhitelist(r.st || {}).length; }, 0);
+  const maxEntries = visible.length === 1 ? 5 : visible.length === 2 ? (entryCount <= 7 ? 5 : 3) : 1;
+  const hero = fwColumn([
+    fwRow([
+      fwRow([fwImage(state.cellular ? "antenna.radiowaves.left.and.right" : "wifi", 11), fwText("当前出口 IP", 10, FW_THEME.muted)], 5),
+      fwSpace(), fwCount(state, 10),
+    ]),
+    fwSpace(6), fwIp(fwExitIp(state), 22), fwSpace(7),
+    fwRow([fwNetwork(state, 10), fwSpace(), fwText(fwSlotLabel(results[0]), 10, FW_THEME.muted)]),
+  ], 0, { padding: [9, 12, 9, 12], borderRadius: 13, backgroundColor: FW_THEME.panel });
+  const children = [fwHeader(state), fwSpace(10), hero, fwSpace(10)];
+  visible.forEach(function (result, index) {
+    if (index) children.push(fwSpace(4), fwRule(), fwSpace(4));
+    children.push(fwMachineSection(result, index, state, maxEntries));
   });
-
-  return {
-    type: "widget",
-    padding: 14,
-    backgroundColor: { light: "#F2F2F7", dark: "#1C1C1E" },
-    url: "https://console.po0.io",
-    children: [
-      {
-        type: "stack",
-        direction: "column",
-        gap: 8,
-        children: [
-          // 顶部横条
-          {
-            type: "stack",
-            direction: "row",
-            alignItems: "center",
-            children: [
-              {
-                type: "image",
-                src: allOk ? "sf-symbol:checkmark.shield.fill" : "sf-symbol:exclamationmark.shield.fill",
-                color: allOk ? "#34C759" : "#FF3B30",
-                width: 20,
-                height: 20,
-              },
-              {
-                type: "text",
-                text: " po0 防火墙白名单看板",
-                font: { size: "headline", weight: "bold" },
-                textColor: { light: "#1C1C1E", dark: "#FFFFFF" },
-              },
-              { type: "spacer" },
-              {
-                type: "text",
-                text: "更新于 " + formatTime(state.ts),
-                font: { size: "caption2" },
-                textColor: "#8E8E93",
-              },
-            ],
-          },
-          // 出口 IP 信息
-          {
-            type: "stack",
-            direction: "row",
-            alignItems: "center",
-            gap: 6,
-            children: [
-              {
-                type: "image",
-                src: state.cellular ? "sf-symbol:antenna.radiowaves.left.and.right" : "sf-symbol:wifi",
-                color: "#8E8E93",
-                width: 12,
-                height: 12,
-              },
-              {
-                type: "text",
-                text: "当前本机出口: " + (state.exitIp || "--"),
-                font: { size: "caption1", weight: "semibold", family: "Menlo" },
-                textColor: { light: "#1C1C1E", dark: "#FFFFFF" },
-              },
-              { type: "spacer" },
-              {
-                type: "text",
-                text: state.okCount + "/" + state.totalCount + " 台正常",
-                font: { size: "caption2", weight: "bold" },
-                textColor: allOk ? "#34C759" : "#FF3B30",
-              },
-            ],
-          },
-          // 机器卡片列表
-          {
-            type: "stack",
-            direction: "column",
-            gap: 6,
-            children: machineCards,
-          },
-        ],
-      },
-    ],
-  };
+  if (results.length > visible.length) {
+    children.push(fwSpace(5), fwText("另 " + (results.length - visible.length) + " 台机器 · 点按查看全部", 9.5, FW_THEME.muted));
+  }
+  children.push(fwSpace(), fwSpace(8), fwRow([
+    fwImage("clock", 10), fwText("更新于 " + formatTime(state.ts), 10, FW_THEME.muted), fwSpace(), fwText("po0", 10, FW_THEME.muted),
+  ], 5));
+  return fwWidget(children, 14, "https://console.po0.io");
 }
+/* po0 Widget UI END */
 
 async function renderWidget(ctx) {
   const family = (ctx && ctx.widgetFamily) || "systemMedium";
