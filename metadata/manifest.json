@@ -21,9 +21,9 @@
       "list": "ad.lsr",
       "url": "https://adrules.top/adrules.list",
       "path": "ad/adrules.list",
-      "sha256": "b5ee9cf5d6c7db23713101d2f96b879edaaf6538403dc793a9f6643102a1707c",
-      "size": 7178697,
-      "etag": "\"b93e3681ed15dde3361e84865e8a7fdb\""
+      "sha256": "e2dc2957690774368834126e43927f477ce27cdbbf3cbe67af322e592dae3214",
+      "size": 7184336,
+      "etag": "\"b88174d404d8fb9a3966ef2acec44873\""
     },
     {
       "list": "geo.lsr",
@@ -53,9 +53,9 @@
       "list": "geo.lsr",
       "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat",
       "path": "geo/geosite.dat",
-      "sha256": "b4d3807aa45b4f5532ae236672f244a562452622483c0b489c63dd2aadaa821f",
-      "size": 4353587,
-      "etag": "W/\"426e33-df601113408c4cc5\""
+      "sha256": "6a1c5ff22883e8912b35dfafd5e6a30591eae7b60916b36ef55f9f3fb3b11a80",
+      "size": 4354422,
+      "etag": "W/\"427176-d0ae14d5f9815a57\""
     },
     {
       "list": "kelee.lsr",
@@ -385,9 +385,9 @@
       "list": "mihomo.lsr",
       "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/ads.mrs",
       "path": "mihomo/ads.mrs",
-      "sha256": "43a426ce1721c0202b356ce7124e4dc73621fcaf7e022e37521a2610f9fc86d6",
-      "size": 864675,
-      "etag": "\"6948d43909233178f25b00c2d281fed7665eb3b64ab73704df3d9195e7efb414\""
+      "sha256": "8b3a3964c3d5711cb38e67efdbc30aa261a6a76e8986f00f1d642410bfea72be",
+      "size": 865005,
+      "etag": "\"cee8892391def7fb47cab1d73292c77ef5470bcae56e774d3f12f672adda43c7\""
     },
     {
       "list": "mihomo.lsr",
@@ -433,9 +433,9 @@
       "list": "mihomo.lsr",
       "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/proxy.mrs",
       "path": "mihomo/proxy.mrs",
-      "sha256": "4055188e54d295807b1662f1da44256f846afbf69d4b5ac9f384a1df27f9c02d",
-      "size": 193510,
-      "etag": "\"a846f84311aa9b8cafd1e9ef2b10abe4fc69ac9ade2f4f8ffcabcd22771d5338\""
+      "sha256": "82d8ddb2a95fc66cd7a447347776f791cc615c069cbd8bb137392555f0753e1c",
+      "size": 193621,
+      "etag": "\"89ce007fc1a53e164c4483d2ec602dcb1c5645d8f34ab8d6ea962790cd73e491\""
     },
     {
       "list": "png.lsr",
