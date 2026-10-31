@@ -21,9 +21,9 @@
       "list": "ad.lsr",
       "url": "https://adrules.top/adrules.list",
       "path": "ad/adrules.list",
-      "sha256": "e2dc2957690774368834126e43927f477ce27cdbbf3cbe67af322e592dae3214",
-      "size": 7184336,
-      "etag": "\"b88174d404d8fb9a3966ef2acec44873\""
+      "sha256": "079bcbbb7b6b68aed584f745df2e8d85b64bfac9cfcc6799f7911537bac02fa9",
+      "size": 7190622,
+      "etag": "\"6ddb869df061ca5a050fea1e3f9cf169\""
     },
     {
       "list": "geo.lsr",
@@ -63,9 +63,7 @@
       "path": "kelee/AI.lsr",
       "sha256": "90c2c5ccb950f885ef5e70c1f600fbd6db9e9764915b8285b4bac338ababf841",
       "size": 9589,
-      "etag": "\"570a312eab6c7c9007b35db28faf77b6\"",
-      "status": "cached",
-      "download_error": "download failed for https://kelee.one/Tool/Loon/Lsr/AI.lsr: <urlopen error [Errno -5] No address associated with hostname>"
+      "etag": "\"570a312eab6c7c9007b35db28faf77b6\""
     },
     {
       "list": "kelee.lsr",
@@ -233,9 +231,7 @@
       "path": "kelee/SpeedtestInternational.lsr",
       "sha256": "5a624798c0295ecdaf3b3a8339776a8433027fe6d4bccaa265da3c1f45621d1f",
       "size": 631927,
-      "etag": "\"da39878c0335653c272a429f55f7b40f\"",
-      "status": "cached",
-      "download_error": "download failed for https://kelee.one/Tool/Loon/Lsr/SpeedtestInternational.lsr: <urlopen error [Errno -5] No address associated with hostname>"
+      "etag": "\"da39878c0335653c272a429f55f7b40f\""
     },
     {
       "list": "kelee.lsr",
