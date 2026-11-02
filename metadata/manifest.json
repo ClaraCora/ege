@@ -21,9 +21,9 @@
       "list": "ad.lsr",
       "url": "https://adrules.top/adrules.list",
       "path": "ad/adrules.list",
-      "sha256": "d20956f5a43fcdf5390acf56aa55e98758febd525509b2fdaae1ba4e44765df7",
-      "size": 7201135,
-      "etag": "\"eb4ad4b515b7fc935f2202834156d7a1\""
+      "sha256": "12ef9f6a088374084fdb158bbdc06103c24b8a9c9cc1b652dbe4c78d7e97c066",
+      "size": 7208680,
+      "etag": "\"266e5e8e54a2a0fa03958f3676e50c6c\""
     },
     {
       "list": "geo.lsr",
@@ -381,9 +381,9 @@
       "list": "mihomo.lsr",
       "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/ads.mrs",
       "path": "mihomo/ads.mrs",
-      "sha256": "8b3a3964c3d5711cb38e67efdbc30aa261a6a76e8986f00f1d642410bfea72be",
-      "size": 865005,
-      "etag": "\"cee8892391def7fb47cab1d73292c77ef5470bcae56e774d3f12f672adda43c7\""
+      "sha256": "4985ec446f531be34aa5c3fca020e9e61b9d762c1b3ec599521db64626aedbd7",
+      "size": 871163,
+      "etag": "\"c326d355b43ee8f482ded7525d9a86e9c92c34002f2c947d707b535b120662d5\""
     },
     {
       "list": "mihomo.lsr",
@@ -429,9 +429,9 @@
       "list": "mihomo.lsr",
       "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/proxy.mrs",
       "path": "mihomo/proxy.mrs",
-      "sha256": "51fc20d0598ab390666c41a0d53e675d989334d561e4fe0f2c6bc0e775275038",
-      "size": 193642,
-      "etag": "\"116b7fc2058e0bb217ee7cd0f90f572e7a09cf5c162931f1ccab8632679a51a8\""
+      "sha256": "31b5a9042020881e598c2f42d933cd7b6f3ec71f58d26513213183969b798164",
+      "size": 193612,
+      "etag": "\"717d5e889d047c4851964445b3012ef8c88deee6549ab792797dd1495653a67b\""
     },
     {
       "list": "png.lsr",
@@ -439,7 +439,7 @@
       "path": "png/1f1fb-1f1f3.png",
       "sha256": "1e0acce15e69098d177a43f7cf7c34192068d41a937056ad3e763c39c8ed81bf",
       "size": 413,
-      "etag": "W/\"19d-dLClj5Zg/HiCvNjluk5t2HK6KNE\""
+      "etag": "W/\"19d-9b9b194e8b413a1c\""
     },
     {
       "list": "png.lsr",
