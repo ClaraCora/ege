@@ -231,17 +231,17 @@ function saveWidgetCache(ctx, data) {
   } catch (e) {}
 }
 
-/* po0 Widget UI · A 浅色原生（两个独立入口须保持此段一致） */
+/* po0 Widget UI · A 冰川蓝（两个独立入口须保持此段一致） */
 const FW_THEME = {
-  background: { light: "#FFFFFF", dark: "#18232F" },
-  panel: { light: "#F2F6FA", dark: "#223242" },
-  text: { light: "#1E2B3C", dark: "#F0F5FA" },
-  muted: { light: "#627082", dark: "#ACBCCC" },
-  ip: { light: "#234765", dark: "#C0DCF2" },
-  line: { light: "#E1E8ED", dark: "#3A4D60" },
-  success: { light: "#24744E", dark: "#8CD9B1" },
-  successTint: { light: "#E8F4EE", dark: "#254338" },
-  warning: { light: "#A85224", dark: "#FFC38E" },
+  background: { light: "#FFFFFF", dark: "#142337" },
+  panel: { light: "#EDF4FF", dark: "#203750" },
+  text: { light: "#1D3553", dark: "#EEF5FF" },
+  muted: { light: "#536B82", dark: "#AFC4DA" },
+  ip: { light: "#245F9D", dark: "#A4CEFF" },
+  line: { light: "#DCE7F3", dark: "#3A526B" },
+  success: { light: "#24634F", dark: "#94DDC0" },
+  successTint: { light: "#E8F3ED", dark: "#244337" },
+  warning: { light: "#A14B20", dark: "#FFC38E" },
   warningTint: { light: "#FFF0E5", dark: "#4B372B" },
   danger: { light: "#B23C3C", dark: "#FFA9A4" },
   dangerTint: { light: "#FCEDEC", dark: "#4B3034" },
@@ -316,14 +316,14 @@ function fwStatus(state) {
 }
 
 function fwBadge(status) {
-  return fwRow([fwImage(status.symbol, 9, status.color), fwText(status.label, 10, status.color, "semibold")], 4, {
-    padding: [4, 7, 4, 7], backgroundColor: status.tint, borderRadius: 7,
+  return fwRow([fwImage(status.symbol, 9, status.color), fwText(status.label, 9, status.color, "semibold")], 4, {
+    padding: [4, 7, 4, 7], backgroundColor: status.tint, borderRadius: 6,
   });
 }
 
 function fwHeader(state) {
   return fwRow([
-    fwRow([fwImage(state.allOk ? "checkmark.shield" : "exclamationmark.shield", 16, fwStatus(state).color), fwText("po0 防火墙", 13, FW_THEME.text, "bold")], 6),
+    fwRow([fwImage(state.allOk ? "checkmark.shield" : "exclamationmark.shield", 16, state.allOk ? FW_THEME.ip : fwStatus(state).color), fwText("po0 防火墙", 13, FW_THEME.text, "bold")], 6),
     fwSpace(),
     fwBadge(fwStatus(state)),
   ]);
@@ -367,12 +367,12 @@ function fwEntry(ip, index, st, exitIp, compact) {
   const color = current ? FW_THEME.success : FW_THEME.text;
   const leading = pinned
     ? fwRow([fwImage("pin.fill", compact ? 7 : 8, FW_THEME.muted), fwText(slot, compact ? 8 : 9, FW_THEME.muted)], 1, { width: compact ? 14 : 20 })
-    : fwRow([fwText(pad2(index + 1), compact ? 8.5 : 9.5, FW_THEME.muted)], 0, { width: compact ? 14 : 20 });
-  const address = fwIp(ip, compact ? 10.5 : 12, color, current ? "semibold" : "regular");
+    : fwRow([fwText(pad2(index + 1), compact ? 8 : 9, FW_THEME.muted)], 0, { width: compact ? 14 : 20 });
+  const address = fwIp(ip, compact ? 10.5 : 11.5, color, current ? "semibold" : "regular");
   address.flex = 1;
   address.minScale = compact ? 0.85 : 0.7;
   const children = [leading, address];
-  if (current) children.push(fwText("本机", compact ? 8.5 : 10, FW_THEME.success, "medium"));
+  if (current) children.push(fwText("本机", compact ? 8 : 9, FW_THEME.success, "medium"));
   return fwRow(children, compact ? 4 : 5, { height: compact ? 15 : 17 });
 }
 
@@ -399,7 +399,11 @@ function fwNoticeWidget(family, configured, message) {
   const color = configured ? FW_THEME.warning : FW_THEME.muted;
   const title = configured ? "更新失败" : "等待配置";
   const description = configured ? fwMessage(message) : "在 Egern 模块设置中填写防火墙 Token";
-  const heading = fwRow([fwImage(configured ? "exclamationmark.triangle" : "key", 16, color), fwText("po0 防火墙", 13, FW_THEME.text, "bold")], 6);
+  const heading = fwRow([
+    fwRow([fwImage(configured ? "exclamationmark.triangle" : "key", 16, color), fwText(small ? "po0" : "po0 防火墙", 13, FW_THEME.text, "bold")], 6),
+    fwSpace(),
+    ...(small ? [fwText("防火墙", 9, FW_THEME.muted)] : []),
+  ]);
   const content = [
     heading,
     fwSpace(large ? 30 : 16),
@@ -409,7 +413,9 @@ function fwNoticeWidget(family, configured, message) {
     fwSpace(),
     fwRule(),
     fwSpace(8),
-    fwText(configured ? "请检查连接后重试" : "模块设置 · tokens", 10, FW_THEME.muted),
+    configured && small
+      ? fwRow([fwText("请求失败", 9.5, FW_THEME.muted), fwSpace(), fwText("稍后重试", 9.5, FW_THEME.muted)])
+      : fwText(configured ? "请检查连接后重试" : "模块设置 · tokens", 10, FW_THEME.muted),
   ];
   return fwWidget(content, small ? 12 : 16, configured ? "https://console.po0.io" : null);
 }
@@ -430,14 +436,14 @@ function buildSmallWidget(state) {
   const note = st.error ? fwMessage(st.error) : state.allOk ? state.okCount + " / " + state.totalCount + " 台机器正常" : state.okCount + " / " + state.totalCount + " 台已加白";
   return fwWidget([
     fwRow([
-      fwRow([fwImage(state.allOk ? "checkmark.shield" : "exclamationmark.shield", 16, status.color), fwText("po0", 13, FW_THEME.text, "bold")], 6),
+      fwRow([fwImage(state.allOk ? "checkmark.shield" : "exclamationmark.shield", 16, state.allOk ? FW_THEME.ip : status.color), fwText("po0", 13, FW_THEME.text, "bold")], 6),
       fwSpace(), fwText("防火墙", 9, FW_THEME.muted),
     ]),
-    fwSpace(12),
-    fwText(status.label, 23, status.color, "semibold"),
-    fwSpace(5),
+    fwSpace(16),
+    fwText(status.label, 26, state.allOk ? FW_THEME.ip : status.color, "semibold"),
+    fwSpace(8),
     fwIp(ip, 13, FW_THEME.text),
-    fwSpace(5),
+    fwSpace(7),
     fwText(note, 10, FW_THEME.muted, "regular", { maxLines: 1 }),
     fwSpace(),
     fwRule(),
@@ -448,13 +454,14 @@ function buildSmallWidget(state) {
 
 function buildMediumWidget(ctx, state) {
   const st = fwFirstMachine(state);
+  const status = fwStatus(state);
   const whitelist = fwWhitelist(st);
   const right = [
     fwRow([
-      fwText(state.totalCount > 1 ? "白名单 #1" : "白名单", 9.5, FW_THEME.muted, "medium"),
-      fwSpace(), fwText(whitelist.length + " / " + fwLimit(st), 9.5, FW_THEME.muted),
+      fwText(state.totalCount > 1 ? "白名单 #1" : "白名单", 9, FW_THEME.muted, "medium"),
+      fwSpace(), fwText(whitelist.length + " / " + fwLimit(st), 9, FW_THEME.muted),
     ]),
-    fwSpace(3),
+    fwSpace(5),
   ];
   // 中号始终逐条展示最多 5 个真实 IP，不使用“+N”折叠。
   whitelist.slice(0, 5).forEach(function (ip, index) {
@@ -463,21 +470,24 @@ function buildMediumWidget(ctx, state) {
   if (!whitelist.length) right.push(fwEmptyList(st, true));
   const summary = fwColumn([
     fwRow([fwImage(state.cellular ? "antenna.radiowaves.left.and.right" : "wifi", 10), fwText("当前出口 IP", 9.5, FW_THEME.muted)], 4),
-    fwSpace(6),
-    fwIp(fwExitIp(state), 18),
+    fwSpace(7),
+    fwIp(fwExitIp(state), 16, FW_THEME.text),
     fwSpace(11),
-    fwCount(state, 10),
+    fwRow([
+      fwImage(status.symbol, 9, status.color),
+      fwText(state.okCount + " / " + state.totalCount + " 台已加白", 10.5, status.color, "semibold", { flex: 1 }),
+    ], 4),
     fwSpace(7),
-    fwNetwork(state, 9.5),
-    fwSpace(7),
-    fwText("更新于 " + formatTime(state.ts), 9.5, FW_THEME.muted),
+    fwText((state.cellular ? "蜂窝" : "Wi-Fi/有线") + " · " + fwSlotLabel(state.results && state.results[0]), 9, FW_THEME.muted),
+    fwSpace(6),
+    fwText("更新于 " + formatTime(state.ts), 8.5, FW_THEME.muted),
   ], 0, { flex: 1 });
   return fwWidget([
     fwHeader(state),
     fwSpace(8),
     fwRow([
       summary,
-      fwColumn(right, 0, { flex: 1.45, padding: [6, 8, 6, 8], borderRadius: 12, backgroundColor: FW_THEME.panel }),
+      fwColumn(right, 0, { flex: 1.6, padding: [6, 8, 6, 8], borderRadius: 12, backgroundColor: FW_THEME.panel }),
     ], 12, { flex: 1, alignItems: "center" }),
   ], 12, "https://console.po0.io");
 }
@@ -488,7 +498,7 @@ function fwMachineSection(result, index, state, maxEntries) {
   const count = whitelist.length;
   const title = "机器 " + pad2(index + 1);
   const children = [fwRow([
-    fwRow([fwImage("server.rack", 12), fwText(title, 11, FW_THEME.text, "semibold")], 5),
+    fwRow([fwImage("server.rack", 12), fwText(title, 10, FW_THEME.muted, "semibold")], 5),
     fwSpace(),
     fwText(st.error ? "请求失败" : st.applied ? count + " / " + fwLimit(st) + " 槽位" : st.enabled === false ? "未启用" : "未生效", 9.5, st.applied && !st.error ? FW_THEME.muted : FW_THEME.warning),
     st.applied && !st.error ? fwSlotMeter(count, fwLimit(st)) : fwImage("exclamationmark.circle", 11, FW_THEME.warning),
@@ -509,13 +519,13 @@ function buildLargeWidget(ctx, state) {
   const maxEntries = visible.length === 1 ? 5 : visible.length === 2 ? (entryCount <= 7 ? 5 : 3) : 1;
   const hero = fwColumn([
     fwRow([
-      fwRow([fwImage(state.cellular ? "antenna.radiowaves.left.and.right" : "wifi", 11), fwText("当前出口 IP", 10, FW_THEME.muted)], 5),
-      fwSpace(), fwCount(state, 10),
+      fwRow([fwImage(state.cellular ? "antenna.radiowaves.left.and.right" : "wifi", 11), fwText("当前出口 IP", 9, FW_THEME.muted)], 5),
+      fwSpace(), fwCount(state, 9),
     ]),
-    fwSpace(6), fwIp(fwExitIp(state), 22), fwSpace(7),
-    fwRow([fwNetwork(state, 10), fwSpace(), fwText(fwSlotLabel(results[0]), 10, FW_THEME.muted)]),
+    fwSpace(6), fwIp(fwExitIp(state), 25, FW_THEME.ip, "medium"), fwSpace(8),
+    fwRow([fwNetwork(state, 9), fwSpace(), fwText(fwSlotLabel(results[0]), 9, FW_THEME.muted)]),
   ], 0, { padding: [9, 12, 9, 12], borderRadius: 13, backgroundColor: FW_THEME.panel });
-  const children = [fwHeader(state), fwSpace(10), hero, fwSpace(10)];
+  const children = [fwHeader(state), fwSpace(12), hero, fwSpace(10)];
   visible.forEach(function (result, index) {
     if (index) children.push(fwSpace(4), fwRule(), fwSpace(4));
     children.push(fwMachineSection(result, index, state, maxEntries));
