@@ -429,9 +429,9 @@
       "list": "mihomo.lsr",
       "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/proxy.mrs",
       "path": "mihomo/proxy.mrs",
-      "sha256": "31b5a9042020881e598c2f42d933cd7b6f3ec71f58d26513213183969b798164",
-      "size": 193612,
-      "etag": "\"717d5e889d047c4851964445b3012ef8c88deee6549ab792797dd1495653a67b\""
+      "sha256": "96f90e50d86defcca2747ee32805ec8bedbf42b32580144936c1bdb08ae1b5b3",
+      "size": 193659,
+      "etag": "\"2d1d7d6e1bedf8854732aefcab9dd5d84ab80abe23544db5217160f0521ca7ed\""
     },
     {
       "list": "png.lsr",
@@ -439,7 +439,7 @@
       "path": "png/1f1fb-1f1f3.png",
       "sha256": "1e0acce15e69098d177a43f7cf7c34192068d41a937056ad3e763c39c8ed81bf",
       "size": 413,
-      "etag": "W/\"19d-dLClj5Zg/HiCvNjluk5t2HK6KNE\""
+      "etag": "W/\"19d-9b9b194e8b413a1c\""
     },
     {
       "list": "png.lsr",
