@@ -37,9 +37,9 @@
       "list": "geo.lsr",
       "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb",
       "path": "geo/country.mmdb",
-      "sha256": "c0c6ea5661a3167abb24bbbaf629605aa3856c425384cbf2897c5a0f41027663",
-      "size": 7621999,
-      "etag": "W/\"744d6f-7255c1f5f7c4573c\""
+      "sha256": "ccec4d6fa69de3a79960a460c377ac9a23c1a90e5f9052dae3488921e56201df",
+      "size": 7649827,
+      "etag": "W/\"74ba23-843eb681ee932513\""
     },
     {
       "list": "geo.lsr",
@@ -53,9 +53,9 @@
       "list": "geo.lsr",
       "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat",
       "path": "geo/geosite.dat",
-      "sha256": "b17c22dbe38b64631f5820d14c000ec1bb9db7636d0bf6599a166f36980e597d",
-      "size": 4356581,
-      "etag": "W/\"4279e5-1662d23cc414fc7e\""
+      "sha256": "e4fa530c3f58593e78d20edf6563947a4257d1903e741871cacffc5a8a09d706",
+      "size": 4356594,
+      "etag": "W/\"4279f2-4649dcf8aded3119\""
     },
     {
       "list": "kelee.lsr",
@@ -439,7 +439,7 @@
       "path": "png/1f1fb-1f1f3.png",
       "sha256": "1e0acce15e69098d177a43f7cf7c34192068d41a937056ad3e763c39c8ed81bf",
       "size": 413,
-      "etag": "W/\"19d-dLClj5Zg/HiCvNjluk5t2HK6KNE\""
+      "etag": "W/\"19d-9b9b194e8b413a1c\""
     },
     {
       "list": "png.lsr",
