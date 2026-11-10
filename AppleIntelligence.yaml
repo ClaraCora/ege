@@ -1,0 +1,21 @@
+domain_set:
+  - guzzoni.apple.com
+  - api-siri-prod.apple.com
+  - mask-api.icloud.com
+  - mask-api.fe.apple-dns.net
+  - mask-t.apple-dns.net
+  - mask.apple-dns.net
+
+domain_suffix_set:
+  - smoot.apple.com
+  - apple-relay.apple.com
+  - apple-relay.cloudflare.com
+  - apple-relay.fastly-edge.com
+  - apple-relay.akamaized.net
+  - apple-relay.mask.apple-dns.net
+  - cp4.cloudflare.com
+  - gspe1-ssl.ls.apple.com
+  - gateway.icloud.com
+  - mask.icloud.com
+  - mask-h2.icloud.com
+  - siri.apple.com
