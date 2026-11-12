@@ -480,7 +480,7 @@ var PANEL_THEME = {
 function panelClock(value) {
   var date = new Date(value || Date.now());
   function two(number) { return number < 10 ? "0" + number : String(number); }
-  return two(date.getHours()) + ":" + two(date.getMinutes()) + ":" + two(date.getSeconds());
+  return two(date.getHours()) + ":" + two(date.getMinutes());
 }
 function lastSuccess(value) {
   var minutes = Math.max(0,Math.floor((Date.now() - value) / 60000));
@@ -497,16 +497,22 @@ function panelEntries(lines, st, result, previous) {
 }
 function buildPanel(state,adapter) {
   var theme = PANEL_THEME[FWCore.status(state)], content = [];
-  if (state.setup) content = ["请在模块设置中填写 Token","多台机器用英文逗号分隔","固定槽位示例：Token@0"];
+  var single = state.totalCount === 1;
+  var checked = (state.allOk ? "更新 " : "检查 ") + panelClock(state.ts);
+  if (state.setup) content = ["请在模块设置中填写 Token","多台用逗号分隔，固定槽位 Token@0"];
   else {
-    content.push(state.outlets.length > 1 ? "出口  " + state.outlets.length + " 个（详见各名单）" : "出口  " + (state.outlets[0] || "暂未获取"));
+    var outlet = state.outlets.length > 1 ? "出口  " + state.outlets.length + " 个" : "出口  " + (state.outlets[0] || "暂未获取");
+    content.push(outlet + " · " + adapter.label);
     state.results.forEach(function (result,index) {
       var st = result.st, header = "白名单" + (state.totalCount > 1 ? " #" + (index + 1) : "");
       if (!st.error) header += " " + st.whitelist.length + "/" + (st.limit === null ? "?" : st.limit);
       if (st.error) header += " · " + (st.conflict ? "槽位冲突" : st.kind === "config" ? "配置错误" : st.kind === "busy" ? "刷新中" : "更新失败") + (FWCore.slotPresent(result.slot) ? " · 📌" + result.slot : "");
       else if (st.enabled === false) header += " · 未启用";
       else if (!st.applied) header += " · 未生效";
-      content.push("",header);
+      if (single) header += " · " + checked;
+      // Native Panel height follows text wrapping. Keep rows tight, with one separator only between machines.
+      if (index) content.push("");
+      content.push(header);
       if (state.outlets.length > 1 && st.currentIp) content.push("出口  " + st.currentIp);
       if (st.error) {
         content.push(panelText(st.error),st.recovery);
@@ -521,8 +527,11 @@ function buildPanel(state,adapter) {
         panelEntries(content,st,result,false);
       }
     });
-    content.push("",adapter.label + " · " + (state.allOk ? "更新 " : "检查 ") + panelClock(state.ts));
-    if (!state.allOk && state.lastSuccessAt) content.push("最近全部成功 · " + lastSuccess(state.lastSuccessAt));
+    if (!single) content.push(checked);
+    var previous = single && state.results[0].previous;
+    if (!state.allOk && state.lastSuccessAt && (!previous || previous.ts !== state.lastSuccessAt)) {
+      content.push("最近全部成功 · " + lastSuccess(state.lastSuccessAt));
+    }
   }
   return {title:"po0 防火墙 · " + theme.label + (state.setup ? "" : " " + state.okCount + "/" + state.totalCount),content:FWCore.redact(content.join("\n"),activeConfig.items),icon:theme.icon,"icon-color":theme.color};
 }
