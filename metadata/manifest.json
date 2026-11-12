@@ -29,9 +29,9 @@
       "list": "geo.lsr",
       "url": "https://gh-proxy.org/https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb",
       "path": "geo/GeoLite2-ASN.mmdb",
-      "sha256": "3f729dfdbca46d6bc83fe084e15e335cef702b46f9d9afb8feaede36180959f4",
-      "size": 9054248,
-      "etag": "\"0x8DF3AF18CDAEE20\""
+      "sha256": "3dceeef0f161aee0b48a3e71dd538798f5d95e9f4c2e0bc35f1c62874e22a4d5",
+      "size": 9065111,
+      "etag": "\"0x8DF4077AED15246\""
     },
     {
       "list": "geo.lsr",
@@ -381,9 +381,9 @@
       "list": "mihomo.lsr",
       "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/ads.mrs",
       "path": "mihomo/ads.mrs",
-      "sha256": "6083562f12a640cbad875e3c25e17db04a25411b9645b4cb22f0231ce3cf93ff",
-      "size": 882509,
-      "etag": "\"1a5f7d10dc0f2fbb4528946b1beead7cfcd9e62027df9cd2f50c2bd5ff011a68\""
+      "sha256": "a23c2921e77d8f209520b6cc9ecf0f8259012ed697c260d6fc2f253aa7e2f730",
+      "size": 870826,
+      "etag": "\"9a17175d7e86040084a04dad8f4eebf70b122d51ccefbc499da57e29cc2cc228\""
     },
     {
       "list": "mihomo.lsr",
