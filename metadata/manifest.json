@@ -53,9 +53,9 @@
       "list": "geo.lsr",
       "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat",
       "path": "geo/geosite.dat",
-      "sha256": "ccbe14013543dcfa91fe4654218552a876fbe4399d8a16e411570d69ada700c0",
-      "size": 4356327,
-      "etag": "W/\"4278e7-789f2b0a1b52cfe8\""
+      "sha256": "3642ffb0dd8b9d820b000420dd2d6c5b8e3989f4e7055e1b55978294f6d62b50",
+      "size": 4356363,
+      "etag": "W/\"42790b-b27fb557716ec10a\""
     },
     {
       "list": "kelee.lsr",
@@ -429,9 +429,9 @@
       "list": "mihomo.lsr",
       "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/proxy.mrs",
       "path": "mihomo/proxy.mrs",
-      "sha256": "4b34b9115080de479be676530da584f1e4dbb46b98cd3a2780849f6f0c24b5db",
-      "size": 193648,
-      "etag": "\"81984b1b17a774f59225c1730ae822f75eaf02d61d847a6648146cc8e941de82\""
+      "sha256": "7127fb0fbb6e3034ec7d01418200b0e855ef6f39fe9013fc7f1b69ec419cf497",
+      "size": 193654,
+      "etag": "\"ebf4c8c87c2509610826a680b3efef9d81add24e6b50823ab72e9e8f76c37c3d\""
     },
     {
       "list": "png.lsr",
@@ -439,7 +439,7 @@
       "path": "png/1f1fb-1f1f3.png",
       "sha256": "1e0acce15e69098d177a43f7cf7c34192068d41a937056ad3e763c39c8ed81bf",
       "size": 413,
-      "etag": "W/\"19d-dLClj5Zg/HiCvNjluk5t2HK6KNE\""
+      "etag": "W/\"19d-9b9b194e8b413a1c\""
     },
     {
       "list": "png.lsr",
