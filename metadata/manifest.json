@@ -5,9 +5,9 @@
       "list": "ad.lsr",
       "url": "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Egern/Rules/Ads_AWAvenue.yaml",
       "path": "ad/Ads_AWAvenue.yaml",
-      "sha256": "517e55cd58021375c1f1562a3226732327214fcb481f6b0a365ad42163784248",
-      "size": 23929,
-      "etag": "\"4f40bef84e2bb2d219dabb6a005aff42e03a6db7c42e43c19ad93e82beb623b0\""
+      "sha256": "1356e5338f365c284884325e9da4b21003a109198a023ae823e62642429558e0",
+      "size": 24293,
+      "etag": "\"ffec333d4c484fcca5a7fe61ec4b19216ccf5883b9e8726541783b9efa221d59\""
     },
     {
       "list": "ad.lsr",
@@ -53,9 +53,9 @@
       "list": "geo.lsr",
       "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat",
       "path": "geo/geosite.dat",
-      "sha256": "acb166b2846dc86a89d85c5cf78ca96c001a411531cdf146244a5f5a15d3736f",
-      "size": 4356378,
-      "etag": "W/\"42791a-d4a0d464bc329cea\""
+      "sha256": "03996897044b01466b85c6f109f47b9d10405b80aa02aaca56e1624be7257d2a",
+      "size": 4357694,
+      "etag": "W/\"427e3e-2029b1fcd328812d\""
     },
     {
       "list": "kelee.lsr",
@@ -439,7 +439,7 @@
       "path": "png/1f1fb-1f1f3.png",
       "sha256": "1e0acce15e69098d177a43f7cf7c34192068d41a937056ad3e763c39c8ed81bf",
       "size": 413,
-      "etag": "W/\"19d-9b9b194e8b413a1c\""
+      "etag": "W/\"19d-dLClj5Zg/HiCvNjluk5t2HK6KNE\""
     },
     {
       "list": "png.lsr",
