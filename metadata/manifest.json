@@ -37,17 +37,17 @@
       "list": "geo.lsr",
       "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb",
       "path": "geo/country.mmdb",
-      "sha256": "bbedba6ef8584c484e35acdee4153ecf4bc9aa5e22b25d3982870ec1e780f681",
-      "size": 7628821,
-      "etag": "W/\"746815-90bd1bb7f193474c\""
+      "sha256": "9840946762fa8c2673738bbbbab22bb720bde931f6dea327eb58e689babc37dc",
+      "size": 7630477,
+      "etag": "W/\"746e8d-9426ac711954fec3\""
     },
     {
       "list": "geo.lsr",
       "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat",
       "path": "geo/geoip.dat",
-      "sha256": "304ac8a1cbcc8166e4f5a4f32955e4d0fb77a1bd713583e371b30ee27f3659d8",
-      "size": 16467275,
-      "etag": "W/\"fb454b-ee8c5cd4c211acf7\""
+      "sha256": "d4ec4c5e5d5a38c1399964ea9fd8c94288426a3b31b483904b67819fc07f4466",
+      "size": 16503149,
+      "etag": "W/\"fbd16d-05afc612724698e9\""
     },
     {
       "list": "geo.lsr",
