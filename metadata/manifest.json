@@ -53,9 +53,9 @@
       "list": "geo.lsr",
       "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat",
       "path": "geo/geosite.dat",
-      "sha256": "05383cf8d1086234116d0cff2af6dc595370b6a8c1197814168dc8a527a781d1",
-      "size": 4359441,
-      "etag": "W/\"428511-3495701e39dc7933\""
+      "sha256": "55c0ff0bb7a75de661de7a30984ece344d9c7840a37a92893b59af9f4baed280",
+      "size": 4349121,
+      "etag": "W/\"425cc1-0c547506e3d89c65\""
     },
     {
       "list": "kelee.lsr",
