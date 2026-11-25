@@ -429,9 +429,9 @@
       "list": "mihomo.lsr",
       "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/proxy.mrs",
       "path": "mihomo/proxy.mrs",
-      "sha256": "3d48d4a2de20244938156221cc838f7e8b290f09caa8d7d4c622764c9df21e2f",
-      "size": 193067,
-      "etag": "\"a53823bedccb0d4fb5e3a19fa48d943f703aa662ed1e73d0236780863b0b5c91\""
+      "sha256": "4fe874cae7e9c0297202494862811a8b443e2e1b350d7b1a82bc8357e7d3bdee",
+      "size": 193091,
+      "etag": "\"7616402ecbae40e35542adaf9cfd56d0cb4cd38a9984805c89aa2707b131d005\""
     },
     {
       "list": "png.lsr",
