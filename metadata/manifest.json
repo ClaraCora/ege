@@ -45,17 +45,17 @@
       "list": "geo.lsr",
       "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat",
       "path": "geo/geoip.dat",
-      "sha256": "d4ec4c5e5d5a38c1399964ea9fd8c94288426a3b31b483904b67819fc07f4466",
-      "size": 16503149,
-      "etag": "W/\"fbd16d-05afc612724698e9\""
+      "sha256": "9dc8e7de8db8300ce27b606f4a30632265713d2f33bcc568c0d2c44c825c8687",
+      "size": 16676025,
+      "etag": "W/\"fe74b9-f3a3cb9860475917\""
     },
     {
       "list": "geo.lsr",
       "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat",
       "path": "geo/geosite.dat",
-      "sha256": "de5bdc1f196e68cd1fad180becb593a0d3cdd41c372de7742dfacd0b1c8b5230",
-      "size": 4351409,
-      "etag": "W/\"4265b1-622d4dacfc7fecc2\""
+      "sha256": "ae35a23f40a8e0486f0ed1723780ba6805a9f917a51ff30441eb2c41f688244c",
+      "size": 4357159,
+      "etag": "W/\"427c27-9a3a098b11cf4b88\""
     },
     {
       "list": "kelee.lsr",
