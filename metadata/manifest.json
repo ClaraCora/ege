@@ -37,9 +37,9 @@
       "list": "geo.lsr",
       "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb",
       "path": "geo/country.mmdb",
-      "sha256": "9840946762fa8c2673738bbbbab22bb720bde931f6dea327eb58e689babc37dc",
-      "size": 7630477,
-      "etag": "W/\"746e8d-9426ac711954fec3\""
+      "sha256": "6c3ca78dadf2477261ea6addf632682bcfc1ab5924bb4c30eb28c37c828e3373",
+      "size": 7657441,
+      "etag": "W/\"74d7e1-eb5bbc02756a0e47\""
     },
     {
       "list": "geo.lsr",
@@ -381,9 +381,9 @@
       "list": "mihomo.lsr",
       "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/ads.mrs",
       "path": "mihomo/ads.mrs",
-      "sha256": "7fede16b1db398f9195983f2fdc5f15dd0bef10f3e83823aac37d24c4917c70a",
-      "size": 883282,
-      "etag": "\"db8db8ca5b3b2f03c89c37785b00ed9cee81dc347da0a9f372e4cf75e56356e9\""
+      "sha256": "59ceaf4f55df0ab3eb845f361acf7e59efd4005d8f7bb65c181f2330a321309d",
+      "size": 877430,
+      "etag": "\"4692439c4565a969f8b230897d20ba400e780c3e6b48a9bb518417778597d645\""
     },
     {
       "list": "mihomo.lsr",
