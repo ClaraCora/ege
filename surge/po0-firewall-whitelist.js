@@ -303,9 +303,9 @@ var FWCore = (function () {
     try { if (adapter.remove) adapter.remove("po0_fw_widget_cache"); } catch (e) {}
     if (inFlight[key.cache]) return inFlight[key.cache];
     if (!options.force && cached && started >= cached.ts && started - cached.ts < FRESH_MS) return Promise.resolve(cached);
-    var budget = options.background ? 45000 : 16000;
+    var budget = options.background ? 80000 : 45000;
     var deadline = started + budget;
-    var policy = {requestMs: options.background ? 10000 : 6000, attempts: options.background ? 3 : 2};
+    var policy = {requestMs: options.background ? 25000 : 20000, attempts: options.background ? 3 : 2};
     var owner = fingerprint(String(started) + Math.random()), leaseKey = key.cache + "_lease";
     function busy() {
       var results = config.items.map(function (item, index) { return {index:index, identity:item.identity, slot:item.slot, st:error("busy", "正在刷新，请稍后查看")}; });
