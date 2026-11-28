@@ -45,17 +45,17 @@
       "list": "geo.lsr",
       "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat",
       "path": "geo/geoip.dat",
-      "sha256": "9dc8e7de8db8300ce27b606f4a30632265713d2f33bcc568c0d2c44c825c8687",
-      "size": 16676025,
-      "etag": "W/\"fe74b9-f3a3cb9860475917\""
+      "sha256": "d4ec4c5e5d5a38c1399964ea9fd8c94288426a3b31b483904b67819fc07f4466",
+      "size": 16503149,
+      "etag": "W/\"fbd16d-05afc612724698e9\""
     },
     {
       "list": "geo.lsr",
       "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat",
       "path": "geo/geosite.dat",
-      "sha256": "f187c87088838f757c880bcbd4bb172e45697d6a8d08158beb49c7500dc0da1e",
-      "size": 4357245,
-      "etag": "W/\"427c7d-6805996ebe44b4e1\""
+      "sha256": "a29f0d812db432aa61ccffc8d72fdf8f0b316dea4c95558169dc6c2b021ab6f9",
+      "size": 4357457,
+      "etag": "W/\"427d51-6f810d916dfdfa0b\""
     },
     {
       "list": "kelee.lsr",
@@ -429,9 +429,9 @@
       "list": "mihomo.lsr",
       "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/proxy.mrs",
       "path": "mihomo/proxy.mrs",
-      "sha256": "265e09e0f998e5dbed2f8913659fda1ae5a546c9730bd4e8f8d7f8806dd4d74c",
-      "size": 193318,
-      "etag": "\"f442198b9a48c6ed5ac72abc6628dd036fba6865deb147ca12a54533bff2b047\""
+      "sha256": "43537fbe2da00407c6dad6259860b39287b7fc5a4bcb7eff8603e8e4cb2504e5",
+      "size": 193138,
+      "etag": "\"d99aab99c9751bb5baaa3d883c74b24393c0764c33d5f9e71833eac18b78a6a2\""
     },
     {
       "list": "png.lsr",
